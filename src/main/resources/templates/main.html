@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+
+        </div>
+        <div class="mid">
+            <a th:href="${@environment.getProperty('homeUrl')}">
+                <img src="/img/SB_Logo.png">
+            </a>
+        </div>
+        <div class="right">
+            <img class="button" src="/img/login.png">
+        </div>
+    </div>
+    <div class="postList">
+        <div class="post" th:each="post : ${posts}">
+            <div class="postImgBox">
+                <img th:src="${post.img}">
+            </div>
+            <div class="postContextBox">
+                <p th:text="${post.content}"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

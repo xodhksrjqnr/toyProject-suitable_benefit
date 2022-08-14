@@ -18,6 +18,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        //리소스에 대한 접근 경로 설정
         registry.addResourceHandler(accessPath)
                 .addResourceLocations(resourcePath + "img/");
     }

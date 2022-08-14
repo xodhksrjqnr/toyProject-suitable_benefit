@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/header.css">
 </head>
 <body>
     <div class="header">
@@ -20,7 +21,7 @@
     </div>
     <div class="postList">
         <div class="post" th:each="post : ${posts}">
-            <div class="postImgBox">
+            <div class="postImgBox" th:onclick="@{view(uid=)}">
                 <img th:src="${post.img}">
             </div>
             <div class="postContextBox">

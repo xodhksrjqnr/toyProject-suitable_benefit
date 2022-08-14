@@ -25,8 +25,8 @@ public class mainController {
         return PostDtos;
     }
 
-    @GetMapping("/post")
+    @GetMapping("/login")
     public String postPage(Model model) {
-        return "post";
+        return "login";
     }
 }

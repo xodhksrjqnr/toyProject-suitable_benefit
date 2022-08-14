@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
-    <div class="postList" th:fragment="main">
-        <div class="post" th:each="post : ${posts}">
-            <div class="postImgBox" th:onclick="@{view(uid=)}">
-                <img th:src="${post.img}">
-            </div>
-            <div class="postContextBox">
-                <p th:text="${post.content}"></p>
-            </div>
+<div class="postList" th:fragment="main">
+    <div class="post" th:each="post : ${posts}">
+        <div class="postImgBox" th:onclick="@{view(uid=)}">
+            <img th:src="${post.img}">
+        </div>
+        <div class="postContextBox">
+            <p th:text="${post.content}"></p>
         </div>
     </div>
-</body>
-</html>
+</div>

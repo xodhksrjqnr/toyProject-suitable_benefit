@@ -13,8 +13,9 @@ public class mainController {
 
     @GetMapping("")
     public String mainPage(Model model) {
+        model.addAttribute("targetPage", "main");
         model.addAttribute("posts", makeDummyPost());
-        return "main";
+        return "base";
     }
 
     private List<PostDto> makeDummyPost() {
@@ -27,6 +28,7 @@ public class mainController {
 
     @GetMapping("/login")
     public String postPage(Model model) {
-        return "login";
+        model.addAttribute("targetPage", "login");
+        return "base";
     }
 }

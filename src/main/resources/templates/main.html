@@ -2,24 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/header.css">
 </head>
 <body>
-    <div class="header">
-        <div class="left">
-
-        </div>
-        <div class="mid">
-            <a th:href="${@environment.getProperty('homeUrl')}">
-                <img src="/img/SB_Logo.png">
-            </a>
-        </div>
-        <div class="right">
-            <img class="button" src="/img/login.png">
-        </div>
-    </div>
-    <div class="postList">
+    <div class="postList" th:fragment="main">
         <div class="post" th:each="post : ${posts}">
             <div class="postImgBox" th:onclick="@{view(uid=)}">
                 <img th:src="${post.img}">

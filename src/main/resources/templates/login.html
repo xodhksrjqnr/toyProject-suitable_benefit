@@ -2,24 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/login.css">
-    <link rel="stylesheet" href="/css/header.css">
 </head>
 <body>
-    <div class="header">
-        <div class="left">
-
-        </div>
-        <div class="mid">
-            <a th:href="${@environment.getProperty('homeUrl')}">
-                <img src="/img/SB_Logo.png">
-            </a>
-        </div>
-        <div class="right">
-            <img class="button" src="/img/login.png">
-        </div>
-    </div>
-    <div class="loginBox">
+    <div class="loginBox" th:fragment="login">
         <div class="loginInfo">
             <input type="text" placeholder="ID">
             <input type="text" placeholder="PW">

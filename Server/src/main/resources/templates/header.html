@@ -1,0 +1,11 @@
+<div class="header" th:fragment="header">
+    <div class="left"></div>
+    <div class="mid">
+        <a th:href="${@environment.getProperty('homeUrl')}">
+            <img src="/img/SB_Logo.png">
+        </a>
+    </div>
+    <div class="right">
+        <img class="button" src="/img/login.png">
+    </div>
+</div>

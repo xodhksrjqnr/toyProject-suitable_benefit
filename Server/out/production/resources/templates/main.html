@@ -1,0 +1,10 @@
+<div class="postList" th:fragment="main">
+    <div class="post" th:each="post : ${posts}">
+        <div class="postImgBox" th:onclick="@{view(uid=)}">
+            <img th:src="${post.img}">
+        </div>
+        <div class="postContextBox">
+            <p th:text="${post.content}"></p>
+        </div>
+    </div>
+</div>

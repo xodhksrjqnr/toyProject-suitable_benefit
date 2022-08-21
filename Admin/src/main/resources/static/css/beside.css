@@ -1,0 +1,10 @@
+.beside {
+    width: 20%;
+    height: 100%;
+    background: green;
+}
+
+.beside > div {
+    margin: 5% auto;
+    text-align: center;
+}

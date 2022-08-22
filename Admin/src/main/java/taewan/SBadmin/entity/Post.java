@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 public class Post {
 
     @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long postId;
+    private int postId;
 
     private String title;
     private String imgPath;

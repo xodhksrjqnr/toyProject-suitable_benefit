@@ -11,11 +11,11 @@ public class PostDAO {
     @Autowired
     PostRepository postRepository;
 
-    private void save(Post post) {
+    public void save(Post post) {
         postRepository.save(post);
     }
 
-    private void delete(Long postId) {
+    public void delete(Long postId) {
         postRepository.deleteById(postId);
     }
 }

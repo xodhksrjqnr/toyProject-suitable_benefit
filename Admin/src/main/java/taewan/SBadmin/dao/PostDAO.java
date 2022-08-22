@@ -11,7 +11,7 @@ public class PostDAO {
     @Autowired
     PostRepository postRepository;
 
-    private void register(Post post) {
+    private void save(Post post) {
         postRepository.save(post);
     }
 

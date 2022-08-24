@@ -18,14 +18,14 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 @Slf4j
 public class PostDaoTest {
-    private ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
-    private PostDao postDao = ac.getBean(PostDao.class);
+    private ApplicationContext ac;
+    private PostDao postDao;
 
-//    @BeforeTestClass
-//    public void setUp() {
-//        ac = new AnnotationConfigApplicationContext(AppConfig.class);
-//        postDao = ac.getBean(PostDao.class);
-//    }
+    @BeforeTestClass
+    public void setUp() {
+        ac = new AnnotationConfigApplicationContext(AppConfig.class);
+        postDao = ac.getBean(PostDao.class);
+    }
     @Test
     public void 게시물저장테스트() {
         //given

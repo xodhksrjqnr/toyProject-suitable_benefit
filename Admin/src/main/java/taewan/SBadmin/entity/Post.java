@@ -42,4 +42,18 @@ public class Post {
         this.needDocuments = needDocuments;
         this.procedure = procedure;
     }
+
+    @Override
+    public String toString() {
+        return this.title + "\n" +
+                this.imgPath + "\n" +
+                this.content + "\n" +
+                this.totalVote + "\n" +
+                this.positive + "\n" +
+                this.createdDate + "\n" +
+                this.expirationDate + "\n" +
+                this.needConditions + "\n" +
+                this.needDocuments + "\n" +
+                this.procedure;
+    }
 }

@@ -1,19 +1,17 @@
 package taewan.SBadmin.dao;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
-@Slf4j
 @Component
-public class PostDAO {
+public class PostDao {
 
-    private PostRepository postRepository;
+    private final PostRepository postRepository;
 
     @Autowired
-    public PostDAO(PostRepository postRepository) {
+    public PostDao(PostRepository postRepository) {
         this.postRepository = postRepository;
     }
 

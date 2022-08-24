@@ -1,13 +1,10 @@
 package taewan.SBadmin.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
-@Component
 public class PostDao {
-
     private final PostRepository postRepository;
 
     @Autowired

@@ -26,6 +26,7 @@ public class PostDaoTest {
         ac = new AnnotationConfigApplicationContext(AppConfig.class);
         postDao = ac.getBean(PostDao.class);
     }
+
     @Test
     public void 게시물저장테스트() {
         //given

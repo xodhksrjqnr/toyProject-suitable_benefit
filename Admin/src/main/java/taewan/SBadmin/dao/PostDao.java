@@ -4,11 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
+import javax.transaction.Transactional;
+import java.util.Optional;
+
+@Transactional
 public class PostDao {
     private final PostRepository postRepository;
 
     @Autowired
-    public PostDao(PostRepository postRepository) {
+    public PostDao (PostRepository postRepository) {
         this.postRepository = postRepository;
     }
 
@@ -17,6 +21,6 @@ public class PostDao {
     }
 
     public void delete(Long postId) {
-        postRepository.deleteById(postId);
+        postRepository.deleteByPostId(postId);
     }
 }

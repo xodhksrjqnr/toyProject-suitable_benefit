@@ -1,31 +1,24 @@
 package taewan.SBadmin.post;
 
 
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.test.context.event.annotation.BeforeTestClass;
-import taewan.SBadmin.config.AppConfig;
 import taewan.SBadmin.dao.PostDao;
 import taewan.SBadmin.entity.Post;
+import taewan.SBadmin.repository.PostRepository;
 
 import java.time.LocalDateTime;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
-@Slf4j
 public class PostDaoTest {
-    private ApplicationContext ac;
-    private PostDao postDao;
 
-    @BeforeTestClass
-    public void setUp() {
-        ac = new AnnotationConfigApplicationContext(AppConfig.class);
-        postDao = ac.getBean(PostDao.class);
-    }
+    @Autowired
+    PostRepository postRepository;
+    @Autowired
+    PostDao postDao;
 
     @Test
     public void 게시물저장테스트() {
@@ -45,7 +38,5 @@ public class PostDaoTest {
 
         //then
         assertThat(save.toString()).isEqualTo(post.toString());
-        log.info(save.toString());
-        log.info(post.toString());
     }
 }

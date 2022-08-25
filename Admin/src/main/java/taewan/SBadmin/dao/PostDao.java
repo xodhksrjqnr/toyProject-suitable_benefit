@@ -5,7 +5,6 @@ import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
 import javax.transaction.Transactional;
-import java.util.Optional;
 
 @Transactional
 public class PostDao {

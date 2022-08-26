@@ -1,6 +1,9 @@
 package taewan.SBadmin.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Slice;
+import org.springframework.data.domain.Sort;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
@@ -21,5 +24,10 @@ public class PostDao {
 
     public void delete(Long postId) {
         postRepository.deleteByPostId(postId);
+    }
+
+    public Slice<Post> searchAll(int page) {
+        PageRequest pageRequest = PageRequest.of(page, 10, Sort.by(Sort.Direction.ASC, "createdDate"));
+        return postRepository.findAll(pageRequest);
     }
 }

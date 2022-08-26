@@ -36,12 +36,12 @@ public class PostDao {
         return postRepository.findAll(pageRequest);
     }
 
-    public Post findOneByPostID(long postId) {
+    public Post findOneByPostId(long postId) {
         return postRepository.findPostByPostId(postId);
     }
 
     public void modify(PostUpdateDto postUpdateDto) {
-        Post post = findOneByPostID(postUpdateDto.getPostId());
+        Post post = findOneByPostId(postUpdateDto.getPostId());
         post.init(postUpdateDto);
     }
 }

@@ -4,6 +4,7 @@ package taewan.SBadmin.post;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.domain.Slice;
 import taewan.SBadmin.dao.PostDao;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
@@ -24,18 +25,6 @@ public class PostDaoTest {
     @Test
     public void 게시물저장테스트() {
         //given
-        Post post = createPost(1).get(0);
-
-        //when
-        Post save = postDao.save(post);
-
-        //then
-        assertThat(save.toString()).isEqualTo(post.toString());
-    }
-
-    @Test
-    public void 게시물전체조회() {
-        //given
         List<Post> posts = createPost(5);
         List<Post> savedPosts = new LinkedList<>();
 
@@ -45,6 +34,41 @@ public class PostDaoTest {
 
         //then
         assertThat(savedPosts.size()).isEqualTo(5);
+        for (int i = 0; i < 5; i++) {
+            Post post = posts.get(i);
+            Post save = savedPosts.get(i);
+            assertThat(post.toString()).isEqualTo(save.toString());
+        }
+    }
+
+    @Test
+    public void 게시물조회테스트bySlice() {
+        //given
+        List<Post> posts = createPost(18);
+
+        for (Post post : posts)
+            postDao.save(post);
+
+        //when
+        Slice<Post> sliced1 = postDao.findAll(0);
+        Slice<Post> sliced2 = postDao.findAll(1);
+
+        //then
+        assertThat(sliced1.getNumberOfElements()).isEqualTo(10);
+        assertThat(sliced2.getNumberOfElements()).isEqualTo(8);
+    }
+
+    @Test
+    public void 게시물삭제테스트() {
+        //given
+        List<Post> posts = createPost(1);
+        Post save = postDao.save(posts.get(0));
+
+        //when
+        postDao.delete(save.getPostId());
+
+        //then
+        assertThat(postRepository.countAllBy()).isEqualTo(0);
     }
 
     private List<Post> createPost(int num) {

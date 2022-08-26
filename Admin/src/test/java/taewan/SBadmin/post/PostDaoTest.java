@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Slice;
 import taewan.SBadmin.dao.PostDao;
-import taewan.SBadmin.dto.PostSaveDto;
+import taewan.SBadmin.dto.PostUpdateDto;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
@@ -69,14 +69,14 @@ public class PostDaoTest {
         postDao.delete(save.getPostId());
 
         //then
-        assertThat(postRepository.countAllBy()).isEqualTo(0);
+        assertThat(postRepository.count()).isEqualTo(0);
     }
 
     private List<Post> createPost(int num) {
         List<Post> posts = new ArrayList<>(num);
 
         while (num-- > 0) {
-            PostSaveDto postSaveDto = PostSaveDto.builder()
+            PostUpdateDto postUpdateDto = PostUpdateDto.builder()
                     .title("test post title" + num)
                     .content("1. test\n2. test\n3. test")
                     .imgPath("test img path")
@@ -85,7 +85,9 @@ public class PostDaoTest {
                     .needDocuments(Long.parseLong("00111111111111111101111111111111111111111", 2))
                     .procedure("test procedure")
                     .build();
-            posts.add(postSaveDto.convert());
+            Post post = new Post();
+            post.init(postUpdateDto);
+            posts.add(post);
         }
         return posts;
     }

@@ -94,7 +94,7 @@ public class PostDaoTest {
         postDao.modify(post);
 
         //then
-        assertThat(str).isNotEqualTo(postDao.findOneByPostID(post.getPostId()).toString());
+        assertThat(str).isNotEqualTo(postDao.findOneByPostId(post.getPostId()).toString());
     }
 
 

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Slice;
 import taewan.SBadmin.dao.PostDao;
+import taewan.SBadmin.dto.PostSaveDto;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
@@ -75,7 +76,7 @@ public class PostDaoTest {
         List<Post> posts = new ArrayList<>(num);
 
         while (num-- > 0) {
-            posts.add(Post.builder()
+            PostSaveDto postSaveDto = PostSaveDto.builder()
                     .title("test post title" + num)
                     .content("1. test\n2. test\n3. test")
                     .imgPath("test img path")
@@ -83,8 +84,8 @@ public class PostDaoTest {
                     .needConditions(Long.parseLong("00111111111111111101111111111111111111111", 2))
                     .needDocuments(Long.parseLong("00111111111111111101111111111111111111111", 2))
                     .procedure("test procedure")
-                    .build()
-            );
+                    .build();
+            posts.add(postSaveDto.convert());
         }
         return posts;
     }

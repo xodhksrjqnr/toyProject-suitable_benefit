@@ -2,6 +2,7 @@ package taewan.SBadmin.entity;
 
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
+import taewan.SBadmin.dto.PostSaveDto;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Data
 public class Post {
 
     @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -30,30 +32,15 @@ public class Post {
     private Long needDocuments;
     private String procedure;
 
-    @Builder
-    public Post(String title, String imgPath, String content, LocalDateTime expirationDate, Long needConditions, Long needDocuments, String procedure) {
-        this.title = title;
-        this.imgPath = imgPath;
-        this.content = content;
+    public Post(PostSaveDto postSaveDto) {
+        this.title = postSaveDto.getTitle();
+        this.imgPath = postSaveDto.getImgPath();
+        this.content = postSaveDto.getContent();
         this.totalVote = 0;
         this.positive = 0;
-        this.expirationDate = expirationDate;
-        this.needConditions = needConditions;
-        this.needDocuments = needDocuments;
-        this.procedure = procedure;
-    }
-
-    @Override
-    public String toString() {
-        return this.title + "\n" +
-                this.imgPath + "\n" +
-                this.content + "\n" +
-                this.totalVote + "\n" +
-                this.positive + "\n" +
-                this.createdDate + "\n" +
-                this.expirationDate + "\n" +
-                this.needConditions + "\n" +
-                this.needDocuments + "\n" +
-                this.procedure;
+        this.expirationDate = postSaveDto.getExpirationDate();
+        this.needConditions = postSaveDto.getNeedConditions();
+        this.needDocuments = postSaveDto.getNeedDocuments();
+        this.procedure = postSaveDto.getProcedure();
     }
 }

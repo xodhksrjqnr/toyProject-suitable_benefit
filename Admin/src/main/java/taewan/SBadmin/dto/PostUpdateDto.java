@@ -1,35 +1,20 @@
 package taewan.SBadmin.dto;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import taewan.SBadmin.entity.Post;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@Data
-public class PostUpdateDto {
-    private String title;
-    private String imgPath;
-    private String content;
+@ToString
+@SuperBuilder
+public class PostUpdateDto extends PostSaveDto {
+    private Long postId;
 
-    private LocalDateTime expirationDate;
-    private Long needConditions;
-    private Long needDocuments;
-    private String procedure;
-
-    @Builder
-    public PostUpdateDto(String title, String imgPath, String content, LocalDateTime expirationDate,
+    public PostUpdateDto(Long postId, String title, String imgPath, String content, LocalDateTime expirationDate,
                          Long needConditions, Long needDocuments, String procedure) {
-        this.title = title;
-        this.imgPath = imgPath;
-        this.content = content;
-        this.expirationDate = expirationDate;
-        this.needConditions = needConditions;
-        this.needDocuments = needDocuments;
-        this.procedure = procedure;
+        super(title, imgPath, content, expirationDate, needConditions, needDocuments, procedure);
+        this.postId = postId;
     }
 }

@@ -2,7 +2,7 @@ package taewan.SBadmin.entity;
 
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
-import taewan.SBadmin.dto.PostUpdateDto;
+import taewan.SBadmin.dto.PostSaveDto;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,9 +12,9 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
-@Data
-public class Post {
+@NoArgsConstructor
+@ToString(exclude = "postId")
+public class Post <T extends PostSaveDto> {
 
     @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long postId;
@@ -32,17 +32,15 @@ public class Post {
     private Long needDocuments;
     private String procedure;
 
-    public Post() {}
-
-    public void init(PostUpdateDto postUpdateDto) {
-        this.title = postUpdateDto.getTitle();
-        this.imgPath = postUpdateDto.getImgPath();
-        this.content = postUpdateDto.getContent();
+    public void init(T dto) {
+        this.title = dto.getTitle();
+        this.imgPath = dto.getImgPath();
+        this.content = dto.getContent();
         this.totalVote = 0;
         this.positive = 0;
-        this.expirationDate = postUpdateDto.getExpirationDate();
-        this.needConditions = postUpdateDto.getNeedConditions();
-        this.needDocuments = postUpdateDto.getNeedDocuments();
-        this.procedure = postUpdateDto.getProcedure();
+        this.expirationDate = dto.getExpirationDate();
+        this.needConditions = dto.getNeedConditions();
+        this.needDocuments = dto.getNeedDocuments();
+        this.procedure = dto.getProcedure();
     }
 }

@@ -26,7 +26,7 @@ public class PostDao {
         postRepository.deleteByPostId(postId);
     }
 
-    public Slice<Post> searchAll(int page) {
+    public Slice<Post> findAll(int page) {
         PageRequest pageRequest = PageRequest.of(page, 10, Sort.by(Sort.Direction.ASC, "createdDate"));
         return postRepository.findAll(pageRequest);
     }

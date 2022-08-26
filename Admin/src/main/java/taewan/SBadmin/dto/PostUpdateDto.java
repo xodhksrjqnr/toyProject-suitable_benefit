@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Data
-public class PostSaveDto {
+public class PostUpdateDto {
     private String title;
     private String imgPath;
     private String content;
@@ -22,8 +22,8 @@ public class PostSaveDto {
     private String procedure;
 
     @Builder
-    public PostSaveDto(String title, String imgPath, String content, LocalDateTime expirationDate,
-                       Long needConditions, Long needDocuments, String procedure) {
+    public PostUpdateDto(String title, String imgPath, String content, LocalDateTime expirationDate,
+                         Long needConditions, Long needDocuments, String procedure) {
         this.title = title;
         this.imgPath = imgPath;
         this.content = content;
@@ -31,9 +31,5 @@ public class PostSaveDto {
         this.needConditions = needConditions;
         this.needDocuments = needDocuments;
         this.procedure = procedure;
-    }
-
-    public Post convert() {
-        return new Post(this);
     }
 }

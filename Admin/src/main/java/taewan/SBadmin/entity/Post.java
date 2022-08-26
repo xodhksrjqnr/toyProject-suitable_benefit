@@ -2,7 +2,7 @@ package taewan.SBadmin.entity;
 
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
-import taewan.SBadmin.dto.PostSaveDto;
+import taewan.SBadmin.dto.PostUpdateDto;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,15 +32,17 @@ public class Post {
     private Long needDocuments;
     private String procedure;
 
-    public Post(PostSaveDto postSaveDto) {
-        this.title = postSaveDto.getTitle();
-        this.imgPath = postSaveDto.getImgPath();
-        this.content = postSaveDto.getContent();
+    public Post() {}
+
+    public void init(PostUpdateDto postUpdateDto) {
+        this.title = postUpdateDto.getTitle();
+        this.imgPath = postUpdateDto.getImgPath();
+        this.content = postUpdateDto.getContent();
         this.totalVote = 0;
         this.positive = 0;
-        this.expirationDate = postSaveDto.getExpirationDate();
-        this.needConditions = postSaveDto.getNeedConditions();
-        this.needDocuments = postSaveDto.getNeedDocuments();
-        this.procedure = postSaveDto.getProcedure();
+        this.expirationDate = postUpdateDto.getExpirationDate();
+        this.needConditions = postUpdateDto.getNeedConditions();
+        this.needDocuments = postUpdateDto.getNeedDocuments();
+        this.procedure = postUpdateDto.getProcedure();
     }
 }

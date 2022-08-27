@@ -70,6 +70,18 @@ public class PostDaoTest {
     }
 
     @Test
+    public void 게시물단건조회테스트() {
+        //given
+        Post saved = postDao.save(utils.createSaveDto(1));
+
+        //when
+        Post foundPost = postDao.findOneByPostId(saved.getPostId());
+
+        //then
+        assertThat(foundPost.toString()).isEqualTo(saved.toString());
+    }
+
+    @Test
     public void 게시물삭제테스트() {
         //given
         Post save = postDao.save(utils.createSaveDto(1));

@@ -9,21 +9,16 @@ import java.time.LocalDateTime;
 @Setter
 @SuperBuilder
 @ToString
-public class PostSaveDto {
-    private String title;
-    private String imgPath;
+public class PostSaveDto extends PostDto {
     private String content;
-    private LocalDateTime expirationDate;
     private Long needConditions;
     private Long needDocuments;
     private String procedure;
 
     public PostSaveDto(String title, String imgPath, String content, LocalDateTime expirationDate,
                        Long needConditions, Long needDocuments, String procedure) {
-        this.title = title;
-        this.imgPath = imgPath;
+        super(title, imgPath, expirationDate);
         this.content = content;
-        this.expirationDate = expirationDate;
         this.needConditions = needConditions;
         this.needDocuments = needDocuments;
         this.procedure = procedure;

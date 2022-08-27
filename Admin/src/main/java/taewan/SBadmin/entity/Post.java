@@ -12,13 +12,12 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
-@NoArgsConstructor
 @ToString(exclude = "postId")
+@NoArgsConstructor
 public class Post <T extends PostSaveDto> {
 
     @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long postId;
-
     private String title;
     private String imgPath;
     private String content;
@@ -31,6 +30,10 @@ public class Post <T extends PostSaveDto> {
     private Long needConditions;
     private Long needDocuments;
     private String procedure;
+
+    public Post(T dto) {
+        this.init(dto);
+    }
 
     public void init(T dto) {
         this.title = dto.getTitle();

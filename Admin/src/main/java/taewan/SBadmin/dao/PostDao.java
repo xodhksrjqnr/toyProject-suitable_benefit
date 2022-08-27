@@ -5,12 +5,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Slice;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.util.Streamable;
+import taewan.SBadmin.dto.PostFullInfoDto;
 import taewan.SBadmin.dto.PostSaveDto;
 import taewan.SBadmin.dto.PostUpdateDto;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
 import javax.transaction.Transactional;
+import java.util.LinkedList;
+import java.util.List;
 
 @Transactional
 public class PostDao {
@@ -21,27 +25,29 @@ public class PostDao {
         this.postRepository = postRepository;
     }
 
-    public Post save(PostSaveDto postSaveDto) {
-        Post post = new Post();
-        post.init(postSaveDto);
-        return postRepository.save(post);
+    public PostFullInfoDto save(PostSaveDto postSaveDto) {
+        return new PostFullInfoDto(postRepository.save(new Post(postSaveDto)));
     }
 
     public void delete(Long postId) {
         postRepository.deleteByPostId(postId);
     }
 
-    public Slice<Post> findAll(int page) {
+    public List<PostFullInfoDto> findAll(int page) {
         PageRequest pageRequest = PageRequest.of(page, 10, Sort.by(Sort.Direction.ASC, "createdDate"));
-        return postRepository.findAll(pageRequest);
+        List<PostFullInfoDto> converted = new LinkedList<>();
+        postRepository
+                .findAll(pageRequest)
+                .forEach(post -> converted.add(new PostFullInfoDto(post)));
+        return converted;
     }
 
-    public Post findOneByPostId(long postId) {
-        return postRepository.findPostByPostId(postId);
+    public PostFullInfoDto findOneByPostId(long postId) {
+        return new PostFullInfoDto(postRepository.findPostByPostId(postId));
     }
 
     public void modify(PostUpdateDto postUpdateDto) {
-        Post post = findOneByPostId(postUpdateDto.getPostId());
+        Post post = postRepository.findPostByPostId(postUpdateDto.getPostId());
         post.init(postUpdateDto);
     }
 }

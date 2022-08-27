@@ -4,8 +4,8 @@ package taewan.SBadmin.post;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.data.domain.Slice;
 import taewan.SBadmin.dao.PostDao;
+import taewan.SBadmin.dto.PostFullInfoDto;
 import taewan.SBadmin.dto.PostSaveDto;
 import taewan.SBadmin.dto.PostUpdateDto;
 import taewan.SBadmin.entity.Post;
@@ -33,7 +33,7 @@ public class PostDaoTest {
         List<PostSaveDto> posts = new ArrayList<>(size);
         for (int i = 0; i < size; i++)
             posts.add(utils.createSaveDto(i));
-        List<Post> savedPosts = new LinkedList<>();
+        List<PostFullInfoDto> savedPosts = new LinkedList<>();
 
         //when
         for (PostSaveDto post : posts)
@@ -42,9 +42,8 @@ public class PostDaoTest {
         //then
         assertThat(savedPosts.size()).isEqualTo(size);
         for (int i = 0; i < size; i++) {
-            Post post = new Post();
-            post.init(posts.get(i));
-            Post save = savedPosts.get(i);
+            PostFullInfoDto post = new PostFullInfoDto(new Post(posts.get(i)));
+            PostFullInfoDto save = savedPosts.get(i);
             assertThat(post.toString()).isEqualTo(save.toString());
         }
     }
@@ -54,28 +53,28 @@ public class PostDaoTest {
         //given
         int size = 18;
         List<PostSaveDto> posts = new ArrayList<>(18);
+
         for (int i = 0; i < size; i++)
             posts.add(utils.createSaveDto(size));
-
         for (PostSaveDto post : posts)
             postDao.save(post);
 
         //when
-        Slice<Post> sliced1 = postDao.findAll(0);
-        Slice<Post> sliced2 = postDao.findAll(1);
+        List<PostFullInfoDto> sliced1 = postDao.findAll(0);
+        List<PostFullInfoDto> sliced2 = postDao.findAll(1);
 
         //then
-        assertThat(sliced1.getNumberOfElements()).isEqualTo(10);
-        assertThat(sliced2.getNumberOfElements()).isEqualTo(size - 10);
+        assertThat(sliced1.size()).isEqualTo(10);
+        assertThat(sliced2.size()).isEqualTo(size - 10);
     }
 
     @Test
     public void 게시물단건조회테스트() {
         //given
-        Post saved = postDao.save(utils.createSaveDto(1));
+        PostFullInfoDto saved = postDao.save(utils.createSaveDto(1));
 
         //when
-        Post foundPost = postDao.findOneByPostId(saved.getPostId());
+        PostFullInfoDto foundPost = postDao.findOneByPostId(saved.getPostId());
 
         //then
         assertThat(foundPost.toString()).isEqualTo(saved.toString());
@@ -84,7 +83,7 @@ public class PostDaoTest {
     @Test
     public void 게시물삭제테스트() {
         //given
-        Post save = postDao.save(utils.createSaveDto(1));
+        PostFullInfoDto save = postDao.save(utils.createSaveDto(1));
 
         //when
         assertThat(postRepository.count()).isEqualTo(1);
@@ -97,7 +96,7 @@ public class PostDaoTest {
     @Test
     public void 게시물수정테스트() {
         //given
-        Post saved = postDao.save(utils.createSaveDto(1));
+        PostFullInfoDto saved = postDao.save(utils.createSaveDto(1));
 
         //when
         String str = saved.toString();

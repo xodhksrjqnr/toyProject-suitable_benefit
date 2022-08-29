@@ -8,7 +8,6 @@ import taewan.SBadmin.dao.PostDao;
 import taewan.SBadmin.dto.PostFullInfoDto;
 import taewan.SBadmin.dto.PostSaveDto;
 import taewan.SBadmin.dto.PostUpdateDto;
-import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
 import javax.transaction.Transactional;
@@ -29,23 +28,13 @@ public class PostDaoTest {
     @Test
     public void 게시물저장테스트() {
         //given
-        int size = 5;
-        List<PostSaveDto> posts = new ArrayList<>(size);
-        for (int i = 0; i < size; i++)
-            posts.add(utils.createSaveDto(i));
-        List<PostFullInfoDto> savedPosts = new LinkedList<>();
+        PostSaveDto post = utils.createSaveDto(1);
 
         //when
-        for (PostSaveDto post : posts)
-            savedPosts.add(postDao.save(post));
+        PostFullInfoDto saved = postDao.save(post);
 
         //then
-        assertThat(savedPosts.size()).isEqualTo(size);
-        for (int i = 0; i < size; i++) {
-            PostFullInfoDto post = new PostFullInfoDto(new Post(posts.get(i)));
-            PostFullInfoDto save = savedPosts.get(i);
-            assertThat(post.toString()).isEqualTo(save.toString());
-        }
+        assertThat(saved.toString()).isEqualTo(postDao.findOneByPostId(saved.getPostId()).toString());
     }
 
     @Test
@@ -107,6 +96,4 @@ public class PostDaoTest {
         //then
         assertThat(str).isNotEqualTo(postDao.findOneByPostId(post.getPostId()).toString());
     }
-
-
 }

@@ -22,9 +22,9 @@ public class PostSimpleInfoDto {
     private Long needConditions;
 
     public PostSimpleInfoDto(Post post) {
+        this.postId = post.getPostId();
         this.title = post.getTitle();
         this.imgPath = post.getImgPath();
-        this.postId = post.getPostId();
         this.totalVote = post.getTotalVote();
         this.positive = post.getPositive();
         this.createdDate = post.getCreatedDate();

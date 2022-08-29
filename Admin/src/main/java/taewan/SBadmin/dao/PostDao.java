@@ -3,9 +3,7 @@ package taewan.SBadmin.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Slice;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.util.Streamable;
 import taewan.SBadmin.dto.PostFullInfoDto;
 import taewan.SBadmin.dto.PostSaveDto;
 import taewan.SBadmin.dto.PostUpdateDto;
@@ -43,7 +41,8 @@ public class PostDao {
     }
 
     public PostFullInfoDto findOneByPostId(long postId) {
-        return new PostFullInfoDto(postRepository.findPostByPostId(postId));
+        Post post = postRepository.findPostByPostId(postId);
+        return post != null ? new PostFullInfoDto(post) : null;
     }
 
     public void modify(PostUpdateDto postUpdateDto) {

@@ -6,6 +6,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import taewan.SBadmin.dto.PostFullInfoDto;
 import taewan.SBadmin.dto.PostSaveDto;
+import taewan.SBadmin.dto.PostSimpleInfoDto;
 import taewan.SBadmin.dto.PostUpdateDto;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
@@ -31,12 +32,12 @@ public class PostDao {
         postRepository.deleteByPostId(postId);
     }
 
-    public List<PostFullInfoDto> findAll(int page) {
+    public List<PostSimpleInfoDto> findAll(int page) {
         PageRequest pageRequest = PageRequest.of(page, 10, Sort.by(Sort.Direction.ASC, "createdDate"));
-        List<PostFullInfoDto> converted = new LinkedList<>();
+        List<PostSimpleInfoDto> converted = new LinkedList<>();
         postRepository
                 .findAll(pageRequest)
-                .forEach(post -> converted.add(new PostFullInfoDto(post)));
+                .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
         return converted;
     }
 

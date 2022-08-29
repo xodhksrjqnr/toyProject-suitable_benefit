@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import taewan.SBadmin.dao.PostDao;
 import taewan.SBadmin.dto.PostFullInfoDto;
 import taewan.SBadmin.dto.PostSaveDto;
+import taewan.SBadmin.dto.PostSimpleInfoDto;
 import taewan.SBadmin.dto.PostUpdateDto;
 import taewan.SBadmin.repository.PostRepository;
 
@@ -49,8 +50,8 @@ public class PostDaoTest {
             postDao.save(post);
 
         //when
-        List<PostFullInfoDto> sliced1 = postDao.findAll(0);
-        List<PostFullInfoDto> sliced2 = postDao.findAll(1);
+        List<PostSimpleInfoDto> sliced1 = postDao.findAll(0);
+        List<PostSimpleInfoDto> sliced2 = postDao.findAll(1);
 
         //then
         assertThat(sliced1.size()).isEqualTo(10);

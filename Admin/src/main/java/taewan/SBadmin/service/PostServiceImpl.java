@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import taewan.SBadmin.dao.PostDao;
 import taewan.SBadmin.dto.PostFullInfoDto;
 import taewan.SBadmin.dto.PostSaveDto;
+import taewan.SBadmin.dto.PostSimpleInfoDto;
 import taewan.SBadmin.dto.PostUpdateDto;
 
 import java.util.List;
@@ -26,7 +27,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public List<PostFullInfoDto> searchAll(Integer page) {
+    public List<PostSimpleInfoDto> searchAll(Integer page) {
         return postDao.findAll(page != null ? page : 0);
     }
 

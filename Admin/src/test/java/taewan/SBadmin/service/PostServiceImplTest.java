@@ -6,6 +6,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import taewan.SBadmin.dao.PostDao;
 import taewan.SBadmin.dto.PostFullInfoDto;
 import taewan.SBadmin.dto.PostSaveDto;
+import taewan.SBadmin.dto.PostSimpleInfoDto;
 import taewan.SBadmin.dto.PostUpdateDto;
 import taewan.SBadmin.post.Utils;
 import taewan.SBadmin.repository.PostRepository;
@@ -49,8 +50,8 @@ class PostServiceImplTest {
             postService.upload(utils.createSaveDto(i));
 
         //when
-        List<PostFullInfoDto> index1 = postService.searchAll(0);
-        List<PostFullInfoDto> index2 = postService.searchAll(1);
+        List<PostSimpleInfoDto> index1 = postService.searchAll(0);
+        List<PostSimpleInfoDto> index2 = postService.searchAll(1);
 
         //then
         assertThat(index1.size()).isEqualTo(10);

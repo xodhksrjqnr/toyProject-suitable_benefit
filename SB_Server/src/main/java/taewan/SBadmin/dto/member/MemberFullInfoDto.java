@@ -21,6 +21,7 @@ public class MemberFullInfoDto extends MemberSimpleInfoDto {
         super(member);
         this.id = member.getId();
         this.password = member.getPassword();
+        this.email = member.getEmail();
         this.createdDate = member.getCreatedDate();
     }
 }

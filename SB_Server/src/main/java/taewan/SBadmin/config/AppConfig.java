@@ -8,6 +8,8 @@ import taewan.SBadmin.dao.MemberDao;
 import taewan.SBadmin.dao.PostDao;
 import taewan.SBadmin.repository.MemberRepository;
 import taewan.SBadmin.repository.PostRepository;
+import taewan.SBadmin.service.MemberService;
+import taewan.SBadmin.service.MemberServiceImpl;
 import taewan.SBadmin.service.PostService;
 import taewan.SBadmin.service.PostServiceImpl;
 
@@ -36,5 +38,10 @@ public class AppConfig {
     @Bean
     public MemberDao memberDao() {
         return new MemberDao(memberRepository);
+    }
+
+    @Bean
+    public MemberService memberService() {
+        return new MemberServiceImpl(memberDao());
     }
 }

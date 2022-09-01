@@ -1,4 +1,4 @@
-package taewan.SBadmin.dto;
+package taewan.SBadmin.dto.post;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;

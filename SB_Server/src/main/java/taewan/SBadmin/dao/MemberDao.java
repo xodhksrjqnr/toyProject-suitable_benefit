@@ -23,8 +23,8 @@ public class MemberDao {
         this.memberRepository = memberRepository;
     }
 
-    public MemberFullInfoDto save(MemberDto postSaveDto) {
-        return new MemberFullInfoDto(memberRepository.save(new Member(postSaveDto)));
+    public MemberFullInfoDto save(MemberDto memberDto) {
+        return new MemberFullInfoDto(memberRepository.save(new Member(memberDto)));
     }
 
     public void delete(Long memberId) {

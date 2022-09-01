@@ -8,7 +8,6 @@ import taewan.SBadmin.dto.post.PostFullInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.dto.post.PostSimpleInfoDto;
 import taewan.SBadmin.dto.post.PostUpdateDto;
-import taewan.SBadmin.post.Utils;
 import taewan.SBadmin.repository.PostRepository;
 import taewan.SBadmin.service.PostService;
 
@@ -19,7 +18,7 @@ import static org.assertj.core.api.Assertions.*;
 
 @SpringBootTest
 @Transactional
-class PostServiceImplTest {
+class PostServiceTest {
 
     @Autowired
     PostRepository postRepository;

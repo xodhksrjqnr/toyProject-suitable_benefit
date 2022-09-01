@@ -1,4 +1,4 @@
-package taewan.SBadmin.service;
+package taewan.SBadmin.post;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +10,7 @@ import taewan.SBadmin.dto.post.PostSimpleInfoDto;
 import taewan.SBadmin.dto.post.PostUpdateDto;
 import taewan.SBadmin.post.Utils;
 import taewan.SBadmin.repository.PostRepository;
+import taewan.SBadmin.service.PostService;
 
 import javax.transaction.Transactional;
 import java.util.List;

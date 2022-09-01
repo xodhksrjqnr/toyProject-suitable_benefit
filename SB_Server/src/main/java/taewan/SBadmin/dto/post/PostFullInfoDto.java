@@ -7,7 +7,7 @@ import taewan.SBadmin.entity.Post;
 
 @Getter
 @Setter
-@ToString
+@ToString(callSuper = true)
 public class PostFullInfoDto extends PostSimpleInfoDto {
 
     private String content;

@@ -40,7 +40,7 @@ public class MemberDao {
         return converted;
     }
 
-    public MemberFullInfoDto findOneByPostId(long memberId) {
+    public MemberFullInfoDto findOneByMemberId(long memberId) {
         Member member = memberRepository.findMemberByMemberId(memberId);
         return member != null ? new MemberFullInfoDto(member) : null;
     }

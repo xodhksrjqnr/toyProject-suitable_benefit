@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import taewan.SBadmin.dao.PostDao;
-import taewan.SBadmin.dto.PostFullInfoDto;
-import taewan.SBadmin.dto.PostSaveDto;
-import taewan.SBadmin.dto.PostSimpleInfoDto;
-import taewan.SBadmin.dto.PostUpdateDto;
+import taewan.SBadmin.dto.post.PostFullInfoDto;
+import taewan.SBadmin.dto.post.PostSaveDto;
+import taewan.SBadmin.dto.post.PostSimpleInfoDto;
+import taewan.SBadmin.dto.post.PostUpdateDto;
 import taewan.SBadmin.post.Utils;
 import taewan.SBadmin.repository.PostRepository;
 

@@ -22,17 +22,17 @@ public class MemberController {
         this.memberService = memberService;
     }
 
-    @GetMapping(value = {"members/search/{page}", "members/search"})
+    @GetMapping(value = {"search/{page}", "search"})
     public List<MemberSimpleInfoDto> search(@PathVariable(required = false) Integer page) {
         return memberService.searchAll(page);
     }
 
-    @GetMapping("members/{memberId}")
+    @GetMapping("{memberId}")
     public MemberFullInfoDto searchOne(@PathVariable Long memberId) {
         return memberService.searchOne(memberId);
     }
 
-    @PostMapping("members/upload")
+    @PostMapping("upload")
     public Long upload(MemberDto memberSaveDto) {
         return memberService.upload(memberSaveDto);
     }

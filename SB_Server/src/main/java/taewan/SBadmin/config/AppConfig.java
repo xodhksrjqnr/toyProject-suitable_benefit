@@ -3,7 +3,6 @@ package taewan.SBadmin.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import taewan.SBadmin.controller.MainController;
 import taewan.SBadmin.dao.MemberDao;
 import taewan.SBadmin.dao.PostDao;
 import taewan.SBadmin.repository.MemberRepository;

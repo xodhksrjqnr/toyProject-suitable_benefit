@@ -18,17 +18,17 @@ public class PostController {
         this.postService = postService;
     }
 
-    @GetMapping(value = {"posts/search/{page}", "posts/search"})
+    @GetMapping(value = {"search/{page}", "search"})
     public List<PostSimpleInfoDto> search(@PathVariable(required = false) Integer page) {
         return postService.searchAll(page);
     }
 
-    @GetMapping("posts/{postId}")
+    @GetMapping("{postId}")
     public PostFullInfoDto searchOne(@PathVariable Long postId) {
         return postService.searchOne(postId);
     }
 
-    @PostMapping("posts/upload")
+    @PostMapping("upload")
     public Long upload(PostSaveDto postSaveDto) {
         return postService.upload(postSaveDto);
     }

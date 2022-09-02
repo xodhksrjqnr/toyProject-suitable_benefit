@@ -1,4 +1,4 @@
-package taewan.SBadmin.dto;
+package taewan.SBadmin.dto.post;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 @Setter
 @SuperBuilder
 @ToString
-@NoArgsConstructor
 public class PostSaveDto extends PostDto {
     private String content;
     private Long needConditions;

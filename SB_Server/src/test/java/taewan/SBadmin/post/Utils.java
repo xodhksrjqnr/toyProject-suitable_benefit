@@ -1,7 +1,7 @@
 package taewan.SBadmin.post;
 
-import taewan.SBadmin.dto.PostSaveDto;
-import taewan.SBadmin.dto.PostUpdateDto;
+import taewan.SBadmin.dto.post.PostSaveDto;
+import taewan.SBadmin.dto.post.PostUpdateDto;
 
 import java.time.LocalDateTime;
 

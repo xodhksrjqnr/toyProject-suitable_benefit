@@ -1,4 +1,4 @@
-package taewan.SBadmin.dto;
+package taewan.SBadmin.dto.post;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +7,7 @@ import taewan.SBadmin.entity.Post;
 
 @Getter
 @Setter
-@ToString
+@ToString(callSuper = true)
 public class PostFullInfoDto extends PostSimpleInfoDto {
 
     private String content;

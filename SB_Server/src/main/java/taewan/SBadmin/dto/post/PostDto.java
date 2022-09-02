@@ -1,4 +1,4 @@
-package taewan.SBadmin.dto;
+package taewan.SBadmin.dto.post;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @SuperBuilder
-@NoArgsConstructor
 abstract class PostDto {
     private String title;
     private String imgPath;

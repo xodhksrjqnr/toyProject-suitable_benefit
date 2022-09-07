@@ -10,7 +10,8 @@ import taewan.SBadmin.service.PostService;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "posts")
+@CrossOrigin(origins = "${allowed.origins}")
+@RequestMapping("posts")
 public class PostController {
     private final PostService postService;
 

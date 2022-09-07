@@ -10,7 +10,6 @@ import taewan.SBadmin.service.PostService;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "${allowed.origins}")
 @RequestMapping("posts")
 public class PostController {
     private final PostService postService;
@@ -20,11 +19,13 @@ public class PostController {
         this.postService = postService;
     }
 
+    @CrossOrigin(origins = "${allowed.origins}")
     @GetMapping(value = {"/search/{page}", "/search"})
     public List<PostSimpleInfoDto> search(@PathVariable(required = false) Integer page) {
         return postService.searchAll(page);
     }
 
+    @CrossOrigin(origins = "${allowed.origins}")
     @GetMapping("/{postId}")
     public PostFullInfoDto searchOne(@PathVariable Long postId) {
         return postService.searchOne(postId);

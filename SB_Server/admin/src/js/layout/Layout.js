@@ -11,15 +11,14 @@ import '../../css/Layout.css'
 
 function Layout() {
     return (
-        <Container fluid>
-            <Row>
-                <Col sm={3} className="Side">
-                    <Row className="logo"><p>Logo</p></Row>
-                    <Row><Side/></Row>
+        <Container fluid className="vh-100">
+            <Row className="h-100">
+                <Col sm={2} className="Side">
+                    <Side/>
                 </Col>
-                <Col sm={7}>
-                    <Row md={5}><Header/></Row>
-                    <Row md={5}><Content/></Row>
+                <Col sm={10} className="Main">
+                    <Row className="bg-light"><Header/></Row>
+                    <Row className="bg-light m-3"><Content/></Row>
                 </Col>
             </Row>
         </Container>

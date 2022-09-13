@@ -1,16 +1,8 @@
 .Side {
     background-color: #323232;
+    color: #d2d2d2;
 }
 
-.Side .logo {
-    color: white;
-    text-align: center;
-}
-
-.Header {
-
-}
-
-.Content {
-
+.Main {
+    background-color: #d2d2d2;
 }

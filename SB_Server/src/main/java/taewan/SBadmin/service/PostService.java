@@ -1,9 +1,9 @@
 package taewan.SBadmin.service;
 
-import taewan.SBadmin.dto.PostFullInfoDto;
-import taewan.SBadmin.dto.PostSaveDto;
-import taewan.SBadmin.dto.PostSimpleInfoDto;
-import taewan.SBadmin.dto.PostUpdateDto;
+import taewan.SBadmin.dto.post.PostFullInfoDto;
+import taewan.SBadmin.dto.post.PostSaveDto;
+import taewan.SBadmin.dto.post.PostSimpleInfoDto;
+import taewan.SBadmin.dto.post.PostUpdateDto;
 
 import java.util.List;
 

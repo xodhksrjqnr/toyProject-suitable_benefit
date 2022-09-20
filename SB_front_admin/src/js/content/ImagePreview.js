@@ -19,7 +19,7 @@ function ImagePreview() {
 
     return (
         <div className="text-center mb-5">
-            <label htmlFor="image" style={{width:"60%", height:"auto", margin:"0 auto"}}>
+            <label htmlFor="image" style={{width:"30%", height:"auto", margin:"0 auto"}}>
                 <Image src={imageSrc} className="img-fluid"/>
             </label>
             <input type="file" style={{display: "none"}} id="image" onChange={(e) => {

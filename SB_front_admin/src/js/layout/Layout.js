@@ -9,7 +9,7 @@ import Sidebar from "./Sidebar";
 
 function Layout() {
     return (
-        <Container fluid className="vh-100">
+        <Container fluid>
             <Header/>
             <Sidebar/>
         </Container>

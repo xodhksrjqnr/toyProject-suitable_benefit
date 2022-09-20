@@ -22,7 +22,7 @@ function Sidebar() {
     };
 
     return (
-        <Row className="h-100 sidebar">
+        <Row className="sidebar">
             <Col sm={2}>
                 <Row className="mt-4">
                     <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer">사이트 바로가기</a>

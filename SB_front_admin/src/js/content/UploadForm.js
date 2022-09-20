@@ -6,18 +6,18 @@ import ImagePreview from "./ImagePreview";
 
 function UploadForm() {
     return (
-        <form className="uploadForm">
-            <div>
-                <label for="title">제목</label>
-                <input type="text" id="title" className=""/>
-            </div>
+        <form className="uploadForm p-4">
             <ImagePreview/>
             <div>
-                <label for="content">내용</label>
+                <label htmlFor="title">제목</label>
+                <input type="text" id="title" className=""/>
+            </div>
+            <div>
+                <label htmlFor="content">내용</label>
                 <input type="text" id="content"/>
             </div>
             <div>
-                <label for="expirationDate">만료일</label>
+                <label htmlFor="expirationDate">만료일</label>
                 <input type="date" id="expirationDate"/>
             </div>
             <div>

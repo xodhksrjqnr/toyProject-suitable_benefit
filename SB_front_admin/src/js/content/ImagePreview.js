@@ -1,7 +1,10 @@
 import {useState} from "react";
 
+import Image from 'react-bootstrap/Image'
+
+
 function ImagePreview() {
-    const [imageSrc, setImageSrc] = useState('');
+    const [imageSrc, setImageSrc] = useState('/img/noImg.png');
 
     const encodeFileToBase64 = (fileBlob) => {
         const reader = new FileReader();
@@ -15,13 +18,13 @@ function ImagePreview() {
     };
 
     return (
-        <div className="imagePreview">
-            <input type="image" src="/img/noImg.png" alt="no image" id="image" onChange={(e) => {
+        <div className="text-center mb-5">
+            <label htmlFor="image" style={{width:"60%", height:"auto", margin:"0 auto"}}>
+                <Image src={imageSrc} className="img-fluid"/>
+            </label>
+            <input type="file" style={{display: "none"}} id="image" onChange={(e) => {
                 encodeFileToBase64(e.target.files[0]);
             }}/>
-            <div className="preview">
-                {imageSrc && <img src={imageSrc} alt="preview-img" />}
-            </div>
         </div>
     );
 }

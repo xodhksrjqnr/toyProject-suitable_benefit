@@ -3,8 +3,7 @@ import Container from "react-bootstrap/Container";
 import '../../css/UploadForm.css'
 
 import ImagePreview from "./ImagePreview";
-import Conditions from "./Conditions";
-import Documents from "./Documents";
+import RequiredInfo from "./RequiredInfo";
 
 function UploadForm() {
     return (
@@ -23,8 +22,8 @@ function UploadForm() {
                     <label htmlFor="expirationDate">만료일</label>
                     <input type="date" id="expirationDate"/>
                 </div>
-                <Conditions/>
-                <Documents/>
+                <RequiredInfo need="needConditions" name="필요 조건"/>
+                <RequiredInfo need="needDocuments" name="필요 서류"/>
                 <div>
                     <p>procedure</p>
                 </div>

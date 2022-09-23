@@ -22,18 +22,10 @@ function UploadForm() {
                     <label htmlFor="expirationDate">만료일</label>
                     <input type="datetime-local" id="expirationDate" name="expirationDate"/>
                 </div>
+                <RequiredInfo need="needConditions" name="필요 조건"/>
+                <RequiredInfo need="needDocuments" name="필요 서류"/>
                 <div>
-                    <label htmlFor="needConditions">필요 조건</label>
-                    <input type="number" id="needConditions" name="needConditions"/>
-                </div>
-                <div>
-                    <label htmlFor="needDocuments">필요 서류</label>
-                    <input type="number" id="needDocuments" name="needDocuments"/>
-                </div>
-                {/*<RequiredInfo need="needConditions" name="필요 조건"/>*/}
-                {/*<RequiredInfo need="needDocuments" name="필요 서류"/>*/}
-                <div>
-                    <label htmlFor="procedure">절차</label>
+                    <label htmlFor="procedure">URL</label>
                     <input type="text" id="procedure" name="procedure"/>
                 </div>
             </form>

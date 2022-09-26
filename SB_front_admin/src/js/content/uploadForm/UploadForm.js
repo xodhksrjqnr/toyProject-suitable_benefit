@@ -1,9 +1,9 @@
 import Container from "react-bootstrap/Container";
 
-import '../../css/UploadForm.css'
+import '../../../css/UploadForm.css'
 
 import ImagePreview from "./ImagePreview";
-import RequiredInfo from "./RequiredInfo";
+import RequiredInfo from "./requiredInfo/RequiredInfo";
 
 function UploadForm() {
     return (
@@ -22,14 +22,16 @@ function UploadForm() {
                     <label htmlFor="expirationDate">만료일</label>
                     <input type="datetime-local" id="expirationDate" name="expirationDate"/>
                 </div>
-                <RequiredInfo need="needConditions" name="필요 조건"/>
-                <RequiredInfo need="needDocuments" name="필요 서류"/>
                 <div>
                     <label htmlFor="procedure">URL</label>
                     <input type="text" id="procedure" name="procedure"/>
                 </div>
+                <RequiredInfo need="needConditions" name="필요 조건"/>
+                <RequiredInfo need="needDocuments" name="필요 서류"/>
+                <div>
+                    <button type="submit" form="postUploadForm">등록하기</button>
+                </div>
             </form>
-            <button type="submit" form="postUploadForm">등록하기</button>
         </Container>
     );
 }

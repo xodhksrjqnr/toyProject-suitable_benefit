@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import '../../css/Sidebar.css'
 
 import Dashboard from "../content/Dashboard";
-import UploadForm from "../content/UploadForm";
+import UploadForm from "../content/uploadForm/UploadForm";
 import Section from "./Section";
 
 function Sidebar() {

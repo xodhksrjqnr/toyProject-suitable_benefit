@@ -5,63 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="400c556d-978a-45db-8057-ef418015e94f" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/HELP.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/SBadminApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/config/AppConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/config/WebConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/controller/MainController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/dao/PostDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/dto/PostDto$PostDtoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/dto/PostDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/dto/PostFullInfoDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/dto/PostSaveDto$PostSaveDtoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/dto/PostSaveDto$PostSaveDtoBuilderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/dto/PostSaveDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/dto/PostSimpleInfoDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/dto/PostUpdateDto$PostUpdateDtoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/dto/PostUpdateDto$PostUpdateDtoBuilderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/dto/PostUpdateDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/entity/Post.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/repository/PostRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/service/PostService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/classes/taewan/SBadmin/service/PostServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/resources/static/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/resources/static/css/beside.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/resources/static/css/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/resources/templates/beside.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/resources/templates/header.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/production/resources/templates/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/test/classes/taewan/SBadmin/SBadminApplicationTests.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/test/classes/taewan/SBadmin/post/PostDaoTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/test/classes/taewan/SBadmin/post/Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/out/test/classes/taewan/SBadmin/service/PostServiceImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/SBadminApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/config/AppConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/config/WebConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/controller/MainController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/dao/PostDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/dto/PostDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/dto/PostFullInfoDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/dto/PostSaveDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/dto/PostSimpleInfoDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/dto/PostUpdateDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/entity/Post.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/repository/PostRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/service/PostService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/java/taewan/SBadmin/service/PostServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/test/java/taewan/SBadmin/SBadminApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/test/java/taewan/SBadmin/post/PostDaoTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/test/java/taewan/SBadmin/post/Utils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_API_Server/src/test/java/taewan/SBadmin/service/PostServiceImplTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/css/Section.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/css/Section.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/js/content/UploadForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/js/content/UploadForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/src/js/layout/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/js/layout/Section.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/config/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/PostDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/PostDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostDto$PostDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostFullInfoDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostSaveDto$PostSaveDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostSaveDto$PostSaveDtoBuilderImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostSaveDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostSimpleInfoDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostUpdateDto$PostUpdateDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostUpdateDto$PostUpdateDtoBuilderImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostUpdateDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/beside.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/header.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/beside.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/PostDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/PostDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/service/PostServiceImplTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/dao/PostDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/dao/PostDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/entity/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/service/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/service/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/taewan/SBadmin/post/PostServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/taewan/SBadmin/post/PostServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,14 +62,32 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SBadmin" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -92,21 +96,107 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2E9gq2Hc1gAxUU5dvMauRwhFFtd" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/Users/taewan/Desktop/toyProject/toyProject-Suitable_Benefit/SB_Server",
-    "spring.configuration.checksum": "e08e246c7221750a9ce8788676ccab88"
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "spring.configuration.checksum": "e08e246c7221750a9ce8788676ccab88",
+    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/posts" />
+      <recent name="$PROJECT_DIR$/frontend/src" />
+      <recent name="$PROJECT_DIR$/frontend/src/css" />
+      <recent name="$PROJECT_DIR$/frontend/src/js" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/js/admin" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.SBadminApplication">
+    <configuration name="PostServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SBadmin.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="taewan.SBadmin.post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="taewan.SBadmin.post" />
+      <option name="MAIN_CLASS_NAME" value="taewan.SBadmin.post.PostServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostServiceTest.게시물삭제테스트" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SBadmin.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="taewan.SBadmin.post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="taewan.SBadmin.post" />
+      <option name="MAIN_CLASS_NAME" value="taewan.SBadmin.post.PostServiceTest" />
+      <option name="METHOD_NAME" value="게시물삭제테스트" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SBadmin.test의 taewan.SBadmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SBadmin.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="taewan.SBadmin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="taewan.SBadmin" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SBadmin.test의 taewan.SBadmin.post" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SBadmin.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="taewan.SBadmin.post.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="taewan.SBadmin.post" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SBadmin.test의 전부" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SBadmin.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SBadminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="SBadmin.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="taewan.SBadmin.SBadminApplication" />
@@ -114,6 +204,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SBadmin.test의 taewan.SBadmin" />
+        <item itemvalue="JUnit.PostServiceTest.게시물삭제테스트" />
+        <item itemvalue="JUnit.SBadmin.test의 전부" />
+        <item itemvalue="JUnit.PostServiceTest" />
+        <item itemvalue="JUnit.SBadmin.test의 taewan.SBadmin.post" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -125,10 +224,22 @@
       <updated>1662013401549</updated>
       <workItem from="1662013403849" duration="266000" />
       <workItem from="1662013684706" duration="8000" />
+      <workItem from="1663058214996" duration="35611000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

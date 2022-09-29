@@ -2,7 +2,7 @@ package taewan.SBadmin.entity;
 
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
-import taewan.SBadmin.dto.PostSaveDto;
+import taewan.SBadmin.dto.post.PostSaveDto;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

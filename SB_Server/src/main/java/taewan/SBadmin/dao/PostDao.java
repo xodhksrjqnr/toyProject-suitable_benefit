@@ -4,10 +4,10 @@ package taewan.SBadmin.dao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import taewan.SBadmin.dto.PostFullInfoDto;
-import taewan.SBadmin.dto.PostSaveDto;
-import taewan.SBadmin.dto.PostSimpleInfoDto;
-import taewan.SBadmin.dto.PostUpdateDto;
+import taewan.SBadmin.dto.post.PostFullInfoDto;
+import taewan.SBadmin.dto.post.PostSaveDto;
+import taewan.SBadmin.dto.post.PostSimpleInfoDto;
+import taewan.SBadmin.dto.post.PostUpdateDto;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 

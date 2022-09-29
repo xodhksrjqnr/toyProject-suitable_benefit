@@ -1,0 +1,18 @@
+.sidebar {
+    background-color: #323232;
+    color: #dcdcdc;
+    font-size: x-small;
+}
+
+.sidebar button {
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    color: #dcdcdc;
+    margin-bottom: 5%;
+}
+
+.sidebar a {
+    text-decoration-line: none;
+    color: #dcdcdc;
+}

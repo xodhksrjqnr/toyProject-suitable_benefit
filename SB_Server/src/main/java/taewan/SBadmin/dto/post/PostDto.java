@@ -1,15 +1,17 @@
 package taewan.SBadmin.dto.post;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.experimental.SuperBuilder;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @SuperBuilder
+@ToString
 abstract class PostDto {
     private String title;
     private String imgPath;

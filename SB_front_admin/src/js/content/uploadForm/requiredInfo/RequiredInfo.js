@@ -4,15 +4,17 @@ import Container from "react-bootstrap/Container";
 
 function RequiredInfo(props) {
     const [pick, setPick] = useState([]);
-    const [bit, setBit] = useState(0);
+    const [bit, setBit] = useState(0n);
+    const [tmp , setTmp] = useState([64]);
 
-    // useEffect(() => {
-    //     // console.log(pick);
-    //     // console.log(bit);
-    // }, [pick, bit]);
+    useEffect(() => {
+        console.log(bit);
+        // console.log(pick);
+        // console.log(bit);
+    }, [pick, bit]);
 
     const removeNeedElement = (e, id) => {
-        const newBit = 1 << id;
+        const newBit = 1n << id;
 
         document.getElementById(id).remove();
         setBit(prevBit => prevBit ^ newBit);
@@ -28,9 +30,9 @@ function RequiredInfo(props) {
                 <button type="button" onClick={(e) => removeNeedElement(e, id)} className="bg-black">-</button>
             </div>
         );
-        const newBit = 1 << id;
+        const newBit = 1n << id;
 
-        if ((bit & newBit) === 0) {
+        if ((bit & newBit) === 0n) {
             setPick(prevList => [...prevList, newValue]);
             setBit(prevBit => prevBit | newBit);
         }
@@ -39,7 +41,7 @@ function RequiredInfo(props) {
 
     return (
         <div>
-            <input type="number" name={props.need} value={bit} readOnly hidden/>
+            <input type="text" name={props.need} value={tmp} readOnly hidden/>
             <label htmlFor={props.name}>{props.name}</label>
             <input type="text" id={props.name} placeholder="search for names" list={props.need + "List"}/>
             <button type="button" onClick={(e) => addNeedElement(e, props.name)} className="bg-black">+</button>

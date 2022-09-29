@@ -2,13 +2,14 @@ package taewan.SBadmin.dto.post;
 
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
 @SuperBuilder
-@ToString
+@ToString(callSuper = true)
 public class PostSaveDto extends PostDto {
     private String content;
     private Long needConditions;

@@ -14,14 +14,14 @@ public class PostSaveDto extends PostDto {
     private String content;
     private Long needConditions;
     private Long needDocuments;
-    private String procedure;
+    private String url;
 
     public PostSaveDto(String title, String imgPath, String content, LocalDateTime expirationDate,
-                       Long needConditions, Long needDocuments, String procedure) {
+                       Long needConditions, Long needDocuments, String url) {
         super(title, imgPath, expirationDate);
         this.content = content;
         this.needConditions = needConditions;
         this.needDocuments = needDocuments;
-        this.procedure = procedure;
+        this.url = url;
     }
 }

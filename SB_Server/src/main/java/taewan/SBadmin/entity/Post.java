@@ -21,15 +21,12 @@ public class Post <T extends PostSaveDto> {
     private String title;
     private String imgPath;
     private String content;
-    private int totalVote;
-    private int positive;
-
+    private String url;
     @CreatedDate
     private LocalDateTime createdDate;
     private LocalDateTime expirationDate;
     private Long needConditions;
     private Long needDocuments;
-    private String procedure;
 
     public Post(T dto) {
         this.init(dto);
@@ -39,11 +36,9 @@ public class Post <T extends PostSaveDto> {
         this.title = dto.getTitle();
         this.imgPath = dto.getImgPath();
         this.content = dto.getContent();
-        this.totalVote = 0;
-        this.positive = 0;
         this.expirationDate = dto.getExpirationDate();
         this.needConditions = dto.getNeedConditions();
         this.needDocuments = dto.getNeedDocuments();
-        this.procedure = dto.getProcedure();
+        this.url = dto.getUrl();
     }
 }

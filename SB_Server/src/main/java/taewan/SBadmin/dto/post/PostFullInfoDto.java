@@ -12,12 +12,12 @@ public class PostFullInfoDto extends PostSimpleInfoDto {
 
     private String content;
     private Long needDocuments;
-    private String procedure;
+    private String url;
 
     public PostFullInfoDto(Post post) {
         super(post);
         this.content = post.getContent();
         this.needDocuments = post.getNeedDocuments();
-        this.procedure = post.getProcedure();
+        this.url = post.getUrl();
     }
 }

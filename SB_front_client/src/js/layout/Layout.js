@@ -1,6 +1,5 @@
-import {Col, Container, Row} from "react-bootstrap";
+import {Container, Row} from "react-bootstrap";
 import Header from "./Header";
-import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 import Section from "./Section";
 
@@ -8,15 +7,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Layout() {
     return (
-        <Container fluid>
-            <Row>
+        <Container fluid className="vh-100">
+            <Row style={{height:"10vh"}}>
                 <Header/>
             </Row>
-            <Row>
-                <Col sm={10}><Section/></Col>
-                <Col sm={2}><Sidebar/></Col>
+            <Row style={{height:"80vh"}}>
+                <Section/>
             </Row>
-            <Row>
+            <Row style={{height:"10vh"}}>
                 <Footer/>
             </Row>
         </Container>

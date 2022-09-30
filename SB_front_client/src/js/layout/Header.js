@@ -3,7 +3,7 @@ import {Container} from "react-bootstrap";
 function Header() {
     return (
         <Container>
-            <p>header</p>
+            header
         </Container>
     );
 }

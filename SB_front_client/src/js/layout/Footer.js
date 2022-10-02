@@ -2,8 +2,8 @@ import {Container} from "react-bootstrap";
 
 function Footer() {
     return (
-        <Container>
-            footer
+        <Container style={{backgroundColor:"#0093FE"}}>
+
         </Container>
     );
 }

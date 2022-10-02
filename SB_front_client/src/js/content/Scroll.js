@@ -6,14 +6,14 @@ import axios from "axios";
 
 import '../../css/Scroll.css';
 
-function Scroll() {
+function Scroll(props) {
     const [posts, setPost] = useState();
 
     useEffect(() => {
         axios.get('http://localhost:8080/posts/search')
             .then(response => {
                 setPost(response.data.map(post =>
-                    <Post key={post.postId} info={post}/>
+                    <Post key={post.postId} info={post} userBit={props.userBit}/>
                 ));
             })
     }, []);

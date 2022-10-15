@@ -1,26 +1,15 @@
-.react-horizontal-scrolling-menu--wrapper {
-    height: 100%;
-}
-
-.react-horizontal-scrolling-menu--inner-wrapper {
-    height: 100%;
-}
-
-.react-horizontal-scrolling-menu--scroll-container::-webkit-scrollbar {
-    display: none;
-    height: 100%;
-}
-
-.react-horizontal-scrolling-menu--scroll-container {
+.scrollBar {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
-    height: 100%;
-    display: flex;
-    align-items: center;
 }
 
-.react-horizontal-scrolling-menu--item {
-    height: 80%;
-    display: flex;
-    align-items: center;
+.scrollBar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+.scrollMenu {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 100%;
 }

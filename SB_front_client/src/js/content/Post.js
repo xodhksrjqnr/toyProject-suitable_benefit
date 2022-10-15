@@ -1,6 +1,8 @@
 import {Col, Container, Row} from "react-bootstrap";
 import {useEffect, useState} from "react";
 
+import '../../css/Post.css'
+
 function Post(props) {
     const [percent, setPercent] = useState();
     const [day, setDay] = useState();
@@ -12,13 +14,10 @@ function Post(props) {
         const numerator = validBit.replaceAll("0", "").length;
         setPercent(Math.round((numerator / denominator) * 100) + "%");
         setDay("D - " + Math.floor((new Date(props.info.expirationDate) - Date.now()) / (1000 * 60 * 60 * 24)));
-    }, [props])
+    }, [])
 
     return (
-        <Container className="rounded-3 mx-5 p-0 shadow" style={{
-            height:"55vh",
-            aspectRatio:"10/16"
-        }}>
+        <div className="shadow post">
             <Container className="h-50 p-0 rounded-top" style={{overflow:"hidden"}}>
                 <img src={props.info.imgPath} alt="postImg" className="img-fluid"/>
             </Container>
@@ -40,7 +39,7 @@ function Post(props) {
                 </Container>
                 <Container className="p-0" style={{height:"10vh"}}></Container>
             </Container>
-        </Container>
+        </div>
     );
 }
 

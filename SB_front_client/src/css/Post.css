@@ -1,0 +1,8 @@
+.post {
+    height: 55vh;
+    aspect-ratio: 10/16;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0 50px 0 50px;
+}

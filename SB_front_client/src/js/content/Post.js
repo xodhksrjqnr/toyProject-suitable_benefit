@@ -4,8 +4,8 @@ import {useEffect, useState} from "react";
 import '../../css/Post.css'
 
 function Post(props) {
-    const [percent, setPercent] = useState();
-    const [day, setDay] = useState();
+    const [percent, setPercent] = useState("");
+    const [day, setDay] = useState("");
 
     useEffect(() => {
         const validBit = ((props.info.needConditions & props.userBit) >>> 0).toString(2);
@@ -18,27 +18,25 @@ function Post(props) {
 
     return (
         <div className="shadow post">
-            <Container className="h-50 p-0 rounded-top" style={{overflow:"hidden"}}>
+            <div className="imgBox">
                 <img src={props.info.imgPath} alt="postImg" className="img-fluid"/>
-            </Container>
-            <Container className="h-50 py-1">
-                <Container className="p-0" style={{
-                    height: "5vh"
-                }}>
+            </div>
+            <div className="infoBox">
+                <div className="title">
                     {props.info.title}
-                </Container>
-                <Container className="p-0 text-center" style={{height:"10vh"}}>
-                    <Row className="px-3 h-100">
-                        <Col>{day}</Col>
-                        <Col className="px-3">
+                </div>
+                <div className="content">
+                    <Row>
+                        <Col className="day">{day}</Col>
+                        <Col className="fitness">
                             <div className="rounded-5 h-100" style={{backgroundColor:"#7AF67A"}}>
                                 {percent}
                             </div>
                         </Col>
                     </Row>
-                </Container>
-                <Container className="p-0" style={{height:"10vh"}}></Container>
-            </Container>
+                </div>
+                <div className="tag"></div>
+            </div>
         </div>
     );
 }

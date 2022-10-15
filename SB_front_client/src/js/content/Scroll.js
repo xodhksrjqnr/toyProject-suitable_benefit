@@ -6,18 +6,19 @@ import Post from "./Post";
 
 function Scroll(props) {
     const [posts, setPosts] = useState([]);
-    const page = useRef(0);
     const lastPost = useRef();
+    let page = 0;
 
     const getPosts = () => {
-        axios.get('http://localhost:8080/posts/search/' + page.current)
+        axios.get('http://localhost:8080/posts/search/' + page)
             .then(response => {
                 const newPosts = response.data.map(post =>
                     <Post key={post.postId} info={post} bit={props.userBit}/>
                 );
                 setPosts(prevPosts => prevPosts.concat(newPosts))
             })
-        page.current += 1;
+        page++;
+        return true;
     }
 
     const addNewPosts = async (entries, observer) => {

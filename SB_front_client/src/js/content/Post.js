@@ -1,4 +1,4 @@
-import {Col, Container, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import {useEffect, useState} from "react";
 
 import '../../css/Post.css'
@@ -14,10 +14,10 @@ function Post(props) {
         const numerator = validBit.replaceAll("0", "").length;
         setPercent(Math.round((numerator / denominator) * 100) + "%");
         setDay("D - " + Math.floor((new Date(props.info.expirationDate) - Date.now()) / (1000 * 60 * 60 * 24)));
-    }, [])
+    }, [props])
 
     return (
-        <div className="shadow post">
+        <div className="shadow post" onClick={() => props.clickEvent(props.info.postId)}>
             <div className="imgBox">
                 <img src={props.info.imgPath} alt="postImg" className="img-fluid"/>
             </div>

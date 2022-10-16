@@ -13,12 +13,11 @@ function Scroll(props) {
         axios.get('http://localhost:8080/posts/search/' + page)
             .then(response => {
                 const newPosts = response.data.map(post =>
-                    <Post key={post.postId} info={post} bit={props.userBit}/>
+                    <Post key={post.postId} info={post} bit={props.userBit} clickEvent={props.clickEvent}/>
                 );
-                setPosts(prevPosts => prevPosts.concat(newPosts))
+                setPosts(prevPosts => prevPosts.concat(newPosts));
             })
         page++;
-        return true;
     }
 
     const addNewPosts = async (entries, observer) => {

@@ -3,7 +3,7 @@ import {Col, Container, Row} from "react-bootstrap";
 function Header() {
     return (
         <Container style={{
-            backgroundColor:"#0093FE",
+            backgroundColor:"#87CEFA",
             color:"white",
             fontSize:"30px",
             verticalAlign: "middle"

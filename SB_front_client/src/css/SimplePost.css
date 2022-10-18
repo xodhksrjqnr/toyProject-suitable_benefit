@@ -1,0 +1,37 @@
+.simplePost {
+    height: 70%;
+    aspect-ratio: 10/16;
+    border-radius: 10px;
+    padding: 0;
+    margin: 11vh 50px 0 50px;
+}
+
+.simplePost > .imgBox {
+    height: 50%;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+}
+
+.simplePost > .infoBox {
+    height: 50%;
+}
+
+.title {
+    height: 5vh;
+}
+
+.content {
+    height: 10vh;
+}
+
+.content > div {
+    height: 100%;
+}
+
+.fitness {
+
+}
+
+.tag {
+    height: 10vh;
+}

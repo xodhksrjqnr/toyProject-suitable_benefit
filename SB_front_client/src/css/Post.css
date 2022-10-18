@@ -1,44 +1,76 @@
 .post {
-    height: 70%;
-    aspect-ratio: 10/16;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 0;
-    margin: 0 50px 0 50px;
+    height: 95%;
+    padding-top: 5vh;
 }
 
-.imgBox {
-    height: 50%;
-    padding: 0;
-    border-radius: 10px 10px 0 0;
+.info {
+    height: 90%;
+    padding: 2vh 0 3vh 0;
+}
+
+.info > div {
+    border-radius: 10px;
+    margin: 0 2vh 0 2vh;
+    position: relative;
+    height: 100%;
+    aspect-ratio: 10/16;
+}
+
+.info > div > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/*empty*/
+.info > .empty {
+
+}
+
+/*imgBox*/
+
+.info > .imgBox {
     overflow: hidden;
 }
 
-.infoBox {
-    height: 50%;
-}
-
-.title {
-    height: 5vh;
-}
-
-.content {
-    text-align: center;
-    height: 10vh;
-}
-
-.content > div {
+.info > .imgBox > img {
     height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
-.day {
+/*infoBox*/
 
+.info > .explanation {
+    white-space: normal;
 }
 
-.fitness {
-
+.info > .explanation > div {
+    text-align: left;
+    padding: 2vh;
 }
 
-.tag {
-    height: 10vh;
+.info > .explanation > div > p {
+    font-size: 10%;
+}
+
+.info > .expiration {
+    white-space: normal;
+}
+
+.info > .expiration > div {
+    text-align: left;
+    padding: 2vh;
+}
+
+.info > .expiration > div > p {
+    font-size: 10%;
+}
+
+/*button*/
+
+.post > .button {
+    text-align: center;
+    height: 10%;
+    padding: 1% 1% 2% 1%;
 }

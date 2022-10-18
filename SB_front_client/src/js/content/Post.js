@@ -1,41 +1,46 @@
-import {Col, Row} from "react-bootstrap";
-import {useEffect, useState} from "react";
-
 import '../../css/Post.css'
+import Clock from "./Clock";
+import Day from "./Day";
 
 function Post(props) {
-    const [percent, setPercent] = useState("");
-    const [day, setDay] = useState("");
-
-    useEffect(() => {
-        const validBit = ((props.info.needConditions & props.userBit) >>> 0).toString(2);
-        const bit = (props.info.needConditions >>> 0).toString(2);
-        const denominator = bit.replaceAll("0", "").length;
-        const numerator = validBit.replaceAll("0", "").length;
-        setPercent(Math.round((numerator / denominator) * 100) + "%");
-        setDay("D - " + Math.floor((new Date(props.info.expirationDate) - Date.now()) / (1000 * 60 * 60 * 24)));
-    }, [props])
-
     return (
-        <div className="shadow post" onClick={() => props.clickEvent(props.info.postId)}>
-            <div className="imgBox">
-                <img src={props.info.imgPath} alt="postImg" className="img-fluid"/>
+        <div className="post">
+            <div className="info scrollMenu scrollBar">
+                <div className="item empty"/>
+                <div className="item empty"/>
+                <div className="item imgBox shadow">
+                    <img src={props.post.imgPath} alt="postImg"/>
+                </div>
+                <div className="item explanation shadow">
+                    <div>
+                        <h6>무엇을 지원해주나요?</h6>
+                        <p>{props.post.content}</p>
+                    </div>
+                </div>
+                <div className="item expiration shadow">
+                    <div>
+                        <h6>누가 신청할 수 있나요?</h6>
+                        <p>{props.post.needConditions}</p>
+                    </div>
+                </div>
+                <div className="item expiration shadow">
+                    <div>
+                        <h6>언제까지 신청할 수 있나요?</h6>
+                        <Day expirationDate={props.post.expirationDate}/>
+                        <Clock expirationDate={props.post.expirationDate}/>
+                    </div>
+                </div>
+                <div className="item expiration shadow">
+                    <div>
+                        <h6>필요한 서류가 있나요?</h6>
+                        <p>{props.post.needDocuments}</p>
+                    </div>
+                </div>
+                <div className="item empty"/>
+                <div className="item empty"/>
             </div>
-            <div className="infoBox">
-                <div className="title">
-                    {props.info.title}
-                </div>
-                <div className="content">
-                    <Row>
-                        <Col className="day">{day}</Col>
-                        <Col className="fitness">
-                            <div className="rounded-5 h-100" style={{backgroundColor:"#7AF67A"}}>
-                                {percent}
-                            </div>
-                        </Col>
-                    </Row>
-                </div>
-                <div className="tag"></div>
+            <div className="button">
+                <button onClick={() => window.open(props.post.url)}>신청하기</button>
             </div>
         </div>
     );

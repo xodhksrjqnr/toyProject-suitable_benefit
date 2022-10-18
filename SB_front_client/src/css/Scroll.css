@@ -13,3 +13,7 @@
     white-space: nowrap;
     height: 100%;
 }
+
+.scrollMenu > .item {
+    display: inline-block;
+}

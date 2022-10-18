@@ -1,8 +1,9 @@
 import {useEffect, useRef, useState} from "react";
 
-import '../../css/Scroll.css';
 import axios from "axios";
-import Post from "./Post";
+import SimplePost from "./SimplePost";
+import '../../css/Scroll.css';
+
 
 function Scroll(props) {
     const [posts, setPosts] = useState([]);
@@ -13,7 +14,7 @@ function Scroll(props) {
         axios.get('http://localhost:8080/posts/search/' + page)
             .then(response => {
                 const newPosts = response.data.map(post =>
-                    <Post key={post.postId} info={post} bit={props.userBit} clickEvent={props.clickEvent}/>
+                    <SimplePost key={post.postId} info={post} bit={props.userBit} clickEvent={props.clickEvent}/>
                 );
                 setPosts(prevPosts => prevPosts.concat(newPosts));
             })

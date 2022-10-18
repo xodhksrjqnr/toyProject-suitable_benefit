@@ -1,6 +1,7 @@
 import axios from "axios";
 import {useEffect, useState} from "react";
-import {Container} from "react-bootstrap";
+import Post from "./Post";
+import '../../css/Scroll.css';
 
 function PostPage(props) {
     const [post, setPost] = useState();
@@ -9,19 +10,8 @@ function PostPage(props) {
         axios.get('http://localhost:8080/posts/' + props.postNum)
             .then(response => {
                 const post = response.data;
-                console.log(post)
                 setPost(
-                    <div>
-                        <img src={post.imgPath} alt="postImg"/>
-                        <p>{post.postId}</p>
-                        <p>{post.title}</p>
-                        <p>{post.content}</p>
-                        <p>{post.createdDate}</p>
-                        <p>{post.expirationDate}</p>
-                        <p>{post.needConditions}</p>
-                        <p>{post.needDocuments}</p>
-                        <p>{post.url}</p>
-                    </div>
+                    <Post key={post.postId} post={post}/>
                 );
             })
     }
@@ -31,9 +21,9 @@ function PostPage(props) {
     }, [])
 
     return (
-        <Container>
+        <div className="postPage h-100 px-0">
             {post}
-        </Container>
+        </div>
     );
 }
 

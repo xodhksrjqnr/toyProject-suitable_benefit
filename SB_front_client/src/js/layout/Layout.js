@@ -1,7 +1,6 @@
 import {Container, Row} from "react-bootstrap";
 import Header from "./Header";
 import Footer from "./Footer";
-import Section from "./Section";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useRef, useState} from "react";
@@ -24,12 +23,12 @@ function Layout() {
     }
 
     return (
-        <Container fluid className="vh-100">
+        <Container fluid className="px-0 vw-100">
             <Row style={{height:"10vh"}}>
                 <Header/>
             </Row>
             <Row style={{height:"80vh"}}>
-                <Section page={pageList[page]}/>
+                {pageList[page]}
             </Row>
             <Row style={{height:"10vh"}}>
                 <Footer/>

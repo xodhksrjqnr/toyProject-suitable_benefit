@@ -10,7 +10,7 @@ import taewan.SBadmin.service.MemberService;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "${allowed.origins}")
+@CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})
 @RequestMapping(value = "members")
 public class MemberController {
 

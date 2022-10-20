@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 @Setter
 @ToString
 public class PostSimpleInfoDto {
-
     private Long postId;
     private String title;
     private String imgPath;

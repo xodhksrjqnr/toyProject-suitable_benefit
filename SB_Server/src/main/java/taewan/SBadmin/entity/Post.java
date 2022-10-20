@@ -2,18 +2,17 @@ package taewan.SBadmin.entity;
 
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import taewan.SBadmin.dto.post.PostSaveDto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @ToString(exclude = "postId")
 @NoArgsConstructor
+@EntityListeners(AuditingEntityListener.class)
 public class Post <T extends PostSaveDto> {
 
     @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)

@@ -14,6 +14,7 @@ import java.util.Random;
 
 @RestController
 @RequestMapping("posts")
+@ResponseBody
 public class PostController {
     private final PostService postService;
 
@@ -22,20 +23,20 @@ public class PostController {
         this.postService = postService;
     }
 
-    @CrossOrigin(origins = "${allowed.origins}")
-    @GetMapping(value = {"/search/{page}", "/search"})
-    public List<PostSimpleInfoDto> search(@PathVariable(required = false) Integer page) {
+    @CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})
+    @GetMapping("/search/{page}")
+    public List<PostSimpleInfoDto> search(@PathVariable Integer page) {
         return postService.searchAll(page);
     }
 
-    @CrossOrigin(origins = "${allowed.origins}")
+    @CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})
     @GetMapping("/{postId}")
     public PostFullInfoDto searchOne(@PathVariable Long postId) {
         return postService.searchOne(postId);
     }
 
     @PostMapping("/upload")
-    @CrossOrigin(origins = "http://localhost:3001")
+    @CrossOrigin(origins = "${client.origins}")
     public Long upload(PostSaveDto postSaveDto) {
         System.out.println(postSaveDto.toString());
         System.out.println(postSaveDto.getNeedDocuments().byteValue());
@@ -47,10 +48,13 @@ public class PostController {
     public void tmpUpload(@PathVariable int num) {
         Random random = new Random();
         for (int i = 0; i < num; i++) {
-            String title = "title" + i;
-            String imgPath = "https://www.next-t.co.kr/public/uploads/7b7f7e2138e29e598cd0cdf2c85ea08d.jpg";
-            String content = "1.test를 위해 입력된 내용입니다./n2.내용의 형식은 대체로 같으며 게시물의 숫자에 따른 차이가 있습니다./n감사합니다." + i;
-            String url = "https://test-url" + i + ".com";
+            String title = "대학 생활비가 걱정일 땐?" + i;
+            String imgPath = "https://www.ajou.ac.kr/_attach/ajou/editor-image/2021/05/GcOThbfNUXHsPQGUEbnqrcNCiT.jpg";
+            String content = "1. 안정적인 학업여건 조성과 취업역량 제고를 위한 장학금입니다.\n" +
+                    "2. 매 학기별 신청기간과 추가 신청기간이 존재합니다.\n" +
+                    "3. (시급) 교내근로 9,160원, 교외근로 11,150원을 지원합니다.\n" +
+                    "4. (최대근로시간) 1일 8시간 / 주당 학기중 20시간(방학중40시간) / 학기당 520시간입니다.";
+            String url = "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_04_01";
             LocalDateTime expirationDate = LocalDateTime.now().plusDays(i + 1);
             Long needConditions = Math.abs(random.nextLong());
             Long needDocuments = Math.abs(random.nextLong());

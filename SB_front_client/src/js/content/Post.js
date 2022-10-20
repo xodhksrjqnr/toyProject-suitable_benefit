@@ -3,6 +3,7 @@ import Clock from "./Clock";
 import Day from "./Day";
 
 function Post(props) {
+    console.log(props)
     return (
         <div className="post scrollMenu scrollBar">
             <div className="item empty"/>
@@ -20,7 +21,7 @@ function Post(props) {
                 <div>
                     <h6>누가 신청할 수 있나요?</h6>
                     {props.post.convertedConditions.map(condition =>
-                        <div className="mx-1" style={{display:"inline-block"}} key={condition}>{condition}</div>
+                        <div className="mx-1" style={{display:"inline-block", fontSize:"10px"}} key={condition}>{condition}</div>
                     )}
                 </div>
             </div>
@@ -34,7 +35,9 @@ function Post(props) {
             <div className="item expiration shadow">
                 <div>
                     <h6>필요한 서류가 있나요?</h6>
-                    <p>{props.post.needDocuments}</p>
+                    {props.post.convertedDocuments.map(document =>
+                        <div className="mx-1" style={{display:"inline-block", fontSize:"5px"}} key={document}>{document}</div>
+                    )}
                 </div>
             </div>
             <div className="item button shadow">

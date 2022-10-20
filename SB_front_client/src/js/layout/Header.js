@@ -1,22 +1,21 @@
-import {Col, Container, Row} from "react-bootstrap";
+import '../../css/Header.css'
+import MenuPopup from "../content/MenuPopup";
+import {useState} from "react";
 
-function Header() {
+function Header(props) {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <Container style={{
-            backgroundColor:"#87CEFA",
-            color:"white",
-            fontSize:"30px",
-            verticalAlign: "middle"
-        }}>
-            <Row>
-                <Col sm={9}>
-                    <em><b><strong>Suitable Benefit</strong></b></em>
-                </Col>
-                <Col sm={3}>
-                    <button>test</button>
-                </Col>
-            </Row>
-        </Container>
+        <div className="header">
+            <div></div>
+            <div onClick={() => props.clickEvent()}>
+                <button>에이드</button>
+            </div>
+            <div>
+                <button onClick={() => setIsOpen(!isOpen)}>Menu</button>
+            </div>
+            {isOpen && <MenuPopup/>}
+        </div>
     );
 }
 

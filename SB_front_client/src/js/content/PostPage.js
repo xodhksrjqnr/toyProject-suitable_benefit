@@ -21,7 +21,7 @@ function PostPage(props) {
     }, [])
 
     return (
-        <div className="postPage h-100 px-0">
+        <div className="postPage px-0" style={{height: "80vh"}}>
             {post}
         </div>
     );

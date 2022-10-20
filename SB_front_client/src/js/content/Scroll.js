@@ -36,7 +36,7 @@ function Scroll(props) {
 
     useEffect(() => {
         try {
-            lastPost.current = document.querySelector(".post:last-of-type");
+            lastPost.current = document.querySelector(".simplePost:last-of-type");
             observer.current.observe(lastPost.current);
         } catch (error) {
         }

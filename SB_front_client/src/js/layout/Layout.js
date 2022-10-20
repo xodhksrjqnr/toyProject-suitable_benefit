@@ -1,4 +1,3 @@
-import {Container, Row} from "react-bootstrap";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -7,10 +6,15 @@ import {useRef, useState} from "react";
 import Scroll from "../content/Scroll";
 import PostPage from "../content/PostPage";
 
+
 function Layout() {
     const [page, setPage] = useState("mainPage")
     const userBit = 1630063798920911600;
     const postNum = useRef(0);
+
+    const logoClickEvent = () => {
+        setPage("mainPage");
+    }
 
     const postClickEvent = (id) => {
         postNum.current = id;
@@ -23,17 +27,17 @@ function Layout() {
     }
 
     return (
-        <Container fluid className="px-0 vw-100">
-            <Row style={{height:"10vh"}}>
-                <Header/>
-            </Row>
-            <Row style={{height:"80vh"}}>
+        <div className="layout">
+            <div style={{height:"10vh"}}>
+                <Header clickEvent={logoClickEvent}/>
+            </div>
+            <div style={{height:"80vh"}}>
                 {pageList[page]}
-            </Row>
-            <Row style={{height:"10vh"}}>
+            </div>
+            <div style={{height:"10vh"}}>
                 <Footer/>
-            </Row>
-        </Container>
+            </div>
+        </div>
     );
 }
 

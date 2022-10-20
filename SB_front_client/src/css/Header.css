@@ -1,0 +1,17 @@
+.header {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    padding: 0;
+}
+
+.header > div {
+    display: inline-block;
+    padding-top: 3vh;
+    width: 33.3vw;
+}
+
+.header > div > button {
+    border: none;
+    background-color: white;
+}

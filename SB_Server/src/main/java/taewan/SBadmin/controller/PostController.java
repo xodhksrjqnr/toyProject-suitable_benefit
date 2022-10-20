@@ -13,7 +13,6 @@ import java.util.Random;
 
 @RestController
 @RequestMapping("posts")
-@ResponseBody
 public class PostController {
     private final PostService postService;
 

@@ -19,7 +19,7 @@ public class NeedDocumentController {
     public void tmpUpload() {
         for (int i = 0; i < 60; i++) {
             NeedDocument tmp = new NeedDocument();
-            tmp.setName("test" + i);
+            tmp.setName("document" + i);
             needDocumentDao.save(tmp);
         }
     }

@@ -20,7 +20,7 @@ public class NeedConditionController {
     public void tmpUpload() {
         for (int i = 0; i < 60; i++) {
             NeedCondition tmp = new NeedCondition();
-            tmp.setName("test" + i);
+            tmp.setName("condition" + i);
             needConditionDao.save(tmp);
         }
     }

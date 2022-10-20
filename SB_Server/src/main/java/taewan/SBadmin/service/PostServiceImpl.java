@@ -3,6 +3,7 @@ package taewan.SBadmin.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import taewan.SBadmin.dao.NeedConditionDao;
+import taewan.SBadmin.dao.NeedDocumentDao;
 import taewan.SBadmin.dao.PostDao;
 import taewan.SBadmin.dto.post.PostFullInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
@@ -16,11 +17,14 @@ public class PostServiceImpl implements PostService {
 
     private final PostDao postDao;
     private final NeedConditionDao needConditionDao;
+    private final NeedDocumentDao needDocumentDao;
 
     @Autowired
-    public PostServiceImpl(PostDao postDao, NeedConditionDao needConditionDao) {
+    public PostServiceImpl(PostDao postDao, NeedConditionDao needConditionDao,
+                           NeedDocumentDao needDocumentDao) {
         this.postDao = postDao;
         this.needConditionDao = needConditionDao;
+        this.needDocumentDao = needDocumentDao;
     }
 
     @Override
@@ -39,6 +43,9 @@ public class PostServiceImpl implements PostService {
         PostFullInfoDto found = postDao.findOneByPostId(postId);
         found.setConvertedConditions(
                 needConditionDao.findValidConditions(found.getNeedConditions())
+        );
+        found.setConvertedDocuments(
+                needDocumentDao.findValidDocuments(found.getNeedConditions())
         );
         return found;
     }

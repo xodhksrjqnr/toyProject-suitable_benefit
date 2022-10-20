@@ -40,7 +40,7 @@ public class AppConfig {
 
     @Bean
     public PostService postService() {
-        return new PostServiceImpl(postDao(), needConditionDao());
+        return new PostServiceImpl(postDao(), needConditionDao(), needDocumentDao());
     }
 
     @Bean

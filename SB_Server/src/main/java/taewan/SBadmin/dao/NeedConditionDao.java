@@ -7,28 +7,41 @@ import taewan.SBadmin.repository.NeedConditionRepository;
 
 import javax.transaction.Transactional;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 @Transactional
 public class NeedConditionDao {
+    private Map<Long, String> registeredConditions = new HashMap<>();
     private NeedConditionRepository needConditionRepository;
 
     @Autowired
     public NeedConditionDao(NeedConditionRepository needConditionRepository) {
         this.needConditionRepository = needConditionRepository;
+        this.needConditionRepository
+                .findAll()
+                .forEach(
+                        condition -> registeredConditions.put(
+                                condition.getConditionId(), condition.getName()
+                        )
+                );
     }
 
     public NeedConditionDto save(NeedCondition needCondition) {
         return new NeedConditionDto(needConditionRepository.save(needCondition));
     }
 
-    public Map<Long, String> findAll() {
-        Map<Long, String> conditions = new HashMap<>();
-        needConditionRepository
-                .findAll()
-                .forEach(
-                        condition -> conditions.put(condition.getConditionId(), condition.getName())
-                );
-        return conditions;
+    public List<String> findAll(Long bitmap) {
+        List<String> valid = new LinkedList<>();
+        int index = 1;
+
+        while (bitmap != 0) {
+            if ((bitmap & 1) != 0)
+                valid.add(registeredConditions.get(index));
+            index++;
+            bitmap >>>= 1;
+        }
+        return valid;
     }
 }

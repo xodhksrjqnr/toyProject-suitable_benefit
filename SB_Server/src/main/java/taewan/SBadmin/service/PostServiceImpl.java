@@ -45,7 +45,7 @@ public class PostServiceImpl implements PostService {
                 needConditionDao.findValidConditions(found.getNeedConditions())
         );
         found.setConvertedDocuments(
-                needDocumentDao.findValidDocuments(found.getNeedConditions())
+                needDocumentDao.findValidDocuments(found.getNeedDocuments())
         );
         return found;
     }

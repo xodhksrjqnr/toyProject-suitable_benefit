@@ -5,6 +5,8 @@ import lombok.Setter;
 import lombok.ToString;
 import taewan.SBadmin.entity.Post;
 
+import java.util.List;
+
 @Getter
 @Setter
 @ToString(callSuper = true)
@@ -13,6 +15,7 @@ public class PostFullInfoDto extends PostSimpleInfoDto {
     private String content;
     private Long needDocuments;
     private String url;
+    private List<String> convertedConditions;
 
     public PostFullInfoDto(Post post) {
         super(post);

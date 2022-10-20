@@ -19,7 +19,9 @@ function Post(props) {
             <div className="item expiration shadow">
                 <div>
                     <h6>누가 신청할 수 있나요?</h6>
-                    <p>{props.post.needConditions}</p>
+                    {props.post.convertedConditions.map(condition =>
+                        <div className="mx-1" style={{display:"inline-block"}} key={condition}>{condition}</div>
+                    )}
                 </div>
             </div>
             <div className="item expiration shadow">

@@ -14,7 +14,7 @@ import java.util.Map;
 @Transactional
 public class NeedConditionDao {
     private Map<Long, String> registeredConditions = new HashMap<>();
-    private NeedConditionRepository needConditionRepository;
+    private final NeedConditionRepository needConditionRepository;
 
     @Autowired
     public NeedConditionDao(NeedConditionRepository needConditionRepository) {
@@ -32,9 +32,9 @@ public class NeedConditionDao {
         return new NeedConditionDto(needConditionRepository.save(needCondition));
     }
 
-    public List<String> findAll(Long bitmap) {
+    public List<String> findValidConditions(long bitmap) {
         List<String> valid = new LinkedList<>();
-        int index = 1;
+        long index = 1;
 
         while (bitmap != 0) {
             if ((bitmap & 1) != 0)

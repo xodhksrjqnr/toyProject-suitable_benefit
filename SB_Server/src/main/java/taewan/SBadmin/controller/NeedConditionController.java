@@ -18,7 +18,7 @@ public class NeedConditionController {
 
     @GetMapping("/tmpNeedConditions")
     public void tmpUpload() {
-        for (int i = 0; i < 60; i++) {
+        for (int i = 0; i < 64; i++) {
             NeedCondition tmp = new NeedCondition();
             tmp.setName("condition" + i);
             needConditionDao.save(tmp);

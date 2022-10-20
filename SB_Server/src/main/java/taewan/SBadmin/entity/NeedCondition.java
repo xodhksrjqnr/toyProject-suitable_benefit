@@ -1,6 +1,7 @@
 package taewan.SBadmin.entity;
 
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.Entity;
@@ -10,10 +11,11 @@ import javax.persistence.Id;
 
 @Entity
 @Getter
+@Setter
 @ToString
 public class NeedCondition {
 
-    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long conditionId;
     private String name;
 }

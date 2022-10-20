@@ -6,7 +6,7 @@ import taewan.SBadmin.entity.NeedDocument;
 import java.util.List;
 
 public interface NeedDocumentRepository extends JpaRepository<NeedDocument, Long> {
-    NeedDocument save(NeedDocument needCondition);
+    NeedDocument save(NeedDocument needDocument);
 
     @Override
     List<NeedDocument> findAll();

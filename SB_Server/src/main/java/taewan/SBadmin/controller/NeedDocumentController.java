@@ -13,7 +13,7 @@ public class NeedDocumentController {
         this.needDocumentDao = needDocumentDao;
     }
 
-    @GetMapping("/tmpNeedConditions")
+    @GetMapping("/tmpNeedDocuments")
     public void tmpUpload() {
         for (int i = 0; i < 60; i++) {
             NeedDocument tmp = new NeedDocument();

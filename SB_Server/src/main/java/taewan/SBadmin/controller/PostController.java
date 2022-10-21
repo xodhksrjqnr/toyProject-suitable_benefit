@@ -54,7 +54,7 @@ public class PostController {
                     "4. (최대근로시간) 1일 8시간 / 주당 학기중 20시간(방학중40시간) / 학기당 520시간입니다.";
             String url = "https://www.kosaf.go.kr/ko/scholar.do?pg=scholarship05_04_01";
             LocalDateTime expirationDate = LocalDateTime.now().plusDays(i + 1);
-            Long needConditions = Math.abs(random.nextLong());
+            Long needConditions = 1L;//Math.abs(random.nextLong());
             Long needDocuments = Math.abs(random.nextLong());
             PostSaveDto postSaveDto = new PostSaveDto(title, imgPath, content, expirationDate, needConditions, needDocuments, url);
             postService.upload(postSaveDto);

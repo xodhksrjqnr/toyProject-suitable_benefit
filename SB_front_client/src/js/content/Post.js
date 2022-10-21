@@ -3,7 +3,6 @@ import Clock from "./Clock";
 import Day from "./Day";
 
 function Post(props) {
-    console.log(props)
     return (
         <div className="post scrollMenu scrollBar">
             <div className="item empty"/>

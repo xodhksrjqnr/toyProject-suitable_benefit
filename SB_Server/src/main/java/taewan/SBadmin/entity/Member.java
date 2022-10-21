@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Member {
 
-    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long memberId;
     private String id;
     private String password;

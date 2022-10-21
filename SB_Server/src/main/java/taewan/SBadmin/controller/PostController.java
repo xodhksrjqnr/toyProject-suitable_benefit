@@ -1,7 +1,6 @@
 package taewan.SBadmin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 import taewan.SBadmin.dto.post.PostFullInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
@@ -14,7 +13,6 @@ import java.util.Random;
 
 @RestController
 @RequestMapping("posts")
-@ResponseBody
 public class PostController {
     private final PostService postService;
 

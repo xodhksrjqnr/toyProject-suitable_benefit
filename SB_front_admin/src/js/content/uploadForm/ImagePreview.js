@@ -19,10 +19,10 @@ function ImagePreview() {
 
     return (
         <div className="text-center mb-5">
-            <label htmlFor="image" style={{width:"30%", height:"auto", margin:"0 auto"}}>
+            <label htmlFor="imgPath" style={{width:"30%", height:"auto", margin:"0 auto"}}>
                 <Image src={imageSrc} className="img-fluid"/>
             </label>
-            <input type="file" style={{display: "none"}} id="image" onChange={(e) => {
+            <input type="file" style={{display: "none"}} id="imgPath" name="imgPath" onChange={(e) => {
                 encodeFileToBase64(e.target.files[0]);
             }}/>
         </div>

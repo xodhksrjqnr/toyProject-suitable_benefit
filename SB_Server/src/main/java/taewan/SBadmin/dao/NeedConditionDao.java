@@ -32,6 +32,12 @@ public class NeedConditionDao {
         return new NeedConditionDto(needConditionRepository.save(needCondition));
     }
 
+    public List<NeedConditionDto> searchAll() {
+        List<NeedConditionDto> found = new LinkedList<>();
+        needConditionRepository.findAll().forEach(condition -> found.add(new NeedConditionDto(condition)));
+        return found;
+    }
+
     public List<String> findValidConditions(long bitmap) {
         List<String> valid = new LinkedList<>();
         long index = 1;

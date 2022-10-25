@@ -1,54 +1,46 @@
-import NeedList from "./NeedList";
-import {useEffect, useState} from "react";
-import Container from "react-bootstrap/Container";
+import Conditions from "./Conditions";
+import {useRef, useState} from "react";
 
-function RequiredInfo(props) {
+function RequiredInfo() {
     const [pick, setPick] = useState([]);
-    const [bit, setBit] = useState(0n);
-    const [tmp , setTmp] = useState([64]);
+    const tmpBit = useRef(0);
 
-    useEffect(() => {
-        console.log(bit);
-        // console.log(pick);
-        // console.log(bit);
-    }, [pick, bit]);
-
-    const removeNeedElement = (e, id) => {
-        const newBit = 1n << id;
+    const removeNeedElement = (id) => {
+        const newBit = 1 << (id - 1);
 
         document.getElementById(id).remove();
-        setBit(prevBit => prevBit ^ newBit);
-        // setBit(prevBit => prevBit)
+        tmpBit.current ^= newBit;
     }
 
-    const addNeedElement = (e, inputId) => {
-        const target = document.getElementById(inputId);
-        const id = document.getElementById(target.value).accessKey;
-        const newValue = (
-            <div id={id} key={id}>
-                <p>{target.value}</p>
-                <button type="button" onClick={(e) => removeNeedElement(e, id)} className="bg-black">-</button>
-            </div>
-        );
-        const newBit = 1n << id;
+    const addNeedElement = () => {
+        const target = document.getElementById("필요조건");
+        if (!target.value) return;
+        const id = document.getElementById(target.value).name;
+        const newBit = 1 << (id - 1);
 
-        if ((bit & newBit) === 0n) {
-            setPick(prevList => [...prevList, newValue]);
-            setBit(prevBit => prevBit | newBit);
+        if ((tmpBit.current & newBit) === 0) {
+            const newValue = (
+                <div id={id} key={id} style={{display:"inline-block"}}>
+                    <span>{target.value}</span>
+                    <button type="button" onClick={() => removeNeedElement(id)} className="bg-black">-</button>
+                </div>
+            );
+            setPick(prevList => prevList.concat(newValue));
+            tmpBit.current |= newBit;
         }
         target.value = null;
     }
 
     return (
         <div>
-            <input type="text" name={props.need} value={tmp} readOnly hidden/>
-            <label htmlFor={props.name}>{props.name}</label>
-            <input type="text" id={props.name} placeholder="search for names" list={props.need + "List"}/>
-            <button type="button" onClick={(e) => addNeedElement(e, props.name)} className="bg-black">+</button>
-            <Container>
+            <input type="text" name="needConditions" value={tmpBit.current} readOnly hidden/>
+            <label htmlFor="필요조건">필요 조건</label>
+            <input type="text" id="필요조건" placeholder="search for names" list="needConditions"/>
+            <button type="button" onClick={() => addNeedElement()} className="bg-black">+</button>
+            <div style={{position:"relative"}}>
                 {pick}
-            </Container>
-            <NeedList need={props.need}/>
+            </div>
+            <Conditions/>
         </div>
     );
 }

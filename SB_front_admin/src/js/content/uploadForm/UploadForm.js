@@ -23,11 +23,10 @@ function UploadForm() {
                     <input type="datetime-local" id="expirationDate" name="expirationDate"/>
                 </div>
                 <div>
-                    <label htmlFor="procedure">URL</label>
-                    <input type="text" id="procedure" name="procedure"/>
+                    <label htmlFor="url">URL</label>
+                    <input type="text" id="url" name="url"/>
                 </div>
-                <RequiredInfo need="needConditions" name="필요 조건"/>
-                <RequiredInfo need="needDocuments" name="필요 서류"/>
+                <RequiredInfo/>
                 <div>
                     <button type="submit" form="postUploadForm">등록하기</button>
                 </div>

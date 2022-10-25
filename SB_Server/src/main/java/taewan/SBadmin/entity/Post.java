@@ -25,7 +25,6 @@ public class Post <T extends PostSaveDto> {
     private LocalDateTime createdDate;
     private LocalDateTime expirationDate;
     private Long needConditions;
-    private Long needDocuments;
 
     public Post(T dto) {
         this.init(dto);
@@ -37,7 +36,6 @@ public class Post <T extends PostSaveDto> {
         this.content = dto.getContent();
         this.expirationDate = dto.getExpirationDate();
         this.needConditions = dto.getNeedConditions();
-        this.needDocuments = dto.getNeedDocuments();
         this.url = dto.getUrl();
     }
 }

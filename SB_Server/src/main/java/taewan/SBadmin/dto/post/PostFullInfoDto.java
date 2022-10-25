@@ -13,15 +13,12 @@ import java.util.List;
 public class PostFullInfoDto extends PostSimpleInfoDto {
 
     private String content;
-    private Long needDocuments;
     private String url;
     private List<String> convertedConditions;
-    private List<String> convertedDocuments;
 
     public PostFullInfoDto(Post post) {
         super(post);
         this.content = post.getContent();
-        this.needDocuments = post.getNeedDocuments();
         this.url = post.getUrl();
     }
 }

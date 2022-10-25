@@ -7,19 +7,21 @@ import java.time.LocalDateTime;
 
 @Getter
 @SuperBuilder
-@ToString(callSuper = true)
-public class PostSaveDto extends PostDto {
+@ToString
+public class PostSaveDto {
+    private String title;
+    private String imgPath;
     private String content;
+    private LocalDateTime expirationDate;
     private Long needConditions;
-    private Long needDocuments;
     private String url;
 
-    public PostSaveDto(String title, String imgPath, String content, LocalDateTime expirationDate,
-                       Long needConditions, Long needDocuments, String url) {
-        super(title, imgPath, expirationDate);
+    public PostSaveDto(String title, String imgPath, String content, LocalDateTime expirationDate, Long needConditions, String url) {
+        this.title = title;
+        this.imgPath = imgPath;
+        this.expirationDate = expirationDate;
         this.content = content;
         this.needConditions = needConditions;
-        this.needDocuments = needDocuments;
         this.url = url;
     }
 }

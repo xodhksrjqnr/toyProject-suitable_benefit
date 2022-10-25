@@ -14,7 +14,7 @@ function Header(props) {
             <div>
                 <button onClick={() => setIsOpen(!isOpen)}>Menu</button>
             </div>
-            {isOpen && <MenuPopup/>}
+            {isOpen && <MenuPopup userBit={props.userBit} bitEvent={props.bitEvent}/>}
         </div>
     );
 }

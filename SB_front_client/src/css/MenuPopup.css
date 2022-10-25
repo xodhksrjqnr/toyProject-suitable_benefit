@@ -5,3 +5,11 @@
     background-color: white;
     height: 60vh;
 }
+
+.menuPopup > .check {
+    background-color: yellow;
+}
+
+.menuPopup > .uncheck {
+    background-color: gray;
+}

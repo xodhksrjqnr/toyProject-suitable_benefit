@@ -9,7 +9,7 @@ import PostPage from "../content/PostPage";
 
 function Layout() {
     const [page, setPage] = useState("mainPage")
-    const userBit = 1630063798920911600;
+    const userBit = useRef(0);
     const postNum = useRef(0);
 
     const logoClickEvent = () => {
@@ -21,15 +21,19 @@ function Layout() {
         setPage("postPage");
     }
 
+    const changeBit = (bit) => {
+        userBit.current = bit;
+    }
+
     const pageList = {
         mainPage : <Scroll userBit={userBit} clickEvent={postClickEvent}/>,
-        postPage : <PostPage userBit={userBit} postNum={postNum.current}/>
+        postPage : <PostPage userBit={userBit.current} postNum={postNum.current}/>
     }
 
     return (
         <div className="layout">
             <div style={{height:"10vh"}}>
-                <Header clickEvent={logoClickEvent}/>
+                <Header userBit={userBit} clickEvent={logoClickEvent} bitEvent={changeBit}/>
             </div>
             <div style={{height:"80vh"}}>
                 {pageList[page]}

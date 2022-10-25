@@ -6,7 +6,6 @@ function Post(props) {
     return (
         <div className="post scrollMenu scrollBar">
             <div className="item empty"/>
-            <div className="item empty"/>
             <div className="item imgBox shadow">
                 <img src={props.post.imgPath} alt="postImg"/>
             </div>
@@ -18,10 +17,13 @@ function Post(props) {
             </div>
             <div className="item expiration shadow">
                 <div>
-                    <h6>누가 신청할 수 있나요?</h6>
-                    {props.post.convertedConditions.map(condition =>
-                        <div className="mx-1" style={{display:"inline-block", fontSize:"10px"}} key={condition}>{condition}</div>
-                    )}
+                    <h6 style={{height:"5%"}}>누가 신청할 수 있나요?</h6>
+                    <div style={{height:"85%"}}>
+                        {props.post.convertedConditions.map(condition =>
+                            <div className="mx-1" style={{display:"inline-block", fontSize:"10px"}} key={condition}>{condition}</div>
+                        )}
+                    </div>
+                    <div style={{height:"5%", fontSize:"5px"}}>❉ 자세한 신청 조건을 꼭 확인하세요! ❉</div>
                 </div>
             </div>
             <div className="item expiration shadow">
@@ -33,10 +35,7 @@ function Post(props) {
             </div>
             <div className="item expiration shadow">
                 <div>
-                    <h6>필요한 서류가 있나요?</h6>
-                    {props.post.convertedDocuments.map(document =>
-                        <div className="mx-1" style={{display:"inline-block", fontSize:"5px"}} key={document}>{document}</div>
-                    )}
+                    <h6 style={{height:"5%"}}>궁금해요!</h6>
                 </div>
             </div>
             <div className="item button shadow">
@@ -47,7 +46,6 @@ function Post(props) {
                     </div>
                 </div>
             </div>
-            <div className="item empty"/>
             <div className="item empty"/>
         </div>
     );

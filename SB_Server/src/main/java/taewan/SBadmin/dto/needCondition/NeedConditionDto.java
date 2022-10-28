@@ -16,4 +16,9 @@ public class NeedConditionDto {
         this.conditionId = needCondition.getConditionId();
         this.name = needCondition.getName();
     }
+
+    public NeedConditionDto(Long conditionId, String name) {
+        this.conditionId = conditionId;
+        this.name = name;
+    }
 }

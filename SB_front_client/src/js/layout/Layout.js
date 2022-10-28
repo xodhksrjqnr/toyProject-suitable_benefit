@@ -40,7 +40,7 @@ function Layout() {
     return (
         <div className="layout">
             <div style={{height:"10vh"}}>
-                <Header userBit={userBit} clickEvent={logoClickEvent} filterClickEvent={filterClickEvent}/>
+                <Header clickEvent={logoClickEvent} filterClickEvent={filterClickEvent}/>
             </div>
             <div style={{height:"80vh"}}>
                 {pageList[page]}

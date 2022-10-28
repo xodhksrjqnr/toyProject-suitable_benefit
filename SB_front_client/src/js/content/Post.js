@@ -33,11 +33,6 @@ function Post(props) {
                     <Clock expirationDate={props.post.expirationDate}/>
                 </div>
             </div>
-            <div className="item expiration shadow">
-                <div>
-                    <h6 style={{height:"5%"}}>궁금해요!</h6>
-                </div>
-            </div>
             <div className="item button shadow">
                 <div>
                     <h4>If you want</h4>

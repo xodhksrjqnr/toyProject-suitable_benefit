@@ -1,8 +1,8 @@
-import '../../css/MenuPopup.css'
+import '../../css/Filter.css'
 import {useEffect, useRef, useState} from "react";
 import axios from "axios";
 
-function MenuPopup (props) {
+function Filter (props) {
     const [conditions, setConditions] = useState([]);
     const curBit = useRef(props.userBit.current);
 
@@ -44,7 +44,7 @@ function MenuPopup (props) {
 
     return (
         <>
-            <div className="menuPopup shadow">
+            <div className="filter shadow">
                 {conditions}
                 <button onClick={() => props.bitEvent(curBit.current)}>완료</button>
             </div>
@@ -52,4 +52,4 @@ function MenuPopup (props) {
     );
 }
 
-export default MenuPopup;
+export default Filter;

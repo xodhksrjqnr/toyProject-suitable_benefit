@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {useRef, useState} from "react";
 import Scroll from "../content/Scroll";
 import PostPage from "../content/PostPage";
+import Filter from "../content/Filter";
 
 
 function Layout() {
@@ -21,19 +22,25 @@ function Layout() {
         setPage("postPage");
     }
 
+    const filterClickEvent = () => {
+        setPage("filterPage");
+    }
+
     const changeBit = (bit) => {
         userBit.current = bit;
+        setPage("mainPage");
     }
 
     const pageList = {
         mainPage : <Scroll userBit={userBit} clickEvent={postClickEvent}/>,
-        postPage : <PostPage userBit={userBit.current} postNum={postNum.current}/>
+        postPage : <PostPage userBit={userBit.current} postNum={postNum.current}/>,
+        filterPage : <Filter userBit={userBit} bitEvent={changeBit}/>
     }
 
     return (
         <div className="layout">
             <div style={{height:"10vh"}}>
-                <Header userBit={userBit} clickEvent={logoClickEvent} bitEvent={changeBit}/>
+                <Header userBit={userBit} clickEvent={logoClickEvent} filterClickEvent={filterClickEvent}/>
             </div>
             <div style={{height:"80vh"}}>
                 {pageList[page]}

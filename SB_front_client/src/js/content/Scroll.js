@@ -10,21 +10,17 @@ function Scroll(props) {
     const lastPost = useRef();
     const page = useRef(0);
 
-    const isValid = (postBit) => {
-        if (props.userBit.current !== 0 && (props.userBit.current & postBit) === 0)
-            return false;
-        return true;
-    }
-
     const getPosts = () => {
         axios.get('http://localhost:8080/posts/search/' + page.current + '/' + props.userBit.current)
             .then(response => {
-                const newPosts = [];
-                response.data.forEach(post => {
-                    if (isValid(post.needConditions))
-                        newPosts.push(<SimplePost key={post.postId} info={post} bit={props.userBit.current} clickEvent={props.clickEvent}/>);
-                })
-                setPosts(prevPosts => prevPosts.concat(newPosts));
+                if (response.data.length !== 0) {
+                    const newPosts = [];
+                    response.data.forEach(post => {
+                        newPosts.push(<SimplePost key={post.postId} info={post} bit={props.userBit.current}
+                                                  clickEvent={props.clickEvent}/>);
+                    });
+                    setPosts(prevPosts => prevPosts.concat(newPosts));
+                }
             })
         page.current++;
     }

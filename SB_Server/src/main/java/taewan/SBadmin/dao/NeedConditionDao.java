@@ -34,7 +34,8 @@ public class NeedConditionDao {
 
     public List<NeedConditionDto> searchAll() {
         List<NeedConditionDto> found = new LinkedList<>();
-        needConditionRepository.findAll().forEach(condition -> found.add(new NeedConditionDto(condition)));
+        for (long key : registeredConditions.keySet())
+            found.add(new NeedConditionDto(key, registeredConditions.get(key)));
         return found;
     }
 

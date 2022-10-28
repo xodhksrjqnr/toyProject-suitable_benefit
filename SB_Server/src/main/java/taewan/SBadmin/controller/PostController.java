@@ -23,9 +23,9 @@ public class PostController {
     }
 
     @CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})
-    @GetMapping("/search/{page}")
-    public List<PostSimpleInfoDto> searchAll(@PathVariable Integer page) {
-        return postService.searchAll(page);
+    @GetMapping("/search/{page}/{filter}")
+    public List<PostSimpleInfoDto> searchAll(@PathVariable Integer page, @PathVariable Long filter) {
+        return postService.searchAll(page, filter);
     }
 
     @CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})

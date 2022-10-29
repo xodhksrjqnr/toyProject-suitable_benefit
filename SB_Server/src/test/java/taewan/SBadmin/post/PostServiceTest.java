@@ -50,8 +50,8 @@ public class PostServiceTest {
             postService.upload(utils.createSaveDto(i));
 
         //when
-        List<PostSimpleInfoDto> index1 = postService.searchAll(0);
-        List<PostSimpleInfoDto> index2 = postService.searchAll(1);
+        List<PostSimpleInfoDto> index1 = postService.searchAll(0, 0L);
+        List<PostSimpleInfoDto> index2 = postService.searchAll(1, 0L);
 
         //then
         assertThat(index1.size()).isEqualTo(10);
@@ -91,7 +91,7 @@ public class PostServiceTest {
         //when
         PostFullInfoDto found = postService.searchOne(postService.upload(post));
         PostUpdateDto updateInfo = utils.createUpdateDto(1, found.getPostId());
-        updateInfo.setContent(updateInfo.getContent() + "diff");
+//        updateInfo.setContent(updateInfo.getContent() + "diff");
         postService.update(updateInfo);
         PostFullInfoDto modified = postService.searchOne(found.getPostId());
 

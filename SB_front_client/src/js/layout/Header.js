@@ -1,10 +1,6 @@
 import '../../css/Header.css'
-import MenuPopup from "../content/MenuPopup";
-import {useState} from "react";
 
 function Header(props) {
-    const [isOpen, setIsOpen] = useState(false);
-
     return (
         <div className="header">
             <div></div>
@@ -12,9 +8,8 @@ function Header(props) {
                 <button>에이드</button>
             </div>
             <div>
-                <button onClick={() => setIsOpen(!isOpen)}>Menu</button>
+                <button onClick={() => props.filterClickEvent()}>Menu</button>
             </div>
-            {isOpen && <MenuPopup/>}
         </div>
     );
 }

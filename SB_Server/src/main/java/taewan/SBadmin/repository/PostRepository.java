@@ -9,7 +9,8 @@ import taewan.SBadmin.entity.Post;
 public interface PostRepository extends JpaRepository<Post, Long> {
     Post save(Post post);
     void deleteByPostId(Long postId);
-    Slice<Post> findSliceBy(Pageable pageable);
+    Slice<Post> findBy(Pageable pageable);
+    Slice<Post> findByNeedConditions(Pageable pageable, long needConditions);
     Post findPostByPostId(long postId);
     long count();
 }

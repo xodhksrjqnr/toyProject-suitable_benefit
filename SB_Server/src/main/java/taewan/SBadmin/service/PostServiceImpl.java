@@ -30,7 +30,9 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public List<PostSimpleInfoDto> searchAll(Integer page) {
+    public List<PostSimpleInfoDto> searchAll(Integer page, Long filter) {
+        if (filter != 0)
+            return postDao.findAll(page, filter);
         return postDao.findAll(page);
     }
 

@@ -33,12 +33,23 @@ public class PostDao {
     }
 
     public List<PostSimpleInfoDto> findAll(int page) {
-        PageRequest pageRequest = PageRequest.of(page, 10, Sort.by(Sort.Direction.ASC, "createdDate"));
         List<PostSimpleInfoDto> converted = new LinkedList<>();
         postRepository
-                .findAll(pageRequest)
+                .findBy(createPageRequest(page))
                 .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
         return converted;
+    }
+
+    public List<PostSimpleInfoDto> findAll(int page, long filter) {
+        List<PostSimpleInfoDto> converted = new LinkedList<>();
+        postRepository
+                .findByNeedConditions(createPageRequest(page), filter)
+                .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
+        return converted;
+    }
+
+    private PageRequest createPageRequest(int page) {
+        return PageRequest.of(page, 10, Sort.by(Sort.Direction.ASC, "createdDate"));
     }
 
     public PostFullInfoDto findOneByPostId(long postId) {

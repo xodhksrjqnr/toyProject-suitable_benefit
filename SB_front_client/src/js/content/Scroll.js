@@ -8,17 +8,21 @@ import '../../css/Scroll.css';
 function Scroll(props) {
     const [posts, setPosts] = useState([]);
     const lastPost = useRef();
-    let page = 0;
+    const page = useRef(0);
 
     const getPosts = () => {
-        axios.get('http://localhost:8080/posts/search/' + page)
+        axios.get('http://localhost:8080/posts/search/' + page.current + '/' + props.userBit.current)
             .then(response => {
-                const newPosts = response.data.map(post =>
-                    <SimplePost key={post.postId} info={post} bit={props.userBit} clickEvent={props.clickEvent}/>
-                );
-                setPosts(prevPosts => prevPosts.concat(newPosts));
+                if (response.data.length !== 0) {
+                    const newPosts = [];
+                    response.data.forEach(post => {
+                        newPosts.push(<SimplePost key={post.postId} info={post} bit={props.userBit.current}
+                                                  clickEvent={props.clickEvent}/>);
+                    });
+                    setPosts(prevPosts => prevPosts.concat(newPosts));
+                }
             })
-        page++;
+        page.current++;
     }
 
     const addNewPosts = async (entries, observer) => {
@@ -31,14 +35,15 @@ function Scroll(props) {
     const observer = useRef(new IntersectionObserver(addNewPosts));
 
     useEffect(() => {
-        getPosts();
-    }, [])
-
-    useEffect(() => {
-        try {
-            lastPost.current = document.querySelector(".simplePost:last-of-type");
+        if (posts.length === 0) {
+            page.current = 0;
+            lastPost.current = document.querySelector(".scrollMenu");
             observer.current.observe(lastPost.current);
-        } catch (error) {
+        } else {
+            try {
+                lastPost.current = document.querySelector(".simplePost:last-of-type");
+                observer.current.observe(lastPost.current);
+            } catch (error) {}
         }
     }, [posts])
 

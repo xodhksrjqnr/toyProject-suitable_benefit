@@ -1,4 +1,4 @@
-.menuPopup {
+.filter {
     margin-top: 7vh;
     z-index: 2;
     border-radius: 10px;
@@ -6,10 +6,10 @@
     height: 60vh;
 }
 
-.menuPopup > .check {
+.filter > .check {
     background-color: yellow;
 }
 
-.menuPopup > .uncheck {
+.filter > .uncheck {
     background-color: gray;
 }

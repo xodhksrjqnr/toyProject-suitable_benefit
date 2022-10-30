@@ -1,5 +1,3 @@
-import Container from "react-bootstrap/Container";
-
 import '../../../css/UploadForm.css'
 
 import RequiredInfo from "./requiredInfo/RequiredInfo";
@@ -12,7 +10,7 @@ function UploadForm() {
     const renderPreview = () => setImgPath(document.getElementById('imgPath').value);
 
     return (
-        <Container className="p-4 bg-white">
+        <div className="p-4 bg-white">
             <div className="text-center mb-5">
                 <Image src={imgPath} className="img-fluid"/>
             </div>
@@ -43,7 +41,7 @@ function UploadForm() {
                     <button type="submit" form="postUploadForm">등록하기</button>
                 </div>
             </form>
-        </Container>
+        </div>
     );
 }
 

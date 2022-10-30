@@ -4,27 +4,18 @@ import Image from 'react-bootstrap/Image'
 
 
 function ImagePreview() {
-    const [imageSrc, setImageSrc] = useState('/img/noImg.png');
+    const [imgPath, setImgPath] = useState('/img/noImg.png');
 
-    const encodeFileToBase64 = (fileBlob) => {
-        const reader = new FileReader();
-        reader.readAsDataURL(fileBlob);
-        return new Promise((resolve) => {
-            reader.onload = () => {
-                setImageSrc(reader.result);
-                resolve();
-            };
-        });
-    };
+    const renderPreview = () => setImgPath(document.getElementById('imgPath').value);
 
     return (
-        <div className="text-center mb-5">
-            <label htmlFor="imgPath" style={{width:"30%", height:"auto", margin:"0 auto"}}>
-                <Image src={imageSrc} className="img-fluid"/>
-            </label>
-            <input type="file" style={{display: "none"}} id="imgPath" name="imgPath" onChange={(e) => {
-                encodeFileToBase64(e.target.files[0]);
-            }}/>
+        <div>
+            <div className="text-center mb-5">
+                <Image src={imgPath} className="img-fluid"/>
+            </div>
+            <label htmlFor="imgPath">이미지</label>
+            <input type="text" id="imgPath" name="imgPath"/>
+            <button type="button" onClick={() => renderPreview()}>Preview</button>
         </div>
     );
 }

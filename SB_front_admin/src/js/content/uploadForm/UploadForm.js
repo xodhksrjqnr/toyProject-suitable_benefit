@@ -16,7 +16,7 @@ function UploadForm() {
                 </div>
                 <div>
                     <label htmlFor="content">내용</label>
-                    <input type="text" id="content" name="content"/>
+                    <textarea id="content" name="content" col="20" wrap="hard"/>
                 </div>
                 <div>
                     <label htmlFor="expirationDate">만료일</label>

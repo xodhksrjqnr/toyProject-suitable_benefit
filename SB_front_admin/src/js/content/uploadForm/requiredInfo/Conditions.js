@@ -8,7 +8,7 @@ function Conditions() {
         axios.get('http://localhost:8080/needConditions/search')
             .then(response => {
                 setNeeds(response.data.map(data =>
-                    <option key={data.name} name={data.conditionId} id={data.name}>{data.name}</option>
+                    <option key={data.name} accessKey={data.conditionId} id={data.name}>{data.name}</option>
                 ));
             });
     }, []);

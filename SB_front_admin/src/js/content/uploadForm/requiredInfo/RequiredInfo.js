@@ -15,7 +15,7 @@ function RequiredInfo() {
     const addNeedElement = () => {
         const target = document.getElementById("필요조건");
         if (!target.value) return;
-        const id = document.getElementById(target.value).name;
+        const id = document.getElementById(target.value).accessKey;
         const newBit = 1 << (id - 1);
 
         if ((tmpBit.current & newBit) === 0) {

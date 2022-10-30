@@ -13,6 +13,8 @@ public interface PostService {
 
     public List<PostSimpleInfoDto> searchAll(Integer page, Long filter);
 
+    public List<PostFullInfoDto> searchAll(Integer page);
+
     public PostFullInfoDto searchOne(Long postId);
 
     public void remove(Long postId);

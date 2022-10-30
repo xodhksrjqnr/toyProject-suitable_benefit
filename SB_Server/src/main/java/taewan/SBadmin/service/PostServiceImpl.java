@@ -37,6 +37,11 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    public List<PostFullInfoDto> searchAll(Integer page) {
+        return postDao.findAllByAdmin(page);
+    }
+
+    @Override
     public PostFullInfoDto searchOne(Long postId) {
         PostFullInfoDto found = postDao.findOneByPostId(postId);
         found.setConvertedConditions(

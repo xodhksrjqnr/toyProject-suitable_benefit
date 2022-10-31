@@ -38,7 +38,6 @@ public class PostController {
     @CrossOrigin(origins = "${admin.origins}")
     public void upload(PostSaveDto postSaveDto, HttpServletResponse response,
                        @Value("${admin.origins}") String redirectUrl) throws IOException {
-        System.out.println(postSaveDto.getContent());
         postService.upload(postSaveDto);
         response.sendRedirect(redirectUrl);
     }

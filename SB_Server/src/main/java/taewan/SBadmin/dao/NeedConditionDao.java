@@ -28,8 +28,10 @@ public class NeedConditionDao {
                 );
     }
 
-    public NeedConditionDto save(NeedCondition needCondition) {
-        return new NeedConditionDto(needConditionRepository.save(needCondition));
+    public Long save(String name) {
+        NeedCondition saved = needConditionRepository.save(new NeedCondition(name));
+        registeredConditions.put(saved.getConditionId(), saved.getName());
+        return saved.getConditionId();
     }
 
     public List<NeedConditionDto> searchAll() {

@@ -1,6 +1,12 @@
+import PostList from "./PostList";
+import ConditionList from "./ConditionList";
+
 function Dashboard() {
     return (
-        <p>dashBoard</p>
+        <div>
+            <PostList/>
+            <ConditionList/>
+        </div>
     );
 }
 

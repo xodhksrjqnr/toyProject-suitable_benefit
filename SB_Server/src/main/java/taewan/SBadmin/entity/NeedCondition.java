@@ -12,7 +12,6 @@ import javax.persistence.Id;
 
 @Entity
 @Getter
-@Setter
 @ToString
 @NoArgsConstructor
 public class NeedCondition {
@@ -20,4 +19,8 @@ public class NeedCondition {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long conditionId;
     private String name;
+
+    public NeedCondition(String name) {
+        this.name = name;
+    }
 }

@@ -48,6 +48,14 @@ public class PostDao {
         return converted;
     }
 
+    public List<PostFullInfoDto> findAllByAdmin(int page) {
+        List<PostFullInfoDto> converted = new LinkedList<>();
+        postRepository
+                .findBy(createPageRequest(page))
+                .forEach(post -> converted.add(new PostFullInfoDto(post)));
+        return converted;
+    }
+
     private PageRequest createPageRequest(int page) {
         return PageRequest.of(page, 10, Sort.by(Sort.Direction.ASC, "createdDate"));
     }

@@ -42,6 +42,12 @@ public class PostController {
         response.sendRedirect(redirectUrl);
     }
 
+    @CrossOrigin(origins = "${admin.origins}")
+    @GetMapping("/search/{page}")
+    public List<PostFullInfoDto> searchAllByAdmin(@PathVariable Integer page) {
+        return postService.searchAll(page);
+    }
+
 //    @GetMapping("/tmpupload/{num}")
 //    public void tmpUpload(@PathVariable int num) {
 //        Random random = new Random();

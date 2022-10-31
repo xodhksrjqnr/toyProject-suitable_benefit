@@ -1,9 +1,7 @@
 package taewan.SBadmin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import taewan.SBadmin.dao.NeedConditionDao;
 import taewan.SBadmin.dto.needCondition.NeedConditionDto;
 import taewan.SBadmin.entity.NeedCondition;
@@ -11,6 +9,7 @@ import taewan.SBadmin.entity.NeedCondition;
 import java.util.List;
 
 @RestController
+@RequestMapping("needConditions")
 public class NeedConditionController {
 
     private final NeedConditionDao needConditionDao;
@@ -20,9 +19,15 @@ public class NeedConditionController {
         this.needConditionDao = needConditionDao;
     }
 
-    @GetMapping("/needConditions/search")
     @CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})
+    @GetMapping("/search")
     public List<NeedConditionDto> searchAll() {
         return needConditionDao.searchAll();
+    }
+
+    @CrossOrigin(origins = "${admin.origins}")
+    @GetMapping("/upload/{name}")
+    public Long upload(@PathVariable(required = true) String name) {
+        return needConditionDao.save(name);
     }
 }

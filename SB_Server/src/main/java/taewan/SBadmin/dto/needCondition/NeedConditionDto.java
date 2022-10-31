@@ -1,6 +1,7 @@
 package taewan.SBadmin.dto.needCondition;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import taewan.SBadmin.entity.NeedCondition;
@@ -8,6 +9,7 @@ import taewan.SBadmin.entity.NeedCondition;
 @Getter
 @Setter
 @ToString
+@NoArgsConstructor
 public class NeedConditionDto {
     private Long conditionId;
     private String name;

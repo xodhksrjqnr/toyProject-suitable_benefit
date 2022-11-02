@@ -1,18 +1,27 @@
 .sidebar {
+    display: table-cell;
+    height: 100%;
+    width: 15%;
     background-color: #323232;
     color: #dcdcdc;
-    font-size: x-small;
+    font-size: 0.5rem;
+    padding: 1%;
+    vertical-align: top;
 }
 
-.sidebar button {
+.sidebar > div {
+    margin: 10% 0 10% 0;
+}
+
+.sidebar > div > button {
     border: none;
     background-color: transparent;
     text-align: left;
     color: #dcdcdc;
-    margin-bottom: 5%;
+    display: block;
 }
 
-.sidebar a {
+.sidebar > div > a {
     text-decoration-line: none;
     color: #dcdcdc;
 }

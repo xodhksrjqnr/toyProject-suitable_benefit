@@ -1,4 +1,20 @@
 .header {
+    height: 100%;
+}
+
+.header > div {
+    height: 100%;
+    vertical-align: middle;
+}
+
+.logo {
+    width: 15%;
     text-align: center;
+    display: inline-block;
     background-color: #323232;
+}
+
+.info {
+    width: 85%;
+    display: inline-block;
 }

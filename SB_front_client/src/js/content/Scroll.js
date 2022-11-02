@@ -25,7 +25,7 @@ function Scroll(props) {
         page.current++;
     }
 
-    const addNewPosts = async (entries, observer) => {
+    const addNewPosts = (entries, observer) => {
         if (entries[0].isIntersecting) {
             observer.unobserve(lastPost.current);
             getPosts();

@@ -43,12 +43,12 @@ function Filter (props) {
     }, [])
 
     return (
-        <>
-            <div className="filter shadow">
+        <div className="filter">
+            <div>
                 {conditions}
-                <button onClick={() => props.bitEvent(curBit.current)}>완료</button>
             </div>
-        </>
+            <button onClick={() => props.bitEvent(curBit.current)}>완료</button>
+        </div>
     );
 }
 

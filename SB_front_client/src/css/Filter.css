@@ -1,15 +1,18 @@
 .filter {
-    margin-top: 7vh;
-    z-index: 2;
-    border-radius: 10px;
-    background-color: white;
-    height: 60vh;
+    padding: 5vh;
+    height: 100%;
 }
 
-.filter > .check {
+.filter > div > .check {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 0 1% 0 1%;
     background-color: yellow;
 }
 
-.filter > .uncheck {
+.filter > div > .uncheck {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 0 1% 0 1%;
     background-color: gray;
 }

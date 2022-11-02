@@ -1,0 +1,8 @@
+.tagFormat {
+    border-radius: 5px;
+    background-color: yellow;
+    display: inline-block;
+    font-size: 0.7rem;
+    margin: 0 2px 0 2px;
+    padding: 0 2px 0 2px;
+}

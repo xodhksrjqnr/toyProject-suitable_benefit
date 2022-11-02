@@ -57,7 +57,7 @@ public class PostDao {
     }
 
     private PageRequest createPageRequest(int page) {
-        return PageRequest.of(page, 10, Sort.by(Sort.Direction.ASC, "createdDate"));
+        return PageRequest.of(page, 10);
     }
 
     public PostFullInfoDto findOneByPostId(long postId) {

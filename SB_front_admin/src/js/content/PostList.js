@@ -52,26 +52,28 @@ function PostList() {
     }, [posts])
 
     return (
-        <div>
-            <p>등록된 게시물</p>
-            <div className="bg-white w-100 table" style={{overflow:"scroll", height:"30vh"}}>
-                <table>
-                    <thead>
-                        <tr>
-                            <th width="6%">번호</th>
-                            <th width="15%">제목</th>
-                            <th width="29%">내용</th>
-                            <th width="10%">등록일</th>
-                            <th width="10%">만료일</th>
-                            <th width="10%">조건</th>
-                            <th width="10%">이미지</th>
-                            <th width="10%">URL</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {posts}
-                    </tbody>
-                </table>
+        <div className="postList">
+            <div>
+                <span>등록된 게시물</span>
+                <div className="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th width="6%">번호</th>
+                                <th width="15%">제목</th>
+                                <th width="29%">내용</th>
+                                <th width="10%">등록일</th>
+                                <th width="10%">만료일</th>
+                                <th width="10%">조건</th>
+                                <th width="10%">이미지</th>
+                                <th width="10%">URL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {posts}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     );

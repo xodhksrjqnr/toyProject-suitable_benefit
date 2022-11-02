@@ -1,7 +1,32 @@
-.uploadForm div {
-
+.uploadForm {
+    display: table-cell;
+    background-color: gray;
+    width: 85%;
+    height: 100%;
+    padding: 2%;
 }
 
-.uploadForm label {
-    margin-right: 3%;
+.uploadForm > .imgBox {
+    background-color: white;
+    height: 45vh;
+    text-align: center;
+    padding: 2%;
+}
+
+.uploadForm > .imgBox > img {
+    height: 100%;
+}
+
+.uploadForm > .content {
+    background-color: white;
+    height: 50%;
+    padding: 2%;
+}
+
+.uploadForm > .content > form {
+    height: 100%;
+}
+
+table, tr, td {
+    border: none;
 }

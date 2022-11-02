@@ -34,9 +34,8 @@ function RequiredInfo() {
     return (
         <div>
             <input type="text" name="needConditions" value={tmpBit.current} readOnly hidden/>
-            <label htmlFor="필요조건">필요 조건</label>
             <input type="text" id="필요조건" placeholder="search for names" list="needConditions"/>
-            <button type="button" onClick={() => addNeedElement()} className="bg-black">+</button>
+            <button type="button" onClick={() => addNeedElement()}>+</button>
             <div style={{position:"relative"}}>
                 {pick}
             </div>

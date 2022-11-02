@@ -1,0 +1,11 @@
+.dashboard {
+    background-color: gray;
+    display: table-cell;
+    height: 100%;
+    width: 85%;
+    padding: 2%;
+}
+
+.dashboard > div {
+    margin: 2% 0 2% 0;
+}

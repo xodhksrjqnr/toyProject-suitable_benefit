@@ -7,7 +7,7 @@ function PostPage(props) {
     const [post, setPost] = useState();
 
     const getPost = () => {
-        axios.get('http://localhost:8080/posts/' + props.postNum)
+        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_POST_ONE + props.postNum)
             .then(response => {
                 const post = response.data;
                 setPost(

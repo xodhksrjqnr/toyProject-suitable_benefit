@@ -24,7 +24,7 @@ function Filter (props) {
     }
 
     const getConditions = () => {
-        axios.get('http://localhost:8080/needConditions/search')
+        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_CONDITION_DATA)
             .then(response => {
                 const newConditions = [];
                 response.data.forEach(data => {

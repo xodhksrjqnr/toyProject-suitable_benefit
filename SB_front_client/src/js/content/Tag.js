@@ -1,0 +1,31 @@
+import {useEffect, useState} from "react";
+import axios from "axios";
+import '../../css/Tag.css'
+
+function Tag(props) {
+    const [tags, setTags] = useState([]);
+
+    const tagFormatting = (name) => {
+        return <div key={name} className="tagFormat">{name}</div>
+    }
+
+    useEffect(() => {
+        axios.get('http://localhost:8080/needConditions/search')
+            .then(response => {
+                const valid = [];
+                response.data.forEach(tag => {
+                    if ((props.conditions & (1 << (tag.conditionId - 1))) !== 0)
+                        valid.push(tagFormatting(tag.name));
+                });
+                setTags(valid);
+            })
+    }, [props])
+
+    return (
+        <div>
+            {tags}
+        </div>
+    );
+}
+
+export default Tag;

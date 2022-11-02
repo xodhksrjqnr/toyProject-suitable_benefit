@@ -43,6 +43,12 @@ public class PostController {
     }
 
     @CrossOrigin(origins = "${admin.origins}")
+    @GetMapping("/visible/{postId}")
+    public void changeVisible(@PathVariable Long postId) {
+        postService.modifyVisible(postId);
+    }
+
+    @CrossOrigin(origins = "${admin.origins}")
     @GetMapping("/search/{page}")
     public List<PostFullInfoDto> searchAllByAdmin(@PathVariable Integer page) {
         return postService.searchAll(page);

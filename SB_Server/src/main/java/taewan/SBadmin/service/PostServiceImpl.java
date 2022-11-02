@@ -30,6 +30,11 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    public void modifyVisible(Long postId) {
+        postDao.modifyVisible(postId);
+    }
+
+    @Override
     public List<PostSimpleInfoDto> searchAll(Integer page, Long filter) {
         if (filter != 0)
             return postDao.findAll(page, filter);

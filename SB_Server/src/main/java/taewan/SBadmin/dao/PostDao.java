@@ -65,6 +65,10 @@ public class PostDao {
         return post != null ? new PostFullInfoDto(post) : null;
     }
 
+    public void modifyVisible(Long postId) {
+        postRepository.modifyPostVisibleByPostId(postId);
+    }
+
     public void modify(PostUpdateDto postUpdateDto) {
         Post post = postRepository.findPostByPostId(postUpdateDto.getPostId());
         post.init(postUpdateDto);

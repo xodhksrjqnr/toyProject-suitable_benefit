@@ -8,7 +8,7 @@ function ConditionList() {
     const addCondition = () => {
         const target = document.getElementById("newCondition");
         if (!target.value) return;
-        axios.get('http://localhost:8080/needConditions/upload/' + target.value)
+        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_CONDITION_UPLOAD + target.value)
             .then(response => {
                 const condition = <span key={target.value}>{target.value}</span>;
                 setConditions(prev => prev.concat(condition));
@@ -17,7 +17,7 @@ function ConditionList() {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:8080/needConditions/search')
+        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_CONDITION_DATA)
             .then(response => {
                 setConditions(response.data.map(data =>
                     <span key={data.name}>{data.name}</span>

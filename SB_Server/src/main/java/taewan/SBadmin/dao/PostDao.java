@@ -42,7 +42,7 @@ public class PostDao {
     public List<PostSimpleInfoDto> findAll(int page, long filter) {
         List<PostSimpleInfoDto> converted = new LinkedList<>();
         postRepository
-                .findPostsByNeedConditionsAndVisible(createPageRequest(page), filter, true)
+                .findPostsBytagsAndVisible(createPageRequest(page), filter, true)
                 .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
         return converted;
     }

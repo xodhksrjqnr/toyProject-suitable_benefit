@@ -1,12 +1,12 @@
 import PostList from "./PostList";
-import ConditionList from "./ConditionList";
+import TagList from "./TagList";
 import '../../css/Dashboard.css'
 
 function Dashboard() {
     return (
         <div className="dashboard">
             <PostList/>
-            <ConditionList/>
+            <TagList/>
         </div>
     );
 }

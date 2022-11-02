@@ -4,10 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import taewan.SBadmin.dao.MemberDao;
-import taewan.SBadmin.dao.NeedConditionDao;
+import taewan.SBadmin.dao.TagDao;
 import taewan.SBadmin.dao.PostDao;
 import taewan.SBadmin.repository.MemberRepository;
-import taewan.SBadmin.repository.NeedConditionRepository;
+import taewan.SBadmin.repository.TagRepository;
 import taewan.SBadmin.repository.PostRepository;
 import taewan.SBadmin.service.MemberService;
 import taewan.SBadmin.service.MemberServiceImpl;
@@ -19,14 +19,14 @@ public class AppConfig {
 
     private final PostRepository postRepository;
     private final MemberRepository memberRepository;
-    private final NeedConditionRepository needConditionRepository;
+    private final TagRepository tagRepository;
 
     @Autowired
     public AppConfig(PostRepository postRepository, MemberRepository memberRepository,
-                     NeedConditionRepository needConditionRepository) {
+                     TagRepository tagRepository) {
         this.postRepository = postRepository;
         this.memberRepository = memberRepository;
-        this.needConditionRepository = needConditionRepository;
+        this.tagRepository = tagRepository;
     }
 
     @Bean
@@ -36,7 +36,7 @@ public class AppConfig {
 
     @Bean
     public PostService postService() {
-        return new PostServiceImpl(postDao(), needConditionDao());
+        return new PostServiceImpl(postDao(), tagDao());
     }
 
     @Bean
@@ -50,7 +50,7 @@ public class AppConfig {
     }
 
     @Bean
-    public NeedConditionDao needConditionDao() {
-        return new NeedConditionDao(needConditionRepository);
+    public TagDao tagDao() {
+        return new TagDao(tagRepository);
     }
 }

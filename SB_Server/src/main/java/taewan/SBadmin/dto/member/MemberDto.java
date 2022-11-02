@@ -13,14 +13,14 @@ public class MemberDto {
     private String password;
     private String nickName;
     private String email;
-    private Long needConditions;
+    private Long tags;
 
     @Builder
-    public MemberDto(String id, String password, String nickName, String email, Long needConditions) {
+    public MemberDto(String id, String password, String nickName, String email, Long tags) {
         this.id = id;
         this.password = password;
         this.nickName = nickName;
         this.email = email;
-        this.needConditions = needConditions;
+        this.tags = tags;
     }
 }

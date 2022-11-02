@@ -91,7 +91,7 @@ public class MemberServiceTest {
         MemberFullInfoDto found = memberService.searchOne(memberService.upload(member));
         MemberDto updateInfo = utils.createMemberDto(1);
         updateInfo.setMemberId(found.getMemberId());
-        updateInfo.setNeedConditions(found.getNeedConditions() + 2);
+        updateInfo.setConditions(found.getConditions() + 2);
         memberService.update(updateInfo);
         MemberFullInfoDto modified = memberService.searchOne(found.getMemberId());
 

@@ -10,11 +10,11 @@ function Tag(props) {
     }
 
     useEffect(() => {
-        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_CONDITION_DATA)
+        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_TAG_DATA)
             .then(response => {
                 const valid = [];
                 response.data.forEach(tag => {
-                    if ((props.conditions & (1 << (tag.conditionId - 1))) !== 0)
+                    if ((props.tags & (1 << (tag.tagId - 1))) !== 0)
                         valid.push(tagFormatting(tag.name));
                 });
                 setTags(valid);

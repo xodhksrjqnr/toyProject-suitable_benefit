@@ -24,7 +24,7 @@ public class Post <T extends PostSaveDto> {
     @CreatedDate
     private LocalDateTime createdDate;
     private LocalDateTime expirationDate;
-    private Long needConditions;
+    private Long tags;
     private Boolean visible;
 
     public Post(T dto) {
@@ -36,7 +36,7 @@ public class Post <T extends PostSaveDto> {
         this.imgPath = dto.getImgPath();
         this.content = dto.getContent();
         this.expirationDate = dto.getExpirationDate();
-        this.needConditions = dto.getNeedConditions();
+        this.tags = dto.getTags();
         this.url = dto.getUrl();
         this.visible = dto.getVisible();
     }

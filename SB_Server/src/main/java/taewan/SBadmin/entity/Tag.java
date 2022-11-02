@@ -2,7 +2,6 @@ package taewan.SBadmin.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.Entity;
@@ -14,13 +13,13 @@ import javax.persistence.Id;
 @Getter
 @ToString
 @NoArgsConstructor
-public class NeedCondition {
+public class Tag {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long conditionId;
+    private Long tagId;
     private String name;
 
-    public NeedCondition(String name) {
+    public Tag(String name) {
         this.name = name;
     }
 }

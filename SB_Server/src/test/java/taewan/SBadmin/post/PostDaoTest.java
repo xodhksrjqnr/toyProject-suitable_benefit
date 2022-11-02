@@ -91,7 +91,7 @@ public class PostDaoTest {
         //when
         String str = saved.toString();
         PostUpdateDto post = utils.createUpdateDto(1, saved.getPostId());
-        post.setContent(saved.getContent() + " diff");
+//        post.setContent(saved.getContent() + " diff");
         postDao.modify(post);
 
         //then

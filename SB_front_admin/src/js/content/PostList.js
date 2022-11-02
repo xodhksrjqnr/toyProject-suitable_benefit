@@ -26,7 +26,7 @@ function PostList() {
                                 <td>{post.content}</td>
                                 <td>{post.createdDate}</td>
                                 <td>{post.expirationDate}</td>
-                                <td>{post.needConditions}</td>
+                                <td>{post.tags}</td>
                                 <td>{post.imgPath}</td>
                                 <td>{post.url}</td>
                                 <td><button onClick={(e) => changeVisible(e, post.postId)}>

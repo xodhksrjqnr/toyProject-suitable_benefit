@@ -3,7 +3,7 @@ import {useEffect, useRef, useState} from "react";
 import axios from "axios";
 
 function Filter (props) {
-    const [conditions, setConditions] = useState([]);
+    const [tags, setTags] = useState([]);
     const curBit = useRef(props.userBit.current);
 
     const isCheck = (id) => {
@@ -23,29 +23,29 @@ function Filter (props) {
         }
     }
 
-    const getConditions = () => {
-        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_CONDITION_DATA)
+    const getTags = () => {
+        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_TAG_DATA)
             .then(response => {
-                const newConditions = [];
+                const newTags = [];
                 response.data.forEach(data => {
-                    newConditions.push(
-                        <button key={data.conditionId} id={data.name}
-                                name={data.conditionId} className={isCheck(data.conditionId)}
+                    newTags.push(
+                        <button key={data.tagId} id={data.name}
+                                name={data.tagId} className={isCheck(data.tagId)}
                                 onClick={(e) => filterClickEvent(e)}>{data.name}</button>
                     )
                 });
-                setConditions(prevConditions => prevConditions.concat(newConditions));
+                setTags(prevTags => prevTags.concat(newTags));
             });
     }
 
     useEffect(() => {
-        getConditions();
+        getTags();
     }, [])
 
     return (
         <div className="filter">
             <div>
-                {conditions}
+                {tags}
             </div>
             <button onClick={() => props.bitEvent(curBit.current)}>완료</button>
         </div>

@@ -14,7 +14,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     void deletePostByPostId(Long postId);
     Slice<Post> findPostsBy(Pageable pageable);
     Slice<Post> findPostsByVisible(Pageable pageable, boolean visible);
-    Slice<Post> findPostsByNeedConditionsAndVisible(Pageable pageable, long needConditions, boolean visible);
+    Slice<Post> findPostsBytagsAndVisible(Pageable pageable, long tags, boolean visible);
     Post findPostByPostId(Long postId);
     @Modifying
     @Query(value = "update Post p set p.visible = if(p.visible, false, true) where p.postId = :postId")

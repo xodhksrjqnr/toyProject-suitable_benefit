@@ -10,7 +10,7 @@ public class Utils {
                 .password("password" + num)
                 .nickName("nickName" + num)
                 .email("test" + num + "@naver.com")
-                .needConditions(3487598374598L)
+                .conditions(3487598374598L)
                 .build();
     }
 }

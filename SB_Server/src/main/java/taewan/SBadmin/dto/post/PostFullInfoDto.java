@@ -14,7 +14,7 @@ public class PostFullInfoDto extends PostSimpleInfoDto {
 
     private String content;
     private String url;
-    private List<String> convertedConditions;
+    private List<String> convertedtags;
 
     public PostFullInfoDto(Post post) {
         super(post);

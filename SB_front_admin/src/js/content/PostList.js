@@ -8,6 +8,11 @@ function PostList() {
     const lastPost = useRef();
     const page = useRef(0);
 
+    const changeVisible = (e, id) => {
+        axios.get('http://localhost:8080/posts/visible/' + id).then();
+        e.target.innerText = (e.target.innerText === "공개" ? "비공개" : "공개");
+    }
+
     const getPosts = () => {
         axios.get('http://localhost:8080/posts/search/' + page.current)
             .then(response => {
@@ -24,6 +29,9 @@ function PostList() {
                                 <td>{post.needConditions}</td>
                                 <td>{post.imgPath}</td>
                                 <td>{post.url}</td>
+                                <td><button onClick={(e) => changeVisible(e, post.postId)}>
+                                    {post.visible ? "공개" : "비공개"}
+                                </button></td>
                             </tr>
                         );
                     });
@@ -59,14 +67,15 @@ function PostList() {
                     <table>
                         <thead>
                             <tr>
-                                <th width="6%">번호</th>
-                                <th width="15%">제목</th>
-                                <th width="29%">내용</th>
+                                <th width="5%">번호</th>
+                                <th width="10%">제목</th>
+                                <th width="25%">내용</th>
                                 <th width="10%">등록일</th>
                                 <th width="10%">만료일</th>
                                 <th width="10%">조건</th>
                                 <th width="10%">이미지</th>
                                 <th width="10%">URL</th>
+                                <th width="10%">공개</th>
                             </tr>
                         </thead>
                         <tbody>

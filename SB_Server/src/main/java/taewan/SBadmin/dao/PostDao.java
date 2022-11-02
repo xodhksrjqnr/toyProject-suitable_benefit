@@ -29,13 +29,13 @@ public class PostDao {
     }
 
     public void delete(Long postId) {
-        postRepository.deleteByPostId(postId);
+        postRepository.deletePostByPostId(postId);
     }
 
     public List<PostSimpleInfoDto> findAll(int page) {
         List<PostSimpleInfoDto> converted = new LinkedList<>();
         postRepository
-                .findBy(createPageRequest(page))
+                .findPostsByVisible(createPageRequest(page), true)
                 .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
         return converted;
     }
@@ -43,7 +43,7 @@ public class PostDao {
     public List<PostSimpleInfoDto> findAll(int page, long filter) {
         List<PostSimpleInfoDto> converted = new LinkedList<>();
         postRepository
-                .findByNeedConditions(createPageRequest(page), filter)
+                .findPostsByNeedConditionsAndVisible(createPageRequest(page), filter, true)
                 .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
         return converted;
     }
@@ -51,7 +51,7 @@ public class PostDao {
     public List<PostFullInfoDto> findAllByAdmin(int page) {
         List<PostFullInfoDto> converted = new LinkedList<>();
         postRepository
-                .findBy(createPageRequest(page))
+                .findPostsBy(createPageRequest(page))
                 .forEach(post -> converted.add(new PostFullInfoDto(post)));
         return converted;
     }

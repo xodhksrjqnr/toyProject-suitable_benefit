@@ -14,7 +14,7 @@ public class PostUpdateDto extends PostSaveDto {
 
     public PostUpdateDto(Long postId, String title, String imgPath, String content, LocalDateTime expirationDate,
                          Long needConditions, String url, Boolean visible) {
-        super(title, imgPath, content, expirationDate, needConditions, url, visible);
+        super(title, imgPath, content, expirationDate, needConditions, url);
         this.postId = postId;
     }
 }

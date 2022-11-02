@@ -1,6 +1,6 @@
 .dashboard {
     background-color: gray;
-    display: table-cell;
+    display: inline-block;
     height: 100%;
     width: 85%;
     padding: 2%;

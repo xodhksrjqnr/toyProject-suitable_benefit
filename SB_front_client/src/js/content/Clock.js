@@ -29,6 +29,9 @@ function Clock(props) {
 
     return (
         <div className="time">
+            <div>
+                <img src="./img/clock.png" alt="clock" style={{height:"5vh"}}/>
+            </div>
             <p>{time}</p>
         </div>
     );

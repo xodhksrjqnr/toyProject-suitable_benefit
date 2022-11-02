@@ -1,20 +1,15 @@
 .day {
-    height: 45%;
+    display: table-cell;
     text-align: center;
-}
-
-.day > p {
+    vertical-align: middle;
     height: 100%;
-    font-size: 30px;
-    padding-top: 10vh;
+    width: 100%;
 }
 
 .time {
-    height: 45%;
+    display: table-cell;
     text-align: center;
-}
-
-.time > p {
+    vertical-align: middle;
     height: 100%;
-    font-size: 30px;
+    width: 100%;
 }

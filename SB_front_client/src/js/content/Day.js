@@ -10,6 +10,9 @@ function Day(props) {
 
     return (
         <div className="day">
+            <div>
+                <img src="./img/calendar.png" alt="calendar" style={{height:"5vh"}}/>
+            </div>
             <p>{day}</p>
         </div>
     );

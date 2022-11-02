@@ -17,6 +17,7 @@ public class PostSimpleInfoDto {
     private LocalDateTime createdDate;
     private LocalDateTime expirationDate;
     private Long needConditions;
+    private Boolean visible;
 
     public PostSimpleInfoDto(Post post) {
         this.postId = post.getPostId();
@@ -25,5 +26,6 @@ public class PostSimpleInfoDto {
         this.createdDate = post.getCreatedDate();
         this.expirationDate = post.getExpirationDate();
         this.needConditions = post.getNeedConditions();
+        this.visible = post.getVisible();
     }
 }

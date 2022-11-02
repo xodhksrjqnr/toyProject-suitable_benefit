@@ -15,13 +15,16 @@ public class PostSaveDto {
     private LocalDateTime expirationDate;
     private Long needConditions;
     private String url;
+    private Boolean visible;
 
-    public PostSaveDto(String title, String imgPath, String content, LocalDateTime expirationDate, Long needConditions, String url) {
+    public PostSaveDto(String title, String imgPath, String content, LocalDateTime expirationDate,
+                       Long needConditions, String url, Boolean visible) {
         this.title = title;
         this.imgPath = imgPath;
         this.expirationDate = expirationDate;
         this.content = content;
         this.needConditions = needConditions;
         this.url = url;
+        this.visible = visible;
     }
 }

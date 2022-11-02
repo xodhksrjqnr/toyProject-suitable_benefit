@@ -25,6 +25,7 @@ public class Post <T extends PostSaveDto> {
     private LocalDateTime createdDate;
     private LocalDateTime expirationDate;
     private Long needConditions;
+    private Boolean visible;
 
     public Post(T dto) {
         this.init(dto);
@@ -37,5 +38,6 @@ public class Post <T extends PostSaveDto> {
         this.expirationDate = dto.getExpirationDate();
         this.needConditions = dto.getNeedConditions();
         this.url = dto.getUrl();
+        this.visible = dto.getVisible();
     }
 }

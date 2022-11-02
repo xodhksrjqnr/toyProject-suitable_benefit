@@ -3,16 +3,16 @@
     height: 100%;
 }
 
-.filter > div > .condition {
+.filter > div > .check {
     border: 1px solid gray;
     border-radius: 10px;
     margin: 0 1% 0 1%;
-}
-
-.filter > .check {
     background-color: yellow;
 }
 
-.filter > .uncheck {
+.filter > div > .uncheck {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 0 1% 0 1%;
     background-color: gray;
 }

@@ -3,6 +3,7 @@ package taewan.SBadmin.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Slice;
 import taewan.SBadmin.dto.post.PostFullInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.dto.post.PostSimpleInfoDto;
@@ -31,28 +32,27 @@ public class PostDao {
         postRepository.deletePostByPostId(postId);
     }
 
-    public List<PostSimpleInfoDto> findAll(int page) {
-        List<PostSimpleInfoDto> converted = new LinkedList<>();
-        postRepository
-                .findPostsByAct(PageRequest.of(page, 10), true)
-                .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
-        return converted;
-    }
-
     public List<PostSimpleInfoDto> findAll(int page, long filter) {
         List<PostSimpleInfoDto> converted = new LinkedList<>();
-        postRepository
-                .findPostsByTagsAndAct(PageRequest.of(page, 10), filter, true)
-                .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
+        if (filter == 0L) {
+            find(postRepository.findPostsByActivity(PageRequest.of(page, 10), true))
+                    .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
+        } else {
+            find(postRepository.findPostsByTagsAndActivity(PageRequest.of(page, 10), filter, true))
+                    .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
+        }
         return converted;
     }
 
     public List<PostFullInfoDto> findAllByAdmin(int page) {
         List<PostFullInfoDto> converted = new LinkedList<>();
-        postRepository
-                .findPostsBy(PageRequest.of(page, 10))
+        find(postRepository.findPostsBy(PageRequest.of(page, 10)))
                 .forEach(post -> converted.add(new PostFullInfoDto(post)));
         return converted;
+    }
+
+    private Slice<Post> find(Slice<Post> found) {
+        return found;
     }
 
     public PostFullInfoDto findOneByPostId(long postId) {

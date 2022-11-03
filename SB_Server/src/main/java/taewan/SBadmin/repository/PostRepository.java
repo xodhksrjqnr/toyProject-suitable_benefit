@@ -18,6 +18,6 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     Post findPostByPostId(Long postId);
     @Modifying
     @Query(value = "update Post p set p.activity = if(p.activity, false, true) where p.postId = :postId")
-    void modifyPostActByPostId(@Param("postId") Long postId);
+    void modifyPostActivityByPostId(@Param("postId") Long postId);
     long count();
 }

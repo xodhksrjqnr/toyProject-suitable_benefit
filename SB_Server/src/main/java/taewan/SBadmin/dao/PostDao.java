@@ -44,7 +44,7 @@ public class PostDao {
         return converted;
     }
 
-    public List<PostFullInfoDto> findAllByAdmin(int page) {
+    public List<PostFullInfoDto> findAll(int page) {
         List<PostFullInfoDto> converted = new LinkedList<>();
         find(postRepository.findPostsBy(PageRequest.of(page, 10)))
                 .forEach(post -> converted.add(new PostFullInfoDto(post)));
@@ -60,8 +60,8 @@ public class PostDao {
         return post != null ? new PostFullInfoDto(post) : null;
     }
 
-    public void modifyPostAct(Long postId) {
-        postRepository.modifyPostActByPostId(postId);
+    public void modifyPostActivity(Long postId) {
+        postRepository.modifyPostActivityByPostId(postId);
     }
 
     public void modify(PostUpdateDto postUpdateDto) {

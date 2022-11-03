@@ -31,7 +31,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public void updateActivity(Long postId) {
-        postDao.modifyPostAct(postId);
+        postDao.modifyPostActivity(postId);
     }
 
     @Override
@@ -41,7 +41,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<PostFullInfoDto> searchAll(Integer page) {
-        return postDao.findAllByAdmin(page);
+        return postDao.findAll(page);
     }
 
     @Override

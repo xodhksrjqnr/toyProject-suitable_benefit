@@ -23,7 +23,7 @@ public class PostController {
     }
 
     @CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})
-    @GetMapping("/search/{page}/{filter}")
+    @GetMapping("/{page}/{filter}")
     public List<PostSimpleInfoDto> searchAll(@PathVariable Integer page, @PathVariable Long filter) {
         return postService.searchAll(page, filter);
     }
@@ -34,7 +34,7 @@ public class PostController {
         return postService.searchOne(postId);
     }
 
-    @PostMapping("/upload")
+    @PostMapping
     @CrossOrigin(origins = "${admin.origins}")
     public void upload(PostSaveDto postSaveDto, HttpServletResponse response,
                        @Value("${admin.origins}") String redirectUrl) throws IOException {
@@ -43,13 +43,13 @@ public class PostController {
     }
 
     @CrossOrigin(origins = "${admin.origins}")
-    @GetMapping("/visible/{postId}")
-    public void changeVisible(@PathVariable Long postId) {
+    @GetMapping("/{postId}/activity")
+    public void updatePostAct(@PathVariable Long postId) {
         postService.modifyVisible(postId);
     }
 
     @CrossOrigin(origins = "${admin.origins}")
-    @GetMapping("/search/{page}")
+    @GetMapping("/{page}")
     public List<PostFullInfoDto> searchAllByAdmin(@PathVariable Integer page) {
         return postService.searchAll(page);
     }

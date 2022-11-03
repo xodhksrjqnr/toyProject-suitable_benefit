@@ -19,14 +19,14 @@ public class TagController {
     }
 
     @CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})
-    @GetMapping("/search")
+    @GetMapping
     public List<TagDto> searchAll() {
         return tagDao.searchAll();
     }
 
     @CrossOrigin(origins = "${admin.origins}")
-    @GetMapping("/upload/{name}")
-    public Long upload(@PathVariable(required = true) String name) {
-        return tagDao.save(name);
+    @PostMapping
+    public void upload(String name) {
+        tagDao.save(name);
     }
 }

@@ -13,11 +13,11 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     Post save(Post post);
     void deletePostByPostId(Long postId);
     Slice<Post> findPostsBy(Pageable pageable);
-    Slice<Post> findPostsByAct(Pageable pageable, boolean visible);
-    Slice<Post> findPostsByTagsAndAct(Pageable pageable, long tags, boolean visible);
+    Slice<Post> findPostsByActivity(Pageable pageable, boolean activity);
+    Slice<Post> findPostsByTagsAndActivity(Pageable pageable, long tags, boolean activity);
     Post findPostByPostId(Long postId);
     @Modifying
-    @Query(value = "update Post p set p.visible = if(p.visible, false, true) where p.postId = :postId")
+    @Query(value = "update Post p set p.activity = if(p.activity, false, true) where p.postId = :postId")
     void modifyPostActByPostId(@Param("postId") Long postId);
     long count();
 }

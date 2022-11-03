@@ -45,7 +45,7 @@ public class PostController {
     @CrossOrigin(origins = "${admin.origins}")
     @PostMapping("/{postId}/activity")
     public void updateAct(@PathVariable Long postId) {
-        postService.updateAct(postId);
+        postService.updateActivity(postId);
     }
 
     @CrossOrigin(origins = "${admin.origins}")

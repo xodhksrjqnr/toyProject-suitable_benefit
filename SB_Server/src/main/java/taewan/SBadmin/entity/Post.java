@@ -25,7 +25,7 @@ public class Post <T extends PostSaveDto> {
     private LocalDateTime createdDate;
     private LocalDateTime expirationDate;
     private Long tags;
-    private Boolean visible;
+    private Boolean activity;
 
     public Post(T dto) {
         this.init(dto);
@@ -38,6 +38,6 @@ public class Post <T extends PostSaveDto> {
         this.expirationDate = dto.getExpirationDate();
         this.tags = dto.getTags();
         this.url = dto.getUrl();
-        this.visible = dto.getVisible();
+        this.activity = dto.getActivity();
     }
 }

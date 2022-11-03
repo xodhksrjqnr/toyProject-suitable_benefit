@@ -30,15 +30,13 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public void updateAct(Long postId) {
+    public void updateActivity(Long postId) {
         postDao.modifyPostAct(postId);
     }
 
     @Override
     public List<PostSimpleInfoDto> searchAll(Integer page, Long filter) {
-        if (filter != 0)
-            return postDao.findAll(page, filter);
-        return postDao.findAll(page);
+        return postDao.findAll(page, filter);
     }
 
     @Override
@@ -49,7 +47,7 @@ public class PostServiceImpl implements PostService {
     @Override
     public PostFullInfoDto searchOne(Long postId) {
         PostFullInfoDto found = postDao.findOneByPostId(postId);
-        found.setConvertedtags(
+        found.setConvertedTags(
                 tagDao.findValidTags(found.getTags())
         );
         return found;

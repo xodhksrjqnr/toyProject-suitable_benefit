@@ -17,7 +17,7 @@ public class PostSimpleInfoDto {
     private LocalDateTime createdDate;
     private LocalDateTime expirationDate;
     private Long tags;
-    private Boolean visible;
+    private Boolean activity;
 
     public PostSimpleInfoDto(Post post) {
         this.postId = post.getPostId();
@@ -26,6 +26,6 @@ public class PostSimpleInfoDto {
         this.createdDate = post.getCreatedDate();
         this.expirationDate = post.getExpirationDate();
         this.tags = post.getTags();
-        this.visible = post.getVisible();
+        this.activity = post.getActivity();
     }
 }

@@ -15,7 +15,7 @@ public class PostSaveDto {
     private LocalDateTime expirationDate;
     private Long tags;
     private String url;
-    private Boolean visible;
+    private Boolean activity;
 
     public PostSaveDto(String title, String imgPath, String content, LocalDateTime expirationDate,
                        Long tags, String url) {
@@ -25,6 +25,6 @@ public class PostSaveDto {
         this.content = content;
         this.tags = tags;
         this.url = url;
-        this.visible = false;
+        this.activity = false;
     }
 }

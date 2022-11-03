@@ -5,7 +5,7 @@ function Tags() {
     const [needs, setNeeds] = useState();
 
     useEffect(() => {
-        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_TAG_DATA)
+        axios.get(process.env.REACT_APP_TAGS)
             .then(response => {
                 setNeeds(response.data.map(data =>
                     <option key={data.name} accessKey={data.tagId} id={data.name}>{data.name}</option>

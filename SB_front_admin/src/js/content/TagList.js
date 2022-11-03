@@ -8,7 +8,7 @@ function TagList() {
     const addTag = () => {
         const target = document.getElementById("newTag");
         if (!target.value) return;
-        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_TAG_UPLOAD + target.value)
+        axios.post(process.env.REACT_APP_POSTS + "/" + target.value)
             .then(response => {
                 const tag = <span key={target.value}>{target.value}</span>;
                 setTags(prev => prev.concat(tag));
@@ -17,7 +17,7 @@ function TagList() {
     }
 
     useEffect(() => {
-        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_TAG_DATA)
+        axios.get(process.env.REACT_APP_TAGS)
             .then(response => {
                 setTags(response.data.map(data =>
                     <span key={data.name}>{data.name}</span>

@@ -9,12 +9,12 @@ function PostList() {
     const page = useRef(0);
 
     const changeVisible = (e, id) => {
-        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_VISIBLE + id).then();
+        axios.get(process.env.REACT_APP_POSTS + "/" + id + "/activity").then();
         e.target.innerText = (e.target.innerText === "공개" ? "비공개" : "공개");
     }
 
     const getPosts = () => {
-        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_ADMIN_POST_DATA + page.current)
+        axios.get(process.env.REACT_APP_POSTS + "/" + page.current + "/detail")
             .then(response => {
                 if (response.data.length !== 0) {
                     const newPosts = [];

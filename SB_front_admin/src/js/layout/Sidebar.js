@@ -5,7 +5,7 @@ function Sidebar(props) {
     return (
         <div className="sidebar">
             <div>
-                <a href="http://localhost:3000" target="_blank" rel="noopener noreferrer">사이트 바로가기</a>
+                <a href={process.env.REACT_APP_CLIENT_URL} target="_blank" rel="noopener noreferrer">사이트 바로가기</a>
             </div>
             <div>
                 <p>사이트 관리------</p>

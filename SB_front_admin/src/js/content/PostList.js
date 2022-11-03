@@ -30,7 +30,7 @@ function PostList() {
                                 <td>{post.imgPath}</td>
                                 <td>{post.url}</td>
                                 <td><button onClick={(e) => changeVisible(e, post.postId)}>
-                                    {post.visible ? "공개" : "비공개"}
+                                    {post.activity ? "공개" : "비공개"}
                                 </button></td>
                             </tr>
                         );

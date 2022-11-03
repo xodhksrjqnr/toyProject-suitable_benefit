@@ -11,7 +11,7 @@ function Scroll(props) {
     const page = useRef(0);
 
     const getPosts = () => {
-        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_POST_DATA + page.current + '/' + props.userBit.current)
+        axios.get(process.env.REACT_APP_POSTS + "/" + page.current + "/" + props.userBit.current)
             .then(response => {
                 if (response.data.length !== 0) {
                     const newPosts = [];

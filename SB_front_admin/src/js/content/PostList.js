@@ -9,7 +9,7 @@ function PostList() {
     const page = useRef(0);
 
     const changeVisible = (e, id) => {
-        axios.get(process.env.REACT_APP_POSTS + "/" + id + "/activity").then();
+        axios.post(process.env.REACT_APP_POSTS + "/" + id + "/activity").then();
         e.target.innerText = (e.target.innerText === "공개" ? "비공개" : "공개");
     }
 

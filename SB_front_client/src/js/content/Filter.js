@@ -24,7 +24,7 @@ function Filter (props) {
     }
 
     const getTags = () => {
-        axios.get(process.env.REACT_APP_BASE_URL + process.env.REACT_APP_TAG_DATA)
+        axios.get(process.env.REACT_APP_TAGS)
             .then(response => {
                 const newTags = [];
                 response.data.forEach(data => {

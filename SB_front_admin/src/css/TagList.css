@@ -1,0 +1,19 @@
+.tagList {
+    background-color: white;
+    padding: 1%;
+}
+
+.tagList > button {
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+}
+
+.tagList > div {
+    margin-top: 1%;
+    word-break: break-word;
+}
+
+.tagList > div > span {
+    margin: 1%;
+}

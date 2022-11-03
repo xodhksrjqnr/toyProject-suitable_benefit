@@ -18,11 +18,11 @@ function SimplePost(props) {
                     </tr>
                     <tr className="content">
                         <Day expirationDate={props.info.expirationDate}/>
-                        <Percent userBit={props.bit} postBit={props.info.needConditions}/>
+                        <Percent userBit={props.bit} postBit={props.info.tags}/>
                     </tr>
                     <tr>
                         <td colSpan="2" className="tag">
-                            <Tag conditions={props.info.needConditions}/>
+                            <Tag tags={props.info.tags}/>
                         </td>
                     </tr>
                 </tbody>

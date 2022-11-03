@@ -1,5 +1,5 @@
 .uploadForm {
-    display: table-cell;
+    display: inline-block;
     background-color: gray;
     width: 85%;
     height: 100%;

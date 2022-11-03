@@ -19,8 +19,8 @@ function Post(props) {
                 <div>
                     <h6 style={{height:"5%"}}>누가 신청할 수 있나요?</h6>
                     <div style={{height:"85%"}}>
-                        {props.post.convertedConditions.map(condition =>
-                            <div className="mx-1" style={{display:"inline-block", fontSize:"1rem"}} key={condition}>{condition}</div>
+                        {props.post.convertedTags.map(tag =>
+                            <div className="mx-1" style={{display:"inline-block", fontSize:"1rem"}} key={tag}>{tag}</div>
                         )}
                     </div>
                     <div style={{height:"5%", fontSize:"5px"}}>❉ 자세한 신청 조건을 꼭 확인하세요! ❉</div>

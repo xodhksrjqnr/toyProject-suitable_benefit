@@ -16,7 +16,8 @@ public class PostSimpleInfoDto {
     private String imgPath;
     private LocalDateTime createdDate;
     private LocalDateTime expirationDate;
-    private Long needConditions;
+    private Long tags;
+    private Boolean activity;
 
     public PostSimpleInfoDto(Post post) {
         this.postId = post.getPostId();
@@ -24,6 +25,7 @@ public class PostSimpleInfoDto {
         this.imgPath = post.getImgPath();
         this.createdDate = post.getCreatedDate();
         this.expirationDate = post.getExpirationDate();
-        this.needConditions = post.getNeedConditions();
+        this.tags = post.getTags();
+        this.activity = post.getActivity();
     }
 }

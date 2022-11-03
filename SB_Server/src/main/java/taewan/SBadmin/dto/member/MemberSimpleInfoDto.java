@@ -12,11 +12,11 @@ public class MemberSimpleInfoDto {
 
     private Long memberId;
     private String nickName;
-    private Long needConditions;
+    private Long tags;
 
     public MemberSimpleInfoDto(Member member) {
         this.memberId = member.getMemberId();
         this.nickName = member.getNickName();
-        this.needConditions = member.getNeedConditions();
+        this.tags = member.getTags();
     }
 }

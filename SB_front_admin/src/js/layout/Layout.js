@@ -26,14 +26,10 @@ function Layout() {
                 <Header/>
             </div>
             <div style={{height:"95vh"}}>
-                <table style={{border:"none", height:"95vh"}}>
-                    <tbody>
-                        <tr>
-                            <Sidebar clickEvent={sidebarClickEvent}/>
-                            {pageList[page]}
-                        </tr>
-                    </tbody>
-                </table>
+                <div style={{height:"100%"}}>
+                    <Sidebar clickEvent={sidebarClickEvent}/>
+                    {pageList[page]}
+                </div>
             </div>
         </div>
     );

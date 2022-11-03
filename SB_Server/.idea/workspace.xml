@@ -5,49 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="400c556d-978a-45db-8057-ef418015e94f" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HELP.md" beforeDir="false" afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/css/Section.css" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/css/Section.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/js/content/UploadForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/js/content/UploadForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/js/layout/Section.js" beforeDir="false" afterPath="$PROJECT_DIR$/admin/src/js/layout/Section.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/MainController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/PostDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/PostDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostDto$PostDtoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostFullInfoDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostSaveDto$PostSaveDtoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostSaveDto$PostSaveDtoBuilderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostSaveDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostSimpleInfoDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostUpdateDto$PostUpdateDtoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostUpdateDto$PostUpdateDtoBuilderImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/PostUpdateDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/base.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/beside.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/beside.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/PostDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/PostDaoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/service/PostServiceImplTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/dao/PostDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/dao/PostDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/entity/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/entity/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/service/PostService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/service/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/service/PostServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/taewan/SBadmin/post/PostServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/taewan/SBadmin/post/PostServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/TagController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_admin/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/.env.development" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_admin/src/js/content/TagList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/src/js/content/TagList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_client/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_client/.env.development" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,10 +46,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -102,24 +67,24 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/taewan/Desktop/toyProject/toyProject-Suitable_Benefit/SB_Server",
-    "list.type.of.created.stylesheet": "CSS",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "spring.configuration.checksum": "e08e246c7221750a9ce8788676ccab88",
-    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/taewan/Desktop/toyProject/toyProject-Suitable_Benefit/SB_Server&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;e08e246c7221750a9ce8788676ccab88&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates/posts" />
@@ -225,6 +190,12 @@
       <workItem from="1662013403849" duration="266000" />
       <workItem from="1662013684706" duration="8000" />
       <workItem from="1663058214996" duration="35611000" />
+      <workItem from="1664616212092" duration="8773000" />
+      <workItem from="1665815754047" duration="38000" />
+      <workItem from="1665816032802" duration="3000" />
+      <workItem from="1665817682790" duration="734000" />
+      <workItem from="1665822552147" duration="57348000" />
+      <workItem from="1666765305071" duration="62719000" />
     </task>
     <servers />
   </component>

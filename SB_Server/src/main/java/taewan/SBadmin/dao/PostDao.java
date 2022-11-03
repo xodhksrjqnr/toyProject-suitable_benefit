@@ -3,7 +3,7 @@ package taewan.SBadmin.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Slice;
 import taewan.SBadmin.dto.post.PostFullInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.dto.post.PostSimpleInfoDto;
@@ -29,40 +29,39 @@ public class PostDao {
     }
 
     public void delete(Long postId) {
-        postRepository.deleteByPostId(postId);
-    }
-
-    public List<PostSimpleInfoDto> findAll(int page) {
-        List<PostSimpleInfoDto> converted = new LinkedList<>();
-        postRepository
-                .findBy(createPageRequest(page))
-                .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
-        return converted;
+        postRepository.deletePostByPostId(postId);
     }
 
     public List<PostSimpleInfoDto> findAll(int page, long filter) {
         List<PostSimpleInfoDto> converted = new LinkedList<>();
-        postRepository
-                .findByNeedConditions(createPageRequest(page), filter)
-                .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
+        if (filter == 0L) {
+            find(postRepository.findPostsByActivity(PageRequest.of(page, 10), true))
+                    .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
+        } else {
+            find(postRepository.findPostsByTagsAndActivity(PageRequest.of(page, 10), filter, true))
+                    .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
+        }
         return converted;
     }
 
-    public List<PostFullInfoDto> findAllByAdmin(int page) {
+    public List<PostFullInfoDto> findAll(int page) {
         List<PostFullInfoDto> converted = new LinkedList<>();
-        postRepository
-                .findBy(createPageRequest(page))
+        find(postRepository.findPostsBy(PageRequest.of(page, 10)))
                 .forEach(post -> converted.add(new PostFullInfoDto(post)));
         return converted;
     }
 
-    private PageRequest createPageRequest(int page) {
-        return PageRequest.of(page, 10, Sort.by(Sort.Direction.ASC, "createdDate"));
+    private Slice<Post> find(Slice<Post> found) {
+        return found;
     }
 
     public PostFullInfoDto findOneByPostId(long postId) {
         Post post = postRepository.findPostByPostId(postId);
         return post != null ? new PostFullInfoDto(post) : null;
+    }
+
+    public void modifyPostActivity(Long postId) {
+        postRepository.modifyPostActivityByPostId(postId);
     }
 
     public void modify(PostUpdateDto postUpdateDto) {

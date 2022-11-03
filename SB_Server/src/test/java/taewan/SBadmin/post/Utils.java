@@ -13,9 +13,7 @@ public class Utils <T extends PostSaveDto> {
                 .content("1. test\n2. test\n3. test\n")
                 .imgPath("test img path")
                 .expirationDate(LocalDateTime.now().plusDays(3L))
-                .needConditions(Long.parseLong("00111111111111111101111111111111111111111", 2))
-                .needDocuments(Long.parseLong("00111111111111111101111111111111111111111", 2))
-                .procedure("test procedure")
+                .conditions(Long.parseLong("00111111111111111101111111111111111111111", 2))
                 .build();
     }
 
@@ -26,9 +24,6 @@ public class Utils <T extends PostSaveDto> {
                 .content("1. test\n2. test\n3. test\n")
                 .imgPath("test img path")
                 .expirationDate(LocalDateTime.now().plusDays(3L))
-                .needConditions(Long.parseLong("00111111111111111101111111111111111111111", 2))
-                .needDocuments(Long.parseLong("00111111111111111101111111111111111111111", 2))
-                .procedure("test procedure")
                 .build();
     }
 }

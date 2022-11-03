@@ -89,13 +89,13 @@ public class MemberDaoTest {
         MemberFullInfoDto saved = memberDao.save(utils.createMemberDto(1));
 
         //when
-        Long pattern = saved.getNeedConditions();
+        Long pattern = saved.getConditions();
         MemberDto member = utils.createMemberDto(1);
         member.setMemberId(saved.getMemberId());
-        member.setNeedConditions(saved.getNeedConditions() + 2);
+        member.setConditions(saved.getConditions() + 2);
         memberDao.modify(member);
 
         //then
-        assertThat(pattern).isNotEqualTo(memberDao.findOneByMemberId(member.getMemberId()).getNeedConditions());
+        assertThat(pattern).isNotEqualTo(memberDao.findOneByMemberId(member.getMemberId()).getConditions());
     }
 }

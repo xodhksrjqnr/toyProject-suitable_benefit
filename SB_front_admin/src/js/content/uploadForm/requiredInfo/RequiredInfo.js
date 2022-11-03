@@ -1,4 +1,4 @@
-import Conditions from "./Conditions";
+import Tags from "./Tags";
 import {useRef, useState} from "react";
 
 function RequiredInfo() {
@@ -33,13 +33,13 @@ function RequiredInfo() {
 
     return (
         <div>
-            <input type="text" name="needConditions" value={tmpBit.current} readOnly hidden/>
-            <input type="text" id="필요조건" placeholder="search for names" list="needConditions"/>
+            <input type="text" name="tags" value={tmpBit.current} readOnly hidden/>
+            <input type="text" id="필요조건" placeholder="search for names" list="tags"/>
             <button type="button" onClick={() => addNeedElement()}>+</button>
             <div style={{position:"relative"}}>
                 {pick}
             </div>
-            <Conditions/>
+            <Tags/>
         </div>
     );
 }

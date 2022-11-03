@@ -14,7 +14,7 @@ function UploadForm() {
                 <img src={imgPath} alt="preview" className="img-fluid"/>
             </div>
             <div className="content">
-                <form id="postUploadForm" method="post" action="http://localhost:8080/posts/upload">
+                <form id="postUploadForm" method="post" action={process.env.REACT_APP_POSTS}>
                     <table>
                         <tbody>
                             <tr>

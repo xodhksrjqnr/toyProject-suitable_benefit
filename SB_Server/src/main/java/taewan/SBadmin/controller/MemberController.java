@@ -10,7 +10,6 @@ import taewan.SBadmin.service.MemberService;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})
 @RequestMapping(value = "members")
 public class MemberController {
 
@@ -21,17 +20,20 @@ public class MemberController {
         this.memberService = memberService;
     }
 
-    @GetMapping(value = {"/search/{page}", "/search"})
-    public List<MemberSimpleInfoDto> search(@PathVariable(required = false) Integer page) {
+    @CrossOrigin(origins = "${admin.origins}")
+    @GetMapping("/{page}")
+    public List<MemberSimpleInfoDto> searchAll(@PathVariable(required = false) Integer page) {
         return memberService.searchAll(page);
     }
 
+    @CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})
     @GetMapping("/{memberId}")
     public MemberFullInfoDto searchOne(@PathVariable Long memberId) {
         return memberService.searchOne(memberId);
     }
 
-    @PostMapping("/upload")
+    @CrossOrigin(origins = "${client.origins}")
+    @PostMapping
     public Long upload(MemberDto memberSaveDto) {
         return memberService.upload(memberSaveDto);
     }

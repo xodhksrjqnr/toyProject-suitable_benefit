@@ -22,7 +22,7 @@ public class Member {
     private String password;
     private String nickName;
     private String email;
-    private Long needConditions;
+    private Long tags;
     @CreatedDate
     private LocalDateTime createdDate;
 
@@ -35,6 +35,6 @@ public class Member {
         this.password = dto.getPassword();
         this.nickName = dto.getNickName();
         this.email = dto.getEmail();
-        this.needConditions = dto.getNeedConditions();
+        this.tags = dto.getTags();
     }
 }

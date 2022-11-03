@@ -30,8 +30,8 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public void modifyVisible(Long postId) {
-        postDao.modifyVisible(postId);
+    public void updateAct(Long postId) {
+        postDao.modifyPostAct(postId);
     }
 
     @Override

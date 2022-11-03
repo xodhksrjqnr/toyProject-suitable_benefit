@@ -17,7 +17,7 @@ public interface PostService {
 
     public PostFullInfoDto searchOne(Long postId);
 
-    public void modifyVisible(Long postId);
+    public void updateAct(Long postId);
 
     public void remove(Long postId);
 

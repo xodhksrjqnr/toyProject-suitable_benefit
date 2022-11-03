@@ -44,13 +44,13 @@ public class PostController {
 
     @CrossOrigin(origins = "${admin.origins}")
     @PostMapping("/{postId}/activity")
-    public void changeVisible(@PathVariable Long postId) {
-        postService.modifyVisible(postId);
+    public void updateAct(@PathVariable Long postId) {
+        postService.updateAct(postId);
     }
 
     @CrossOrigin(origins = "${admin.origins}")
     @GetMapping("/{page}/detail")
-    public List<PostFullInfoDto> searchAll(@PathVariable Integer page) {
+    public List<PostFullInfoDto> searchAllDetail(@PathVariable Integer page) {
         return postService.searchAll(page);
     }
 }

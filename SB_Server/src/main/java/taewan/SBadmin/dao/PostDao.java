@@ -34,7 +34,7 @@ public class PostDao {
     public List<PostSimpleInfoDto> findAll(int page) {
         List<PostSimpleInfoDto> converted = new LinkedList<>();
         postRepository
-                .findPostsByVisible(createPageRequest(page), true)
+                .findPostsByAct(PageRequest.of(page, 10), true)
                 .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
         return converted;
     }
@@ -42,7 +42,7 @@ public class PostDao {
     public List<PostSimpleInfoDto> findAll(int page, long filter) {
         List<PostSimpleInfoDto> converted = new LinkedList<>();
         postRepository
-                .findPostsBytagsAndVisible(createPageRequest(page), filter, true)
+                .findPostsByTagsAndAct(PageRequest.of(page, 10), filter, true)
                 .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
         return converted;
     }
@@ -50,13 +50,9 @@ public class PostDao {
     public List<PostFullInfoDto> findAllByAdmin(int page) {
         List<PostFullInfoDto> converted = new LinkedList<>();
         postRepository
-                .findPostsBy(createPageRequest(page))
+                .findPostsBy(PageRequest.of(page, 10))
                 .forEach(post -> converted.add(new PostFullInfoDto(post)));
         return converted;
-    }
-
-    private PageRequest createPageRequest(int page) {
-        return PageRequest.of(page, 10);
     }
 
     public PostFullInfoDto findOneByPostId(long postId) {
@@ -64,8 +60,8 @@ public class PostDao {
         return post != null ? new PostFullInfoDto(post) : null;
     }
 
-    public void modifyVisible(Long postId) {
-        postRepository.modifyPostVisibleByPostId(postId);
+    public void modifyPostAct(Long postId) {
+        postRepository.modifyPostActByPostId(postId);
     }
 
     public void modify(PostUpdateDto postUpdateDto) {

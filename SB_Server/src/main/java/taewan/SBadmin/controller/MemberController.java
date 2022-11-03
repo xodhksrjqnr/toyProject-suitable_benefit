@@ -21,8 +21,8 @@ public class MemberController {
         this.memberService = memberService;
     }
 
-    @GetMapping(value = {"/search/{page}", "/search"})
-    public List<MemberSimpleInfoDto> search(@PathVariable(required = false) Integer page) {
+    @GetMapping("/{page}")//이후 사용시 api 중복 문제 해결
+    public List<MemberSimpleInfoDto> search(@PathVariable Integer page) {
         return memberService.searchAll(page);
     }
 
@@ -31,7 +31,7 @@ public class MemberController {
         return memberService.searchOne(memberId);
     }
 
-    @PostMapping("/upload")
+    @PostMapping
     public Long upload(MemberDto memberSaveDto) {
         return memberService.upload(memberSaveDto);
     }

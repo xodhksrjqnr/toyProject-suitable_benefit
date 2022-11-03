@@ -13,7 +13,7 @@ import java.util.Map;
 
 @Transactional
 public class TagDao {
-    private Map<Long, String> registeredTags = new HashMap<>();
+    private Map<Long, String> tagCache = new HashMap<>();
     private final TagRepository tagRepository;
 
     @Autowired
@@ -22,7 +22,7 @@ public class TagDao {
         this.tagRepository
                 .findAll()
                 .forEach(
-                        tag -> registeredTags.put(
+                        tag -> tagCache.put(
                                 tag.getTagId(), tag.getName()
                         )
                 );
@@ -30,14 +30,14 @@ public class TagDao {
 
     public Long save(String name) {
         Tag saved = tagRepository.save(new Tag(name));
-        registeredTags.put(saved.getTagId(), saved.getName());
+        tagCache.put(saved.getTagId(), saved.getName());
         return saved.getTagId();
     }
 
     public List<TagDto> searchAll() {
         List<TagDto> found = new LinkedList<>();
-        for (long key : registeredTags.keySet())
-            found.add(new TagDto(key, registeredTags.get(key)));
+        for (long key : tagCache.keySet())
+            found.add(new TagDto(key, tagCache.get(key)));
         return found;
     }
 
@@ -47,7 +47,7 @@ public class TagDao {
 
         while (bitmap != 0) {
             if ((bitmap & 1) != 0)
-                valid.add(registeredTags.get(index));
+                valid.add(tagCache.get(index));
             index++;
             bitmap >>>= 1;
         }

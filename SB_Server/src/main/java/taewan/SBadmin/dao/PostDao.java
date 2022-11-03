@@ -14,6 +14,7 @@ import taewan.SBadmin.repository.PostRepository;
 import javax.transaction.Transactional;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 @Transactional
 public class PostDao {
@@ -29,7 +30,7 @@ public class PostDao {
     }
 
     public void delete(Long postId) {
-        postRepository.deletePostByPostId(postId);
+        postRepository.deleteById(postId);
     }
 
     public List<PostSimpleInfoDto> findAll(int page, long filter) {
@@ -56,8 +57,8 @@ public class PostDao {
     }
 
     public PostFullInfoDto findOneByPostId(long postId) {
-        Post post = postRepository.findPostByPostId(postId);
-        return post != null ? new PostFullInfoDto(post) : null;
+        Optional<Post> post = postRepository.findById(postId);
+        return post.isPresent() ? new PostFullInfoDto(post.get()) : null;
     }
 
     public void modifyPostActivity(Long postId) {
@@ -65,7 +66,7 @@ public class PostDao {
     }
 
     public void modify(PostUpdateDto postUpdateDto) {
-        Post post = postRepository.findPostByPostId(postUpdateDto.getPostId());
-        post.init(postUpdateDto);
+        Optional<Post> post = postRepository.findById(postUpdateDto.getPostId());
+        post.get().init(postUpdateDto);
     }
 }

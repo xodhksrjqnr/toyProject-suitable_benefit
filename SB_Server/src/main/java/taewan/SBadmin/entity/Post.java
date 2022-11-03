@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @ToString(exclude = "postId")
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-public class Post <T extends PostSaveDto> {
+public class Post {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long postId;
@@ -27,11 +27,11 @@ public class Post <T extends PostSaveDto> {
     private Long tags;
     private Boolean activity;
 
-    public Post(T dto) {
+    public Post(PostSaveDto dto) {
         this.init(dto);
     }
 
-    public void init(T dto) {
+    public void init(PostSaveDto dto) {
         this.title = dto.getTitle();
         this.imgPath = dto.getImgPath();
         this.content = dto.getContent();

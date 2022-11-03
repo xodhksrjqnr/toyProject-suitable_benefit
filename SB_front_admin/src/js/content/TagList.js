@@ -8,7 +8,7 @@ function TagList() {
     const addTag = () => {
         const target = document.getElementById("newTag");
         if (!target.value) return;
-        axios.post(process.env.REACT_APP_POSTS + "/" + target.value)
+        axios.post(process.env.REACT_APP_TAGS + "/" + target.value)
             .then(response => {
                 const tag = <span key={target.value}>{target.value}</span>;
                 setTags(prev => prev.concat(tag));

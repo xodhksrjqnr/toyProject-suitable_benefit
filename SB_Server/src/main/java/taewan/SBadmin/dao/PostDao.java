@@ -36,10 +36,10 @@ public class PostDao {
     public List<PostSimpleInfoDto> findAll(int cursor, long filter) {
         List<PostSimpleInfoDto> converted = new LinkedList<>();
         if (filter == 0L) {
-            find(postRepository.findPostsByActivity(PageRequest.of(cursor, 10), true))
+            postRepository.findActivityPostsAll(cursor)
                     .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
         } else {
-            find(postRepository.findPostsByTagsAndActivity(PageRequest.of(cursor, 10), filter, true))
+            postRepository.findPostsAllByTags(cursor, filter)
                     .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
         }
         return converted;
@@ -47,13 +47,9 @@ public class PostDao {
 
     public List<PostFullInfoDto> findAll(int cursor) {
         List<PostFullInfoDto> converted = new LinkedList<>();
-        find(postRepository.findPostsBy(PageRequest.of(cursor, 10)))
+        postRepository.findPostsAll(cursor)
                 .forEach(post -> converted.add(new PostFullInfoDto(post)));
         return converted;
-    }
-
-    private Slice<Post> find(Slice<Post> found) {
-        return found;
     }
 
     public PostFullInfoDto findOneByPostId(long postId) {

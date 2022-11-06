@@ -11,9 +11,9 @@ public interface PostService {
 
     public Long upload(PostSaveDto postSaveDto);
 
-    public List<PostSimpleInfoDto> searchAll(Integer offset, Long filter);
+    public List<PostSimpleInfoDto> searchAll(Integer cursor, Long filter);
 
-    public List<PostFullInfoDto> searchAll(Integer offset);
+    public List<PostFullInfoDto> searchAll(Integer cursor);
 
     public PostFullInfoDto searchOne(Long postId);
 

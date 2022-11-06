@@ -9,12 +9,19 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import taewan.SBadmin.entity.Post;
 
+import java.util.List;
+
 public interface PostRepository extends JpaRepository<Post, Long> {
-    Slice<Post> findPostsBy(Pageable pageable);
-    Slice<Post> findPostsByActivity(Pageable pageable, boolean activity);
-    Slice<Post> findPostsByTagsAndActivity(Pageable pageable, long tags, boolean activity);
+    @Query(nativeQuery = true, value = "select * from post where post_id >= :cursor limit 10")
+    List<Post> findPostsAll(@Param("cursor") int cursor);
+    @Query(nativeQuery = true,
+            value = "select * from post where post_id >= :cursor and tags & :tags = :tags and activie = true limit 10")
+    List<Post> findPostsAllByTags(@Param("cursor") int cursor, @Param("tags") long tags);
+    @Query(nativeQuery = true,
+            value = "select * from post where post_id >= :cursor and activity = true limit 10")
+    List<Post> findActivityPostsAll(@Param("cursor") int cursor);
     @Modifying
-    @Query(value = "update Post p set p.activity = if(p.activity, false, true) where p.postId = :postId")
-    void modifyPostActivityByPostId(@Param("postId") Long postId);
+    @Query("update Post p set p.activity = if(p.activity, false, true) where p.postId = :id")
+    void modifyPostActivityByPostId(@Param("id") Long postId);
     long count();
 }

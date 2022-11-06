@@ -33,21 +33,21 @@ public class PostDao {
         postRepository.deleteById(postId);
     }
 
-    public List<PostSimpleInfoDto> findAll(int page, long filter) {
+    public List<PostSimpleInfoDto> findAll(int offset, long filter) {
         List<PostSimpleInfoDto> converted = new LinkedList<>();
         if (filter == 0L) {
-            find(postRepository.findPostsByActivity(PageRequest.of(page, 10), true))
+            find(postRepository.findPostsByActivity(PageRequest.of(offset, 10), true))
                     .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
         } else {
-            find(postRepository.findPostsByTagsAndActivity(PageRequest.of(page, 10), filter, true))
+            find(postRepository.findPostsByTagsAndActivity(PageRequest.of(offset, 10), filter, true))
                     .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
         }
         return converted;
     }
 
-    public List<PostFullInfoDto> findAll(int page) {
+    public List<PostFullInfoDto> findAll(int offset) {
         List<PostFullInfoDto> converted = new LinkedList<>();
-        find(postRepository.findPostsBy(PageRequest.of(page, 10)))
+        find(postRepository.findPostsBy(PageRequest.of(offset, 10)))
                 .forEach(post -> converted.add(new PostFullInfoDto(post)));
         return converted;
     }

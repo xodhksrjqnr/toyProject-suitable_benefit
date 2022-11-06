@@ -35,13 +35,13 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public List<PostSimpleInfoDto> searchAll(Integer page, Long filter) {
-        return postDao.findAll(page, filter);
+    public List<PostSimpleInfoDto> searchAll(Integer offset, Long filter) {
+        return postDao.findAll(offset, filter);
     }
 
     @Override
-    public List<PostFullInfoDto> searchAll(Integer page) {
-        return postDao.findAll(page);
+    public List<PostFullInfoDto> searchAll(Integer offset) {
+        return postDao.findAll(offset);
     }
 
     @Override

@@ -2,8 +2,6 @@ package taewan.SBadmin.dao;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Slice;
 import taewan.SBadmin.dto.post.PostFullInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.dto.post.PostSimpleInfoDto;

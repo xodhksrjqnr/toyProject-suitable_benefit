@@ -21,7 +21,7 @@
 }
 
 .simplePost > .content {
-    height: 25%;
+    height: 23%;
 }
 
 .simplePost > .content > div {
@@ -30,7 +30,7 @@
 }
 
 .simplePost > .tag {
-    height: 13%;
+    height: 15%;
     padding: 2%;
     text-align: center;
 }

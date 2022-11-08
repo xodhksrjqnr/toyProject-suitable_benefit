@@ -39,10 +39,10 @@ function Layout() {
 
     return (
         <div className="layout">
-            <div style={{height:"10vh"}}>
+            <div style={{height:"8vh"}}>
                 <Header clickEvent={logoClickEvent} filterClickEvent={filterClickEvent}/>
             </div>
-            <div style={{height:"80vh"}}>
+            <div style={{height:"82vh"}}>
                 {pageList[page]}
             </div>
             <div style={{height:"10vh"}}>

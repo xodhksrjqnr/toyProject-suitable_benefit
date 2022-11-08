@@ -26,6 +26,7 @@
 
 .simplePost > .content > div {
     width: 50%;
+    vertical-align: middle;
     display: inline-block;
 }
 

@@ -1,8 +1,10 @@
 .tagFormat {
     border-radius: 5px;
-    background-color: yellow;
+    background-color: gray;
+    color: white;
     display: inline-block;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     margin: 0 2px 0 2px;
-    padding: 0 2px 0 2px;
+    padding: 0 5px 0 5px;
+    font-weight: bold;
 }

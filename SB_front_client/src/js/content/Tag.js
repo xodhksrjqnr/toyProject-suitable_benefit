@@ -22,7 +22,7 @@ function Tag(props) {
     }, [props])
 
     return (
-        <div>
+        <div style={{overflowY:"scroll"}}>
             {tags}
         </div>
     );

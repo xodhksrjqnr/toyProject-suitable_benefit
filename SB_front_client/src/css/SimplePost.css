@@ -26,6 +26,7 @@
 
 .simplePost > .content > div {
     width: 50%;
+    display: inline-block;
 }
 
 .simplePost > .tag {

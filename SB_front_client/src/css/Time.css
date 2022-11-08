@@ -1,9 +1,18 @@
 .day {
-    display: table-cell;
+    padding: 2%;
     text-align: center;
-    vertical-align: middle;
     height: 100%;
     width: 100%;
+}
+
+.day > div {
+    margin-top: 10%;
+}
+
+.day > p {
+    font-weight: bold;
+    font-size: smaller;
+    color: gray;
 }
 
 .time {

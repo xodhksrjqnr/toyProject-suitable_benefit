@@ -22,9 +22,7 @@ function Layout() {
 
     return (
         <div className="layout">
-            <div style={{height:"5vh"}}>
-                <Header/>
-            </div>
+            <Header/>
             <div style={{height:"95vh"}}>
                 <div style={{height:"100%"}}>
                     <Sidebar clickEvent={sidebarClickEvent}/>

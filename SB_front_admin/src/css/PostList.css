@@ -1,4 +1,5 @@
 .postList {
+    border-radius: 10px;
     background-color: white;
     height: 30vh;
 }

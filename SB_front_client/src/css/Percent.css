@@ -1,7 +1,30 @@
 .percent {
+    padding: 2%;
     height: 100%;
     width: 100%;
-    display: table-cell;
+    position: relative;
     text-align: center;
-    vertical-align: middle;
+}
+
+.percent > p {
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.percent > svg {
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+circle {
+    cx: 50%;
+    cy: 50%;
+    r: 4vh;
+    stroke: gray;
+    stroke-width: 10%;
+    fill: white;
+    stroke-dasharray: 214%;
 }

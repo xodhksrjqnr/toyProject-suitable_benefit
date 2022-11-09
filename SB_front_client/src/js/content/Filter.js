@@ -27,6 +27,7 @@ function Filter (props) {
         axios.get(process.env.REACT_APP_TAGS)
             .then(response => {
                 const newTags = [];
+                newTags.push(<h5>Condition_1</h5>);
                 response.data.forEach(data => {
                     newTags.push(
                         <button key={data.tagId} id={data.name}
@@ -44,10 +45,13 @@ function Filter (props) {
 
     return (
         <div className="filter">
-            <div>
+            <div className="conditions">
                 {tags}
             </div>
-            <button onClick={() => props.bitEvent(curBit.current)}>완료</button>
+            <div className="buttons">
+                <button onClick={() => props.bitEvent(props.userBit.current)}>취소</button>
+                <button onClick={() => props.bitEvent(curBit.current)}>완료</button>
+            </div>
         </div>
     );
 }

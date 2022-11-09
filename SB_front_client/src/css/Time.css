@@ -1,15 +1,24 @@
 .day {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
     height: 100%;
     width: 100%;
 }
 
-.time {
-    display: table-cell;
+.day > div {
+    height: 100%;
+    width: 100%;
+    margin-top: 50%;
     text-align: center;
-    vertical-align: middle;
+    transform: translate(0, -50%);
+}
+
+.day > p {
+    font-weight: bold;
+    font-size: smaller;
+    color: gray;
+}
+
+.time {
+    text-align: center;
     height: 100%;
     width: 100%;
 }

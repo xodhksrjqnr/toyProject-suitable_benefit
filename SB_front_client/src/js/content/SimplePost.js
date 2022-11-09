@@ -9,24 +9,16 @@ function SimplePost(props) {
             <div>
                 <img src={props.info.imgPath} alt="postImg" className="img-fluid"/>
             </div>
-            <table>
-                <tbody>
-                    <tr>
-                        <td colSpan="2" className="title">
-                            {props.info.title}
-                        </td>
-                    </tr>
-                    <tr className="content">
-                        <Day expirationDate={props.info.expirationDate}/>
-                        <Percent userBit={props.bit} postBit={props.info.tags}/>
-                    </tr>
-                    <tr>
-                        <td colSpan="2" className="tag">
-                            <Tag tags={props.info.tags}/>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div className="title">
+                <strong>{props.info.title}</strong>
+            </div>
+            <div className="content">
+                <Day expirationDate={props.info.expirationDate}/>
+                <Percent userBit={props.bit} postBit={props.info.tags}/>
+            </div>
+            <div className="tag">
+                <Tag tags={props.info.tags}/>
+            </div>
         </div>
     );
 }

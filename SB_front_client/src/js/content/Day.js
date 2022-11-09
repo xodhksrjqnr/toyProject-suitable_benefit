@@ -12,8 +12,8 @@ function Day(props) {
         <div className="day">
             <div>
                 <img src="./img/calendar.png" alt="calendar" style={{height:"5vh"}}/>
+                <p>{day}</p>
             </div>
-            <p>{day}</p>
         </div>
     );
 }

@@ -1,12 +1,14 @@
 .day {
-    padding: 2%;
-    text-align: center;
     height: 100%;
     width: 100%;
 }
 
 .day > div {
-    margin-top: 10%;
+    height: 100%;
+    width: 100%;
+    margin-top: 50%;
+    text-align: center;
+    transform: translate(0, -50%);
 }
 
 .day > p {
@@ -16,9 +18,7 @@
 }
 
 .time {
-    display: table-cell;
     text-align: center;
-    vertical-align: middle;
     height: 100%;
     width: 100%;
 }

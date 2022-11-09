@@ -1,6 +1,7 @@
 .post {
     height: 95%;
     padding-top: 10vh;
+    color: gray;
 }
 
 .post > div {
@@ -55,6 +56,33 @@
 .post > .expiration > div {
     text-align: left;
     padding: 3vh;
+}
+
+.post > .expiration > div > .day {
+    height: 40%;
+}
+
+.post > .expiration > div > .time {
+    height: 30%;
+}
+
+.post > .condition {
+    white-space: normal;
+}
+
+.post > .condition > div {
+    text-align: left;
+    padding: 3vh;
+}
+
+.post > .condition > div > div > .tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    box-shadow: 0 0 1px gray;
+    border: none;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 0 2% 0 2%;
 }
 
 /*button*/

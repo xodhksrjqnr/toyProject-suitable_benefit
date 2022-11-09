@@ -10,7 +10,7 @@ function TagList() {
         if (!target.value) return;
         axios.post(process.env.REACT_APP_TAGS + "/" + target.value)
             .then(response => {
-                const tag = <span key={target.value}>{target.value}</span>;
+                const tag = <div className="tag" key={target.value}>{target.value}</div>;
                 setTags(prev => prev.concat(tag));
                 target.value = null;
             });
@@ -20,18 +20,24 @@ function TagList() {
         axios.get(process.env.REACT_APP_TAGS)
             .then(response => {
                 setTags(response.data.map(data =>
-                    <span key={data.name}>{data.name}</span>
+                    <div className="tag" key={data.name}>{data.name}</div>
                 ));
             });
     }, []);
 
     return (
         <div className="tagList">
-            <span>등록된 조건</span>
-            <input type="text" id="newTag"/>
-            <button onClick={() => addTag()}>추가</button>
-            <div>
-                {tags}
+            <div className="title">
+                <h6>등록된 조건</h6>
+            </div>
+            <div className="search">
+                <input type="text" id="newTag"/>
+                <button onClick={() => addTag()}>추가</button>
+            </div>
+            <div className="content">
+                <div>
+                    {tags}
+                </div>
             </div>
         </div>
     );

@@ -1,19 +1,27 @@
 .postList {
     background-color: white;
-}
-
-.table {
     height: 30vh;
-    overflow-y: scroll;
-    padding-top: 2%;
 }
 
-.postList > div {
+.postList > .title {
+    height: 15%;
     padding: 1%;
 }
 
-th, td {
-    border: 1px solid;
+.postList > .content {
+    height: 85%;
+    padding: 2%;
+}
+
+.postList > .content > div {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.post > td {
+    border: 1px solid gray;
+    padding: 0 1% 0 1%;
 }
 
 table {
@@ -23,6 +31,7 @@ table {
 }
 
 th {
+    border: 1px solid gray;
     text-align: center;
 }
 
@@ -30,4 +39,9 @@ td {
     overflow: hidden;
     white-space : nowrap;
     text-overflow: ellipsis;
+}
+
+td > button {
+    border: none;
+    border-radius: 10px;
 }

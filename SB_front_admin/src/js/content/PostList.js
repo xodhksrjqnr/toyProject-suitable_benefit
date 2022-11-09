@@ -29,7 +29,7 @@ function PostList() {
                                 <td>{post.tags}</td>
                                 <td>{post.imgPath}</td>
                                 <td>{post.url}</td>
-                                <td><button onClick={(e) => changeVisible(e, post.postId)}>
+                                <td className="text-center"><button onClick={(e) => changeVisible(e, post.postId)}>
                                     {post.activity ? "공개" : "비공개"}
                                 </button></td>
                             </tr>
@@ -54,16 +54,18 @@ function PostList() {
         if (posts.length === 0)
             page.current = 0;
         lastPost.current = document.querySelector(
-            posts.length === 0 ? ".table" : ".post:last-of-type"
+            posts.length === 0 ? ".content" : ".post:last-of-type"
         );
         observer.current.observe(lastPost.current);
     }, [posts])
 
     return (
         <div className="postList">
-            <div>
-                <span>등록된 게시물</span>
-                <div className="table">
+            <div className="title">
+                <h6>등록된 게시물</h6>
+            </div>
+            <div className="content">
+                <div>
                     <table>
                         <thead>
                             <tr>

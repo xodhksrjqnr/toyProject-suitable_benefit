@@ -32,13 +32,8 @@ public class PostDao {
 
     public List<PostSimpleInfoDto> findAll(int cursor, long filter) {
         List<PostSimpleInfoDto> converted = new LinkedList<>();
-        if (filter == 0L) {
-            postRepository.findActivityPostsAll(cursor)
-                    .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
-        } else {
-            postRepository.findPostsAllByTags(cursor, filter)
-                    .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
-        }
+        (filter == 0L ? postRepository.findActivePostsAll(cursor) : postRepository.findActivePostsAll(cursor, filter))
+                .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
         return converted;
     }
 

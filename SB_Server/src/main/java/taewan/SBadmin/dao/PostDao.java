@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import taewan.SBadmin.dto.post.PostFullInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.dto.post.PostSimpleInfoDto;
-import taewan.SBadmin.dto.post.PostUpdateDto;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
@@ -52,15 +51,10 @@ public class PostDao {
 
     public PostFullInfoDto findOneByPostId(long postId) {
         Optional<Post> post = postRepository.findById(postId);
-        return post.isPresent() ? new PostFullInfoDto(post.get()) : null;
+        return new PostFullInfoDto(post.get());
     }
 
     public void modifyPostActivity(Long postId) {
         postRepository.modifyPostActivityByPostId(postId);
-    }
-
-    public void modify(PostUpdateDto postUpdateDto) {
-        Optional<Post> post = postRepository.findById(postUpdateDto.getPostId());
-        post.get().init(postUpdateDto);
     }
 }

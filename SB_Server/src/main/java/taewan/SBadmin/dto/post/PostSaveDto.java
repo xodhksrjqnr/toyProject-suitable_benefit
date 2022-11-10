@@ -6,8 +6,8 @@ import lombok.experimental.SuperBuilder;
 import java.time.LocalDateTime;
 
 @Getter
-@SuperBuilder
 @ToString
+@SuperBuilder
 public class PostSaveDto {
     private String title;
     private String imgPath;
@@ -18,13 +18,13 @@ public class PostSaveDto {
     private Boolean activity;
 
     public PostSaveDto(String title, String imgPath, String content, LocalDateTime expirationDate,
-                       Long tags, String url) {
+                       Long tags, String url, Boolean activity) {
         this.title = title;
         this.imgPath = imgPath;
         this.expirationDate = expirationDate;
         this.content = content;
         this.tags = tags;
         this.url = url;
-        this.activity = false;
+        this.activity = activity;
     }
 }

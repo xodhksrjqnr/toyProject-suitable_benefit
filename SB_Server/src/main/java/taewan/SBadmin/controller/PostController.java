@@ -23,9 +23,9 @@ public class PostController {
     }
 
     @CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})
-    @GetMapping("/{page}/{filter}")
-    public List<PostSimpleInfoDto> searchAll(@PathVariable Integer page, @PathVariable Long filter) {
-        return postService.searchAll(page * 10, filter);
+    @GetMapping("/{cursor}/{filter}")
+    public List<PostSimpleInfoDto> searchAll(@PathVariable Integer cursor, @PathVariable Long filter) {
+        return postService.searchAll(cursor, filter);
     }
 
     @CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})
@@ -49,8 +49,8 @@ public class PostController {
     }
 
     @CrossOrigin(origins = "${admin.origins}")
-    @GetMapping("/{page}/detail")
-    public List<PostFullInfoDto> searchAllDetail(@PathVariable Integer page) {
-        return postService.searchAll(page * 10);
+    @GetMapping("/{cursor}/detail")
+    public List<PostFullInfoDto> searchAllDetail(@PathVariable Integer cursor) {
+        return postService.searchAll(cursor);
     }
 }

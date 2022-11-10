@@ -6,7 +6,7 @@ import '../../css/PostList.css'
 function PostList() {
     const [posts, setPosts] = useState([]);
     const lastPost = useRef();
-    const page = useRef(0);
+    const postNum = useRef(0);
 
     const changeVisible = (e, id) => {
         axios.post(process.env.REACT_APP_POSTS + "/" + id + "/activity").then();
@@ -14,9 +14,10 @@ function PostList() {
     }
 
     const getPosts = () => {
-        axios.get(process.env.REACT_APP_POSTS + "/" + page.current + "/detail")
+        axios.get(process.env.REACT_APP_POSTS + "/" + postNum.current + "/detail")
             .then(response => {
                 if (response.data.length !== 0) {
+                    postNum.current += response.data.length;
                     const newPosts = [];
                     response.data.forEach(post => {
                         newPosts.push(
@@ -38,7 +39,6 @@ function PostList() {
                     setPosts(prevPosts => prevPosts.concat(newPosts));
                 }
             })
-        page.current++;
     }
 
     const addNewPosts = (entries, observer) => {
@@ -52,7 +52,7 @@ function PostList() {
 
     useEffect(() => {
         if (posts.length === 0)
-            page.current = 0;
+            postNum.current = 0;
         lastPost.current = document.querySelector(
             posts.length === 0 ? ".content" : ".post:last-of-type"
         );

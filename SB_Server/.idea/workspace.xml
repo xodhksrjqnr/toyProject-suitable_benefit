@@ -7,11 +7,14 @@
     <list default="true" id="400c556d-978a-45db-8057-ef418015e94f" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/PostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/TagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/TagController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_front_admin/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/.env.development" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_front_admin/src/js/content/TagList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/src/js/content/TagList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_front_client/.env.development" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_client/.env.development" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/PostDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/PostDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/repository/PostRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_admin/src/js/content/PostList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/src/js/content/PostList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_client/src/js/content/Scroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_client/src/js/content/Scroll.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

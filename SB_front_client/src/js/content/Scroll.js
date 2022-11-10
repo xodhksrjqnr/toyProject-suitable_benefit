@@ -8,12 +8,13 @@ import '../../css/Scroll.css';
 function Scroll(props) {
     const [posts, setPosts] = useState([]);
     const lastPost = useRef();
-    const page = useRef(0);
+    const postNum = useRef(0);
 
     const getPosts = () => {
-        axios.get(process.env.REACT_APP_POSTS + "/" + page.current + "/" + props.userBit.current)
+        axios.get(process.env.REACT_APP_POSTS + "/" + postNum.current + "/" + props.userBit.current)
             .then(response => {
                 if (response.data.length !== 0) {
+                    postNum.current += response.data.length;
                     const newPosts = [];
                     response.data.forEach(post => {
                         newPosts.push(<SimplePost key={post.postId} info={post} bit={props.userBit.current}
@@ -22,7 +23,6 @@ function Scroll(props) {
                     setPosts(prevPosts => prevPosts.concat(newPosts));
                 }
             })
-        page.current++;
     }
 
     const addNewPosts = (entries, observer) => {
@@ -36,7 +36,7 @@ function Scroll(props) {
 
     useEffect(() => {
         if (posts.length === 0) {
-            page.current = 0;
+            postNum.current = 0;
             lastPost.current = document.querySelector(".scrollMenu");
             observer.current.observe(lastPost.current);
         } else {

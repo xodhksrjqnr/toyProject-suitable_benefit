@@ -27,7 +27,6 @@ function Filter (props) {
         axios.get(process.env.REACT_APP_TAGS)
             .then(response => {
                 const newTags = [];
-                newTags.push(<h5>Condition_1</h5>);
                 response.data.forEach(data => {
                     newTags.push(
                         <button key={data.tagId} id={data.name}
@@ -46,6 +45,7 @@ function Filter (props) {
     return (
         <div className="filter">
             <div className="conditions">
+                <h5>Condition_1</h5>
                 {tags}
             </div>
             <div className="buttons">

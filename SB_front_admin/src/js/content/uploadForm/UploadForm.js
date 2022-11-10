@@ -46,8 +46,8 @@ function UploadForm() {
                             </tr>
                         </tbody>
                     </table>
-                    <div>
-                        <button type="submit" form="postUploadForm">등록하기</button>
+                    <div style={{textAlign:"right"}}>
+                        <button style={{border:"none", borderRadius:"10px"}} type="submit" form="postUploadForm">등록하기</button>
                     </div>
                 </form>
             </div>

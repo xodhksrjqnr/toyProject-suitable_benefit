@@ -1,19 +1,49 @@
 .tagList {
+    border-radius: 10px;
     background-color: white;
-    padding: 1%;
+    height: 30vh;
+    position: relative;
 }
 
-.tagList > button {
+.tagList > .title {
+    height: 15%;
+    padding: 1%;
+    position: absolute;
+}
+
+.tagList > .search {
+    text-align: right;
+    padding: 0.5%;
+}
+
+.tagList > .search > * {
+    height: 3vh;
+    margin-right: 1%;
+    vertical-align: middle;
+}
+
+.tagList > .search > button {
+    font-size: 0.7rem;
     border: none;
     border-radius: 5px;
     background-color: gray;
 }
 
-.tagList > div {
-    margin-top: 1%;
+.tagList > .content {
+    height: 85%;
     word-break: break-word;
+    padding: 0 2% 0 2%;
 }
 
-.tagList > div > span {
-    margin: 1%;
+.tagList > .content > div {
+    overflow-y: scroll;
+}
+
+.tagList > .content > div > .tag {
+    display: inline-block;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 0.7rem;
+    margin: 0 0.5% 0 0.5%;
+    padding: 0 1% 0 1%;
 }

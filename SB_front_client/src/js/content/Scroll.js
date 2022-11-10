@@ -14,13 +14,13 @@ function Scroll(props) {
         axios.get(process.env.REACT_APP_POSTS + "/" + postNum.current + "/" + props.userBit.current)
             .then(response => {
                 if (response.data.length !== 0) {
-                    postNum.current += response.data.length;
                     const newPosts = [];
                     response.data.forEach(post => {
                         newPosts.push(<SimplePost key={post.postId} info={post} bit={props.userBit.current}
                                                   clickEvent={props.clickEvent}/>);
                     });
                     setPosts(prevPosts => prevPosts.concat(newPosts));
+                    postNum.current = response.data[response.data.length - 1].postId;
                 }
             })
     }
@@ -35,16 +35,12 @@ function Scroll(props) {
     const observer = useRef(new IntersectionObserver(addNewPosts));
 
     useEffect(() => {
-        if (posts.length === 0) {
+        if (posts.length === 0)
             postNum.current = 0;
-            lastPost.current = document.querySelector(".scrollMenu");
-            observer.current.observe(lastPost.current);
-        } else {
-            try {
-                lastPost.current = document.querySelector(".simplePost:last-of-type");
-                observer.current.observe(lastPost.current);
-            } catch (error) {}
-        }
+        lastPost.current = document.querySelector(
+            posts.length === 0 ? ".scrollMenu" : ".simplePost:last-of-type"
+        );
+        observer.current.observe(lastPost.current);
     }, [posts])
 
     return (

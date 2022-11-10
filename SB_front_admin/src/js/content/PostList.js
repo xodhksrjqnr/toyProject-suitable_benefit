@@ -17,7 +17,6 @@ function PostList() {
         axios.get(process.env.REACT_APP_POSTS + "/" + postNum.current + "/detail")
             .then(response => {
                 if (response.data.length !== 0) {
-                    postNum.current += response.data.length;
                     const newPosts = [];
                     response.data.forEach(post => {
                         newPosts.push(
@@ -37,6 +36,7 @@ function PostList() {
                         );
                     });
                     setPosts(prevPosts => prevPosts.concat(newPosts));
+                    postNum.current = response.data[response.data.length - 1].postId;
                 }
             })
     }

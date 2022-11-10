@@ -1,10 +1,8 @@
 package taewan.SBadmin.repository;
 
-import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import taewan.SBadmin.entity.Post;
 
 import java.util.List;
@@ -13,7 +11,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
     @Query(nativeQuery = true, value = "select * from post where post_id >= ?1 limit 10")
     List<Post> findPostsAll(int cursor);
     @Query(nativeQuery = true,
-            value = "select * from post where post_id >= ?1 and tags & ?2 = ?2 and activie = true limit 10")
+            value = "select * from post where post_id >= ?1 and tags & ?2 = ?2 and activity = true limit 10")
     List<Post> findPostsAllByTags(int cursor, long tags);
     @Query(nativeQuery = true,
             value = "select * from post where post_id >= ?1 and activity = true limit 10")

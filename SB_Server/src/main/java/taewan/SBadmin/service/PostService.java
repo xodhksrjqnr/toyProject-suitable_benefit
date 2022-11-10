@@ -20,6 +20,4 @@ public interface PostService {
     public void updateActivity(Long postId);
 
     public void remove(Long postId);
-
-    public void update(PostUpdateDto postUpdateDto);
 }

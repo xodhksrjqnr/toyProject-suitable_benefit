@@ -7,7 +7,6 @@ import taewan.SBadmin.dao.PostDao;
 import taewan.SBadmin.dto.post.PostFullInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.dto.post.PostSimpleInfoDto;
-import taewan.SBadmin.dto.post.PostUpdateDto;
 
 import java.util.List;
 
@@ -56,10 +55,5 @@ public class PostServiceImpl implements PostService {
     @Override
     public void remove(Long postId) {
         postDao.delete(postId);
-    }
-
-    @Override
-    public void update(PostUpdateDto postUpdateDto) {
-        postDao.modify(postUpdateDto);
     }
 }

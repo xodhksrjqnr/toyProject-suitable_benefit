@@ -2,8 +2,8 @@ package taewan.SBadmin.post;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
@@ -12,11 +12,11 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.*;
 import static taewan.SBadmin.post.PostUtils.*;
 
-@SpringBootTest
+@DataJpaTest
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 class PostRepositoryTest {
     @Autowired private PostRepository repository;
 
-    @Transactional
     @Test
     void 게시물저장() {
         //given
@@ -29,7 +29,6 @@ class PostRepositoryTest {
         assertThat(save.toString()).isEqualTo(post.toString());
     }
 
-    @Transactional
     @Test
     void 게시물삭제() {
         //given
@@ -43,7 +42,6 @@ class PostRepositoryTest {
         assertThat(repository.count()).isEqualTo(0);
     }
 
-    @Transactional
     @Test
     void 게시물공개여부변경() {
         //given
@@ -61,7 +59,6 @@ class PostRepositoryTest {
                 p -> assertThat(p.getActivity()).isFalse());
     }
 
-    @Transactional
     @Test
     void 게시물전체조회() {
         //given
@@ -75,7 +72,6 @@ class PostRepositoryTest {
             assertThat(saved.get(i).toString()).isEqualTo(posts.get(i).toString());
     }
 
-    @Transactional
     @Test
     void 공개게시물전체조회() {
         //given
@@ -92,7 +88,6 @@ class PostRepositoryTest {
         assertThat(repository.findActivePostsAll(0).size()).isEqualTo(2);
     }
 
-    @Transactional
     @Test
     void 공개게시물조회with태그() {
         //given

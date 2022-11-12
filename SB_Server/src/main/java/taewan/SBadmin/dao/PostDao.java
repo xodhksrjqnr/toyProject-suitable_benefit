@@ -8,12 +8,10 @@ import taewan.SBadmin.dto.post.PostSimpleInfoDto;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
-import javax.transaction.Transactional;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
-@Transactional
 public class PostDao {
     private final PostRepository postRepository;
 
@@ -22,15 +20,15 @@ public class PostDao {
         this.postRepository = postRepository;
     }
 
-    public PostFullInfoDto save(PostSaveDto postSaveDto) {
-        return new PostFullInfoDto(postRepository.save(new Post(postSaveDto)));
+    public Long save(PostSaveDto postSaveDto) {
+        return postRepository.save(new Post(postSaveDto)).getPostId();
     }
 
     public void delete(Long postId) {
         postRepository.deleteById(postId);
     }
 
-    public List<PostSimpleInfoDto> findAll(int cursor, long filter) {
+    public List<PostSimpleInfoDto> findAll(int cursor, Long filter) {
         List<PostSimpleInfoDto> converted = new LinkedList<>();
         (filter == 0L ? postRepository.findActivePostsAll(cursor) : postRepository.findActivePostsAll(cursor, filter))
                 .forEach(post -> converted.add(new PostSimpleInfoDto(post)));
@@ -44,7 +42,7 @@ public class PostDao {
         return converted;
     }
 
-    public PostFullInfoDto findOneByPostId(long postId) {
+    public PostFullInfoDto findOneByPostId(Long postId) {
         Optional<Post> post = postRepository.findById(postId);
         return new PostFullInfoDto(post.get());
     }

@@ -6,7 +6,4 @@ import taewan.SBadmin.entity.Tag;
 import java.util.List;
 
 public interface TagRepository extends JpaRepository<Tag, Long> {
-    Tag save(Tag tag);
-    @Override
-    List<Tag> findAll();
 }

@@ -19,13 +19,8 @@ public class TagDao {
     @Autowired
     public TagDao(TagRepository tagRepository) {
         this.tagRepository = tagRepository;
-        this.tagRepository
-                .findAll()
-                .forEach(
-                        tag -> tagCache.put(
-                                tag.getTagId(), tag.getName()
-                        )
-                );
+        this.tagRepository.findAll().forEach(
+                        tag -> tagCache.put(tag.getTagId(), tag.getName()));
     }
 
     public Long save(String name) {
@@ -52,5 +47,9 @@ public class TagDao {
             bitmap >>>= 1;
         }
         return valid;
+    }
+
+    public void clearCache() {
+        this.tagCache.clear();
     }
 }

@@ -7,15 +7,24 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import taewan.SBadmin.entity.Post;
 import taewan.SBadmin.repository.PostRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;
-import static taewan.SBadmin.post.PostUtils.*;
+import static taewan.SBadmin.post.PostUtils.createPost;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 class PostRepositoryTest {
     @Autowired private PostRepository repository;
+
+    private List<Post> createPosts(int size) {
+        List<Post> posts = new ArrayList<>(size);
+
+        for (int i = 0; i < size; i++)
+            posts.add(createPost(i));
+        return posts;
+    }
 
     @Test
     void 게시물저장() {

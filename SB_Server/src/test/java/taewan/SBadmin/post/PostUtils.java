@@ -35,13 +35,24 @@ public class PostUtils {
     public static List<Post> createPosts(int size) {
         List<Post> posts = new ArrayList<>(size);
 
-        createDtos(size).forEach(
-                dto -> posts.add(createPost(dto))
-        );
+        for (int i = 0; i < size; i++)
+            posts.add(createPost(i));
         return posts;
     }
 
-    private static Post createPost(PostSaveDto dto) {
-        return new Post(dto);
+    public static Post createCompletePost(int index) {
+        Post post = new Post(createDto(index));
+
+        post.setCreatedDate(post.getExpirationDate().minusDays(3));
+        post.setPostId((long)(index + 1));
+        return post;
+    }
+
+    public static List<Post> createCompletePosts(int size) {
+        List<Post> posts = new ArrayList<>(size);
+
+        for (int i = 0; i < size; i++)
+            posts.add(createCompletePost(i));
+        return posts;
     }
 }

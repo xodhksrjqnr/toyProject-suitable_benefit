@@ -49,7 +49,7 @@ public class PostDaoTest {
 
     @Transactional
     @Test
-    void 게시물하나조회() {
+    void 게시물단일조회() {
         //given
         PostSaveDto dto = createDto(0);
 

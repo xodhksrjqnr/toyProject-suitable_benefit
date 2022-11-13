@@ -37,14 +37,21 @@ Admin Front Server
 
 API Server
 - Post
-  - 특정게시물조회 : GET /posts/{postId}
-  - 공개게시물전체조회 : GET /posts/{cursor}/{filter}  (filter = 0 : 태그 x, filter != 0 : 태그 o)
-  - 게시물전체조회 : GET /posts/{cursor}/detail
-  - 게시물저장 : POST /posts
-  - 특정게시물공개여부변경 : POST /posts/{postId}/activity
+
+  |설명|API|비고|
+  |---|---|---|
+  |게시물조회|GET /posts/{postId}||
+  |공개게시물전체조회|GET /posts/{cursor}/{filter}|filter = 0 : 태그 x, filter != 0 : 태그 o|
+  |게시물전체조회|GET /posts/{cursor}/detail||
+  |게시물저장|POST /posts||
+  |게시물공개여부변경|POST /posts/{postId}/activity||
+  
 - Tag
-  - 태그전체조회 : GET /tags
-  - 태그저장 : POST /tags/{name}
+
+  |설명|API|비고|
+  |---|---|---|
+  |태그전체조회|GET /tags||
+  |태그저장|POST /tags/{name}||
 
 ### 생각 정리
 

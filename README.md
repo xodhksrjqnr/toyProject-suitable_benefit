@@ -30,7 +30,7 @@
 
 - Admin Front Server
   - 유지보수를 위한 사이드바 기능(홈페이지 이동, Dashboard, UploadForm)
-  - Dashboard : 등록된 게시물 리스트 확인, 특정 게시물 공개 여부 변경, 등록된 태그 리스트 확인, 
+  - Dashboard : 등록된 게시물 리스트 확인, 특정 게시물 공개 여부 변경, 등록된 태그 리스트 확인, 태그 등록
   - UploadForm : 게시물 등록, 포스터 preview
 
 <img width="787" alt="amdin" src="https://user-images.githubusercontent.com/48250370/201512518-d49f1e3a-52c3-4349-b628-4197aae1285b.png">

@@ -5,16 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="400c556d-978a-45db-8057-ef418015e94f" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/PostController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/config/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/MemberController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/MemberDao.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/PostDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/PostDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/TagDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/TagDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/member/MemberDto$MemberDtoBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/member/MemberDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/member/MemberFullInfoDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/member/MemberSimpleInfoDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostSaveDto$PostSaveDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostSaveDto$PostSaveDtoBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostSaveDto$PostSaveDtoBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostSaveDto$PostSaveDtoBuilderImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostSaveDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostSaveDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostUpdateDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostUpdateDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Member.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Post.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Tag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/repository/MemberRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/repository/PostRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/repository/TagRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/repository/TagRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/MemberService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/MemberServiceImpl.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/repository/PostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_front_admin/src/js/content/PostList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/src/js/content/PostList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_front_client/src/js/content/Scroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_client/src/js/content/Scroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/PostDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/PostDaoTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/PostServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/PostServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/dao/PostDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/dao/PostDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_admin/public/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/public/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_admin/public/img/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_admin/src/js/content/uploadForm/UploadForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/src/js/content/uploadForm/UploadForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_client/public/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_client/public/img/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_client/public/img/logo.svg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +79,7 @@
         <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -70,25 +97,30 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/taewan/Desktop/toyProject/toyProject-Suitable_Benefit/SB_Server&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;e08e246c7221750a9ce8788676ccab88&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/taewan/Desktop/toyProject/toyProject-suitable_benefit/SB_Server/src/test",
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "spring.configuration.checksum": "e08e246c7221750a9ce8788676ccab88",
+    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/templates/posts" />
       <recent name="$PROJECT_DIR$/frontend/src" />
@@ -96,39 +128,14 @@
       <recent name="$PROJECT_DIR$/frontend/src/js" />
       <recent name="$PROJECT_DIR$/src/main/resources/static/js/admin" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="taewan.SBadmin.repository" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SBadminApplication">
-    <configuration name="PostServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SBadmin.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="taewan.SBadmin.post.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="taewan.SBadmin.post" />
-      <option name="MAIN_CLASS_NAME" value="taewan.SBadmin.post.PostServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PostServiceTest.게시물삭제테스트" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SBadmin.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="taewan.SBadmin.post.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="taewan.SBadmin.post" />
-      <option name="MAIN_CLASS_NAME" value="taewan.SBadmin.post.PostServiceTest" />
-      <option name="METHOD_NAME" value="게시물삭제테스트" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SBadmin.test의 taewan.SBadmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SBadmin.test" />
       <extension name="coverage">
@@ -143,24 +150,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SBadmin.test의 taewan.SBadmin.post" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TagDaoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SBadmin.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="taewan.SBadmin.post.*" />
+          <option name="PATTERN" value="taewan.SBadmin.tag.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="taewan.SBadmin.post" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="taewan.SBadmin.tag" />
+      <option name="MAIN_CLASS_NAME" value="taewan.SBadmin.tag.TagDaoTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SBadmin.test의 전부" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TagDaoTest.태그저장" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SBadmin.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="taewan.SBadmin.tag.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="taewan.SBadmin.tag" />
+      <option name="MAIN_CLASS_NAME" value="taewan.SBadmin.tag.TagDaoTest" />
+      <option name="METHOD_NAME" value="태그저장" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TagDaoTest.유효태그조회" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SBadmin.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="taewan.SBadmin.tag.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="taewan.SBadmin.tag" />
+      <option name="MAIN_CLASS_NAME" value="taewan.SBadmin.tag.TagDaoTest" />
+      <option name="METHOD_NAME" value="유효태그조회" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TagRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SBadmin.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="taewan.SBadmin.tag.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="taewan.SBadmin.tag" />
+      <option name="MAIN_CLASS_NAME" value="taewan.SBadmin.tag.TagRepositoryTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,10 +222,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SBadmin.test의 taewan.SBadmin" />
-        <item itemvalue="JUnit.PostServiceTest.게시물삭제테스트" />
-        <item itemvalue="JUnit.SBadmin.test의 전부" />
-        <item itemvalue="JUnit.PostServiceTest" />
-        <item itemvalue="JUnit.SBadmin.test의 taewan.SBadmin.post" />
+        <item itemvalue="JUnit.TagDaoTest" />
+        <item itemvalue="JUnit.TagDaoTest.유효태그조회" />
+        <item itemvalue="JUnit.TagDaoTest.태그저장" />
+        <item itemvalue="JUnit.TagRepositoryTest" />
       </list>
     </recent_temporary>
   </component>

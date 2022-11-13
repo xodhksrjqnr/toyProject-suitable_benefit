@@ -46,6 +46,7 @@ function UploadForm() {
                             </tr>
                         </tbody>
                     </table>
+                    <input type="hidden" id="activity" name="activity" value="false"/>
                     <div style={{textAlign:"right"}}>
                         <button style={{border:"none", borderRadius:"10px"}} type="submit" form="postUploadForm">등록하기</button>
                     </div>

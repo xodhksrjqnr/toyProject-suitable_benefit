@@ -2,6 +2,7 @@ package taewan.SBadmin.dao;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import taewan.SBadmin.dto.post.PostFullInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.dto.post.PostSimpleInfoDto;
@@ -12,6 +13,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class PostDao {
     private final PostRepository postRepository;
 

@@ -10,7 +10,8 @@ import java.time.LocalDateTime;
 
 @Entity
 @Getter
-@ToString(exclude = "postId")
+@Setter
+@ToString
 @NoArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
 public class Post {
@@ -28,10 +29,6 @@ public class Post {
     private Boolean activity;
 
     public Post(PostSaveDto dto) {
-        this.init(dto);
-    }
-
-    public void init(PostSaveDto dto) {
         this.title = dto.getTitle();
         this.imgPath = dto.getImgPath();
         this.content = dto.getContent();

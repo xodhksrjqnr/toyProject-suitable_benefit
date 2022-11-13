@@ -24,8 +24,7 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public Long upload(PostSaveDto postSaveDto) {
-        PostFullInfoDto saved = postDao.save(postSaveDto);
-        return saved.getPostId();
+        return postDao.save(postSaveDto);
     }
 
     @Override

@@ -24,16 +24,16 @@
   - 출력된 게시물은 SimpleInfo(포스터이미지, 타이틀, D-day, 적합률, 태그)를 표시
   - 특정 게시물 클릭시 해당 게시물의 DetailInfo(SimpleInfo, 지원 내용, 남은 시간, 혜택 url)를 표시
 
-<img width="592" alt="amdin" src="https://user-images.githubusercontent.com/48250370/201512518-d49f1e3a-52c3-4349-b628-4197aae1285b.png">
+<img width="787" alt="amdin" src="https://user-images.githubusercontent.com/48250370/201512518-d49f1e3a-52c3-4349-b628-4197aae1285b.png">
 
 - Admin Front Server
   - 유지보수를 위한 사이드바 기능(홈페이지 이동, Dashboard, UploadForm)
   - Dashboard : 등록된 게시물 리스트 확인, 특정 게시물 공개 여부 변경, 등록된 태그 리스트 확인
   - UploadForm : 게시물 등록, 포스터 preview
 
-<img width="592" alt="client_post" src="https://user-images.githubusercontent.com/48250370/201512520-686a06b9-71ae-4601-afb5-4e1abbf41723.png">
+<img width="787" alt="client_post" src="https://user-images.githubusercontent.com/48250370/201512520-686a06b9-71ae-4601-afb5-4e1abbf41723.png">
 
-<img width="592" alt="client_filter" src="https://user-images.githubusercontent.com/48250370/201512526-230befdd-b268-4de5-b0cd-78fa3a70f598.png">
+<img width="787" alt="client_filter" src="https://user-images.githubusercontent.com/48250370/201512526-230befdd-b268-4de5-b0cd-78fa3a70f598.png">
 
 - API Server
   - Post

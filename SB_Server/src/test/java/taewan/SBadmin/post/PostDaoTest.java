@@ -93,7 +93,7 @@ public class PostDaoTest {
 
     @Transactional
     @Test
-    void 공개게시물전체조회with태그() {
+    void 공개게시물전체조회By태그() {
         //given
         List<PostSaveDto> dtos = createDtos(5);
         List<Long> ids = new ArrayList<>(5);

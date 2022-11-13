@@ -98,7 +98,7 @@ public class PostServiceTest {
     }
 
     @Test
-    void 공개게시물전체조회with태그() {
+    void 공개게시물전체조회By태그() {
 
     }
 

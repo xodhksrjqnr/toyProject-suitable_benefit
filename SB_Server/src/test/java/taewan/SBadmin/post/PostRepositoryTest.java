@@ -98,7 +98,7 @@ class PostRepositoryTest {
     }
 
     @Test
-    void 공개게시물조회with태그() {
+    void 공개게시물조회By태그() {
         //given
         List<Post> posts = createPosts(5);
 

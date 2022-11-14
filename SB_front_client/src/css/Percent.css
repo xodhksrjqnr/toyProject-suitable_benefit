@@ -17,14 +17,14 @@
 .percent > svg {
     height: 100%;
     aspect-ratio: 1;
+    transform: rotate(-90deg);
 }
 
 circle {
     cx: 50%;
     cy: 50%;
     r: 4vh;
-    stroke: gray;
     stroke-width: 10%;
-    fill: white;
-    stroke-dasharray: 214%;
+    fill: none;
+    stroke-dasharray: 159;
 }

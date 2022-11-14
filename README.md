@@ -57,6 +57,5 @@ API Server
 
 - [SPA? MPA?](https://github.com/xodhksrjqnr/toyProject-suitable_benefit/wiki/SPA,-MPA)
 - [Cursor vs Offset](https://github.com/xodhksrjqnr/toyProject-suitable_benefit/wiki/Cursor-vs-Offset)
-- [게시물 태그 저장 방식](https://github.com/xodhksrjqnr/toyProject-suitable_benefit/wiki/%EA%B2%8C%EC%8B%9C%EB%AC%BC-%ED%83%9C%EA%B7%B8-%EC%A0%80%EC%9E%A5-%EB%B0%A9%EC%8B%9D)
-- [유효 태그 호출 방식](https://github.com/xodhksrjqnr/toyProject-suitable_benefit/wiki/%EC%9C%A0%ED%9A%A8-%ED%83%9C%EA%B7%B8-%ED%98%B8%EC%B6%9C-%EB%B0%A9%EC%8B%9D)
+- [태그 저장 방식 & 호출 방식](https://github.com/xodhksrjqnr/toyProject-suitable_benefit/wiki/%ED%83%9C%EA%B7%B8-%EC%A0%80%EC%9E%A5-%EB%B0%A9%EC%8B%9D-&-%ED%98%B8%EC%B6%9C-%EB%B0%A9%EC%8B%9D)
 - [서버 분리](https://github.com/xodhksrjqnr/toyProject-suitable_benefit/wiki/%EC%84%9C%EB%B2%84-%EB%B6%84%EB%A6%AC)

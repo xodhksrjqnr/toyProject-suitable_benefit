@@ -13,7 +13,7 @@ public interface PostService {
 
     public List<PostSimpleInfoDto> searchAll(Integer cursor, Long filter);
 
-    public List<PostFullInfoDto> searchAll(Integer cursor);
+    public List<PostFullInfoDto> searchAll();
 
     public PostFullInfoDto searchOne(Long postId);
 

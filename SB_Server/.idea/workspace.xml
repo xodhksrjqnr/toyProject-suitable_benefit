@@ -6,41 +6,26 @@
   <component name="ChangeListManager">
     <list default="true" id="400c556d-978a-45db-8057-ef418015e94f" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/config/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/config/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/MemberController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/MemberDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/AdminController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/controller/PostController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/PostDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/PostDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/TagDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dao/TagDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/member/MemberDto$MemberDtoBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/member/MemberDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/member/MemberFullInfoDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/member/MemberSimpleInfoDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostSaveDto$PostSaveDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostSaveDto$PostSaveDtoBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostSaveDto$PostSaveDtoBuilderImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostSaveDto$PostSaveDtoBuilderImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostSaveDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostSaveDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostUpdateDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/dto/post/PostUpdateDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Member.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Tag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/entity/Tag.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/repository/MemberRepository.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/repository/PostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/repository/PostRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/repository/TagRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/repository/TagRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/MemberService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/MemberServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/taewan/SBadmin/service/PostServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/PostDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/PostDaoTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/PostServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/PostServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/member/MemberDaoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/member/MemberServiceTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/member/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/taewan/SBadmin/post/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/controller/PostController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/dao/PostDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/dao/PostDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_front_admin/public/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/public/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_front_admin/public/img/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/service/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/taewan/SBadmin/service/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_admin/src/css/UploadForm.css" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/src/css/UploadForm.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_admin/src/js/content/PostList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/src/js/content/PostList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SB_front_admin/src/js/content/uploadForm/UploadForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/src/js/content/uploadForm/UploadForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_front_client/public/img/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_client/public/img/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SB_front_client/public/img/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SB_front_admin/src/js/content/uploadForm/requiredInfo/RequiredInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/../SB_front_admin/src/js/content/uploadForm/requiredInfo/RequiredInfo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

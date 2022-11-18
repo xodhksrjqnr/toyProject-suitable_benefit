@@ -1,25 +1,20 @@
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 import '../../css/PostList.css'
 
 function PostList() {
-    const [posts, setPosts] = useState([]);
-    const lastPost = useRef();
-    const postNum = useRef(0);
+    const [posts, setPosts] = useState();
 
     const changeVisible = (e, id) => {
         axios.post(process.env.REACT_APP_POSTS + "/" + id + "/activity").then();
         e.target.innerText = (e.target.innerText === "공개" ? "비공개" : "공개");
     }
 
-    const getPosts = () => {
-        axios.get(process.env.REACT_APP_POSTS + "/" + postNum.current + "/detail")
+    useEffect(() => {
+        axios.get(process.env.REACT_APP_POSTS + "/detail")
             .then(response => {
-                if (response.data.length !== 0) {
-                    const newPosts = [];
-                    response.data.forEach(post => {
-                        newPosts.push(
+                    setPosts(response.data.map(post =>
                             <tr key={post.postId} className="post">
                                 <td>{post.postId}</td>
                                 <td>{post.title}</td>
@@ -33,31 +28,9 @@ function PostList() {
                                     {post.activity ? "공개" : "비공개"}
                                 </button></td>
                             </tr>
-                        );
-                    });
-                    setPosts(prevPosts => prevPosts.concat(newPosts));
-                    postNum.current = response.data[response.data.length - 1].postId;
-                }
-            })
-    }
-
-    const addNewPosts = (entries, observer) => {
-        if (entries[0].isIntersecting) {
-            observer.unobserve(lastPost.current);
-            getPosts();
-        }
-    }
-
-    const observer = useRef(new IntersectionObserver(addNewPosts));
-
-    useEffect(() => {
-        if (posts.length === 0)
-            postNum.current = 0;
-        lastPost.current = document.querySelector(
-            posts.length === 0 ? ".content" : ".post:last-of-type"
-        );
-        observer.current.observe(lastPost.current);
-    }, [posts])
+                    ));
+                })
+    }, [])
 
     return (
         <div className="postList">

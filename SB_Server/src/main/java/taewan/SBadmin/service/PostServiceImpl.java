@@ -38,8 +38,8 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public List<PostFullInfoDto> searchAll(Integer cursor) {
-        return postDao.findAll(cursor);
+    public List<PostFullInfoDto> searchAll() {
+        return postDao.findAll();
     }
 
     @Override

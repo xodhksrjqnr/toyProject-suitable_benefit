@@ -2,6 +2,7 @@ package taewan.SBadmin.dao;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
 import taewan.SBadmin.dto.post.PostFullInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
@@ -37,9 +38,9 @@ public class PostDao {
         return converted;
     }
 
-    public List<PostFullInfoDto> findAll(int cursor) {
+    public List<PostFullInfoDto> findAll() {
         List<PostFullInfoDto> converted = new LinkedList<>();
-        postRepository.findPostsAll(cursor)
+        postRepository.findAll(Sort.by(Sort.Direction.DESC, "postId"))
                 .forEach(post -> converted.add(new PostFullInfoDto(post)));
         return converted;
     }

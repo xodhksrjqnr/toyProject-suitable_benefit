@@ -49,8 +49,8 @@ public class PostController {
     }
 
     @CrossOrigin(origins = "${admin.origins}")
-    @GetMapping("/{cursor}/detail")
-    public List<PostFullInfoDto> searchAllDetail(@PathVariable Integer cursor) {
-        return postService.searchAll(cursor);
+    @GetMapping("/detail")
+    public List<PostFullInfoDto> searchAllDetail() {
+        return postService.searchAll();
     }
 }

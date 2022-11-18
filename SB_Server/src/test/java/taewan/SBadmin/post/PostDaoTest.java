@@ -118,6 +118,6 @@ public class PostDaoTest {
         ids.forEach(id -> postDao.modifyPostActivity(id));
 
         //then
-        assertThat(postDao.findAll(0).size()).isEqualTo(5);
+        assertThat(postDao.findAll().size()).isEqualTo(5);
     }
 }

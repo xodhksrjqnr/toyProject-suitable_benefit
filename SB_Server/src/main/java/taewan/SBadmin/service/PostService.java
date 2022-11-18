@@ -8,16 +8,10 @@ import taewan.SBadmin.dto.post.PostUpdateDto;
 import java.util.List;
 
 public interface PostService {
-
-    public Long upload(PostSaveDto postSaveDto);
-
     public List<PostSimpleInfoDto> searchAll(Integer cursor, Long filter);
-
     public List<PostFullInfoDto> searchAll();
-
     public PostFullInfoDto searchOne(Long postId);
-
+    public Long upload(PostSaveDto postSaveDto);
     public void updateActivity(Long postId);
-
     public void remove(Long postId);
 }

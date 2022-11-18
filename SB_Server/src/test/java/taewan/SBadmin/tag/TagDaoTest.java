@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 import taewan.SBadmin.dao.TagDao;
+import taewan.SBadmin.dao.TagDaoSpringDataJpa;
 import taewan.SBadmin.repository.TagRepository;
 
 import java.util.List;
@@ -14,7 +15,8 @@ import static org.assertj.core.api.Assertions.*;
 @SpringBootTest
 public class TagDaoTest {
     @Autowired TagRepository repository;
-    @Autowired TagDao tagDao;
+    @Autowired
+    TagDao tagDao;
 
     @Transactional
     @Test

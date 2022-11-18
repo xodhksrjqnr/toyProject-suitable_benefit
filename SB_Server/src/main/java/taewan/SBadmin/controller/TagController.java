@@ -2,7 +2,7 @@ package taewan.SBadmin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import taewan.SBadmin.dao.TagDao;
+import taewan.SBadmin.dao.TagDaoSpringDataJpa;
 import taewan.SBadmin.dto.tag.TagDto;
 
 import java.util.List;
@@ -11,10 +11,10 @@ import java.util.List;
 @RequestMapping("tags")
 public class TagController {
 
-    private final TagDao tagDao;
+    private final TagDaoSpringDataJpa tagDao;
 
     @Autowired
-    public TagController(TagDao tagDao) {
+    public TagController(TagDaoSpringDataJpa tagDao) {
         this.tagDao = tagDao;
     }
 

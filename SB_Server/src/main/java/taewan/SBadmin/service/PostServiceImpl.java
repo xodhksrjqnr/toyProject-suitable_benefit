@@ -2,14 +2,16 @@ package taewan.SBadmin.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import taewan.SBadmin.dao.TagDao;
+import org.springframework.transaction.annotation.Transactional;
 import taewan.SBadmin.dao.PostDao;
+import taewan.SBadmin.dao.TagDao;
 import taewan.SBadmin.dto.post.PostFullInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.dto.post.PostSimpleInfoDto;
 
 import java.util.List;
 
+@Transactional(readOnly = true)
 @Service
 public class PostServiceImpl implements PostService {
 
@@ -23,18 +25,8 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public Long upload(PostSaveDto postSaveDto) {
-        return postDao.save(postSaveDto);
-    }
-
-    @Override
-    public void updateActivity(Long postId) {
-        postDao.modifyPostActivity(postId);
-    }
-
-    @Override
     public List<PostSimpleInfoDto> searchAll(Integer cursor, Long filter) {
-        return postDao.findAll(cursor, filter);
+        return (filter == 0L ? postDao.findActiveAll(cursor) : postDao.findActiveAll(cursor, filter));
     }
 
     @Override
@@ -44,13 +36,24 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public PostFullInfoDto searchOne(Long postId) {
-        PostFullInfoDto found = postDao.findOneByPostId(postId);
-        found.setConvertedTags(
-                tagDao.findValidTags(found.getTags())
-        );
+        PostFullInfoDto found = postDao.findById(postId);
+        found.setConvertedTags(tagDao.findValidTags(found.getTags()));
         return found;
     }
 
+    @Transactional
+    @Override
+    public Long upload(PostSaveDto postSaveDto) {
+        return postDao.save(postSaveDto).getPostId();
+    }
+
+    @Transactional
+    @Override
+    public void updateActivity(Long postId) {
+        postDao.modifyActivity(postId);
+    }
+
+    @Transactional
     @Override
     public void remove(Long postId) {
         postDao.delete(postId);

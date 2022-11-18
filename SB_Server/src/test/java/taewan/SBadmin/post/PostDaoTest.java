@@ -26,7 +26,7 @@ public class PostDaoTest {
         PostSaveDto dto = createDto(0);
 
         //when
-        Long id = postDao.save(dto);
+        Long id = postDao.save(dto).getPostId();
 
         //then
         assertThat(repository.count()).isEqualTo(1);
@@ -39,7 +39,7 @@ public class PostDaoTest {
         PostSaveDto dto = createDto(0);
 
         //when
-        Long id = postDao.save(dto);
+        Long id = postDao.save(dto).getPostId();
 
         //then
         assertThat(repository.count()).isEqualTo(1);
@@ -54,7 +54,7 @@ public class PostDaoTest {
         PostSaveDto dto = createDto(0);
 
         //when
-        Long id = postDao.save(dto);
+        Long id = postDao.save(dto).getPostId();
 
         //then
         //예외처리 후 진행
@@ -67,13 +67,13 @@ public class PostDaoTest {
         PostSaveDto dto = createDto(0);
 
         //when
-        Long id = postDao.save(dto);
-        postDao.modifyPostActivity(id);
+        Long id = postDao.save(dto).getPostId();
+        postDao.modifyActivity(id);
 
         //then
-        assertThat(postDao.findOneByPostId(id).getActivity()).isTrue();
-        postDao.modifyPostActivity(id);
-        assertThat(postDao.findOneByPostId(id).getActivity()).isFalse();
+        assertThat(postDao.findById(id).getActivity()).isTrue();
+        postDao.modifyActivity(id);
+        assertThat(postDao.findById(id).getActivity()).isFalse();
     }
 
     @Transactional
@@ -84,11 +84,11 @@ public class PostDaoTest {
         List<Long> ids = new ArrayList<>(5);
 
         //when
-        dtos.forEach(dto -> ids.add(postDao.save(dto)));
-        ids.forEach(id -> postDao.modifyPostActivity(id));
+        dtos.forEach(dto -> ids.add(postDao.save(dto).getPostId()));
+        ids.forEach(id -> postDao.modifyActivity(id));
 
         //then
-        assertThat(postDao.findAll(0, 0L).size()).isEqualTo(5);
+        assertThat(postDao.findActiveAll(0, 0L).size()).isEqualTo(5);
     }
 
     @Transactional
@@ -99,12 +99,12 @@ public class PostDaoTest {
         List<Long> ids = new ArrayList<>(5);
 
         //when
-        dtos.forEach(dto -> ids.add(postDao.save(dto)));
-        ids.forEach(id -> postDao.modifyPostActivity(id));
+        dtos.forEach(dto -> ids.add(postDao.save(dto).getPostId()));
+        ids.forEach(id -> postDao.modifyActivity(id));
 
         //then
-        assertThat(postDao.findAll(0, 1L).size()).isEqualTo(1);
-        assertThat(postDao.findAll(0, 32L).size()).isEqualTo(0);
+        assertThat(postDao.findActiveAll(0, 1L).size()).isEqualTo(1);
+        assertThat(postDao.findActiveAll(0, 32L).size()).isEqualTo(0);
     }
 
     @Transactional
@@ -114,8 +114,8 @@ public class PostDaoTest {
         List<Long> ids = new ArrayList<>(5);
 
         //when
-        dtos.forEach(dto -> ids.add(postDao.save(dto)));
-        ids.forEach(id -> postDao.modifyPostActivity(id));
+        dtos.forEach(dto -> ids.add(postDao.save(dto).getPostId()));
+        ids.forEach(id -> postDao.modifyActivity(id));
 
         //then
         assertThat(postDao.findAll().size()).isEqualTo(5);

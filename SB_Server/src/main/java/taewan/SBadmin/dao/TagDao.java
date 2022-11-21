@@ -1,7 +1,6 @@
 package taewan.SBadmin.dao;
 
 import taewan.SBadmin.dto.tag.TagDto;
-import taewan.SBadmin.entity.Tag;
 
 import java.util.List;
 

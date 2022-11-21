@@ -3,7 +3,7 @@ package taewan.SBadmin.dao;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
-import taewan.SBadmin.dto.post.PostFullInfoDto;
+import taewan.SBadmin.dto.post.PostDetailInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.dto.post.PostSimpleInfoDto;
 import taewan.SBadmin.entity.Post;
@@ -34,19 +34,19 @@ public class PostDaoSpringDataJpa implements PostDao {
                 .toArray(PostSimpleInfoDto[]::new));
     }
 
-    public List<PostFullInfoDto> findAll() {
+    public List<PostDetailInfoDto> findAll() {
         return Arrays.asList(postRepository
                 .findAll(Sort.by(Sort.Direction.DESC, "postId"))
-                .stream().map(PostFullInfoDto::new)
-                .toArray(PostFullInfoDto[]::new));
+                .stream().map(PostDetailInfoDto::new)
+                .toArray(PostDetailInfoDto[]::new));
     }
 
-    public PostFullInfoDto findById(Long postId) {
-        return new PostFullInfoDto(postRepository.findById(postId).orElseThrow());
+    public PostDetailInfoDto findById(Long postId) {
+        return new PostDetailInfoDto(postRepository.findById(postId).orElseThrow());
     }
 
-    public PostFullInfoDto save(PostSaveDto postSaveDto) {
-        return new PostFullInfoDto(postRepository.save(new Post(postSaveDto)));
+    public PostDetailInfoDto save(PostSaveDto postSaveDto) {
+        return new PostDetailInfoDto(postRepository.save(new Post(postSaveDto)));
     }
 
     public void modifyActivity(Long postId) {

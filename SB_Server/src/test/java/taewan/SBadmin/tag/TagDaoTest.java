@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
 import taewan.SBadmin.dao.TagDao;
-import taewan.SBadmin.dao.TagDaoSpringDataJpa;
 import taewan.SBadmin.repository.TagRepository;
 
 import java.util.List;
@@ -24,7 +23,7 @@ public class TagDaoTest {
         //given
 
         //when
-        Long id = tagDao.save("대학생");
+        Long id = tagDao.save("대학생").getTagId();
 
         //then
         assertThat(repository.findById(id).isPresent()).isTrue();

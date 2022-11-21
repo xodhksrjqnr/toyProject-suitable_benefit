@@ -2,7 +2,7 @@ package taewan.SBadmin.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import taewan.SBadmin.dao.TagDaoSpringDataJpa;
+import taewan.SBadmin.dao.TagDao;
 import taewan.SBadmin.dto.tag.TagDto;
 
 import java.util.List;
@@ -11,10 +11,10 @@ import java.util.List;
 @RequestMapping("tags")
 public class TagController {
 
-    private final TagDaoSpringDataJpa tagDao;
+    private final TagDao tagDao;
 
     @Autowired
-    public TagController(TagDaoSpringDataJpa tagDao) {
+    public TagController(TagDao tagDao) {
         this.tagDao = tagDao;
     }
 
@@ -27,6 +27,6 @@ public class TagController {
     @CrossOrigin(origins = "${admin.origins}")
     @PostMapping("/{name}")
     public Long upload(@PathVariable(required = true) String name) {
-        return tagDao.save(name);
+        return tagDao.save(name).getTagId();
     }
 }

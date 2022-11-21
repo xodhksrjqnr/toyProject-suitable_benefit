@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import taewan.SBadmin.dao.PostDao;
 import taewan.SBadmin.dao.TagDao;
-import taewan.SBadmin.dto.post.PostFullInfoDto;
+import taewan.SBadmin.dto.post.PostDetailInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.dto.post.PostSimpleInfoDto;
 
@@ -30,15 +30,13 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public List<PostFullInfoDto> searchAll() {
+    public List<PostDetailInfoDto> searchAll() {
         return postDao.findAll();
     }
 
     @Override
-    public PostFullInfoDto searchOne(Long postId) {
-        PostFullInfoDto found = postDao.findById(postId);
-        found.setConvertedTags(tagDao.findValidTags(found.getTags()));
-        return found;
+    public PostDetailInfoDto searchOne(Long postId) {
+        return postDao.findById(postId);
     }
 
     @Transactional

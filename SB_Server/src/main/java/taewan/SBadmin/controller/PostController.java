@@ -3,7 +3,7 @@ package taewan.SBadmin.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
-import taewan.SBadmin.dto.post.PostFullInfoDto;
+import taewan.SBadmin.dto.post.PostDetailInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.dto.post.PostSimpleInfoDto;
 import taewan.SBadmin.service.PostService;
@@ -30,7 +30,7 @@ public class PostController {
 
     @CrossOrigin(origins = {"${admin.origins}", "${client.origins}"})
     @GetMapping("/{postId}")
-    public PostFullInfoDto searchOne(@PathVariable Long postId) {
+    public PostDetailInfoDto searchOne(@PathVariable Long postId) {
         return postService.searchOne(postId);
     }
 
@@ -50,7 +50,7 @@ public class PostController {
 
     @CrossOrigin(origins = "${admin.origins}")
     @GetMapping("/detail")
-    public List<PostFullInfoDto> searchAllDetail() {
+    public List<PostDetailInfoDto> searchAllDetail() {
         return postService.searchAll();
     }
 }

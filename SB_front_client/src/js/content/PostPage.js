@@ -6,19 +6,14 @@ import '../../css/Scroll.css';
 function PostPage(props) {
     const [post, setPost] = useState();
 
-    const getPost = () => {
+    useEffect(() => {
         axios.get(process.env.REACT_APP_POSTS + "/" + props.postNum)
             .then(response => {
                 const post = response.data;
-                setPost(
-                    <Post key={post.postId} post={post}/>
-                );
+                if (response.data !== null)
+                    setPost(<Post key={post.postId} post={post}/>);
             })
-    }
-
-    useEffect(() => {
-        getPost();
-    }, [])
+    }, [props])
 
     return (
         <div className="postPage px-0" style={{height: "80vh"}}>

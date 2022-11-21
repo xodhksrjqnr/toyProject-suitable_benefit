@@ -8,7 +8,7 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import taewan.SBadmin.dao.PostDaoSpringDataJpa;
 import taewan.SBadmin.dao.TagDaoSpringDataJpa;
-import taewan.SBadmin.dto.post.PostFullInfoDto;
+import taewan.SBadmin.dto.post.PostDetailInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.service.PostServiceImpl;
 import taewan.SBadmin.tag.TagUtils;
@@ -38,7 +38,7 @@ public class PostServiceTest {
     void 게시물저장() {
         //given
         PostSaveDto dto = createDto(0);
-        PostFullInfoDto fullDto = new PostFullInfoDto(createCompletePost(0));
+        PostDetailInfoDto fullDto = new PostDetailInfoDto(createCompletePost(0));
         when(postDao.save(any(PostSaveDto.class))).thenReturn(fullDto);
 
         //when
@@ -52,7 +52,7 @@ public class PostServiceTest {
     void 게시물삭제() {
         //given
         PostSaveDto dto = createDto(0);
-        PostFullInfoDto fullDto = new PostFullInfoDto(createCompletePost(0));
+        PostDetailInfoDto fullDto = new PostDetailInfoDto(createCompletePost(0));
         when(postDao.save(any(PostSaveDto.class))).thenReturn(fullDto);
 
         //when
@@ -66,12 +66,12 @@ public class PostServiceTest {
     void 게시물단일조회() {
         //given
         PostSaveDto dto = createDto(0);
-        PostFullInfoDto found = new PostFullInfoDto(createCompletePost(0));
+        PostDetailInfoDto found = new PostDetailInfoDto(createCompletePost(0));
 
         when(postDao.save(any(PostSaveDto.class))).thenReturn(found);
         when(postDao.findById(anyLong())).thenReturn(found);
-        when(tagDao.findValidTags(anyLong()))
-                .thenReturn(TagUtils.testFindValidTags(found.getTags(), tagCache));
+//        when(tagDao.findValidTags(anyLong()))
+//                .thenReturn(TagUtils.testFindValidTags(found.getTags(), tagCache));
 
         //when
         Long id = postService.upload(dto);
@@ -84,7 +84,7 @@ public class PostServiceTest {
     void 게시물공개여부변경() {
         //given
         PostSaveDto dto = createDto(0);
-        PostFullInfoDto found = new PostFullInfoDto(createCompletePost(0));
+        PostDetailInfoDto found = new PostDetailInfoDto(createCompletePost(0));
 
 
         //when

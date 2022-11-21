@@ -1,5 +1,6 @@
 package taewan.SBadmin.post;
 
+import taewan.SBadmin.dto.post.PostDetailInfoDto;
 import taewan.SBadmin.dto.post.PostSaveDto;
 import taewan.SBadmin.entity.Post;
 
@@ -40,11 +41,23 @@ public class PostUtils {
         return posts;
     }
 
-    public static Post createCompletePost(int index) {
-        Post post = new Post(createDto(index));
+    public static PostDetailInfoDto createDetailDto(int index) {
+        return PostDetailInfoDto.builder()
+                .postId((long)(index + 1))
+                .title("test title" + index)
+                .content("test content" + index)
+                .imgPath("http://test.com/img/" + index)
+                .url("http://test.com/" + index)
+                .createdDate(LocalDateTime.now())
+                .expirationDate(LocalDateTime.now().plusDays(10))
+                .tags((long)(1 << index))
+                .activity(false)
+                .build();
+    }
 
-        post.setCreatedDate(post.getExpirationDate().minusDays(3));
-        post.setPostId((long)(index + 1));
+    public static Post createCompletePost(int index) {
+        Post post = new Post();
+        post.update(createDetailDto(index));
         return post;
     }
 

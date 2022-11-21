@@ -3,8 +3,10 @@ package taewan.SBadmin.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import taewan.SBadmin.dao.TagDao;
 import taewan.SBadmin.dao.PostDao;
+import taewan.SBadmin.dao.TagDao;
+import taewan.SBadmin.dao.TagDaoSpringDataJpa;
+import taewan.SBadmin.dao.PostDaoSpringDataJpa;
 import taewan.SBadmin.repository.TagRepository;
 import taewan.SBadmin.repository.PostRepository;
 import taewan.SBadmin.service.PostService;
@@ -24,7 +26,7 @@ public class AppConfig {
 
     @Bean
     public PostDao postDao() {
-        return new PostDao(postRepository);
+        return new PostDaoSpringDataJpa(postRepository);
     }
 
     @Bean
@@ -34,6 +36,6 @@ public class AppConfig {
 
     @Bean
     public TagDao tagDao() {
-        return new TagDao(tagRepository);
+        return new TagDaoSpringDataJpa(tagRepository);
     }
 }

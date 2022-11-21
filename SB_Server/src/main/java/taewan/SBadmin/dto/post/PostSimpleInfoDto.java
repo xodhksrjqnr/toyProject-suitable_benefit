@@ -1,14 +1,17 @@
 package taewan.SBadmin.dto.post;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 import taewan.SBadmin.entity.Post;
 
 import java.time.LocalDateTime;
 
 @Getter
 @Setter
+@SuperBuilder
 @ToString
 public class PostSimpleInfoDto {
     private Long postId;

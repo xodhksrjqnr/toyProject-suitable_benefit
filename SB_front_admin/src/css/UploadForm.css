@@ -1,32 +1,59 @@
 .uploadForm {
+    position: relative;
     display: inline-block;
     background-color: gray;
     width: 85%;
     height: 100%;
-    padding: 2%;
 }
 
-.uploadForm > .imgBox {
+.uploadForm > .formBox {
+    position: absolute;
     background-color: white;
-    height: 45vh;
+    height: 95%;
+    aspect-ratio: 5 / 6;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.uploadForm > .formBox > .imgBox {
+    height: 40%;
     text-align: center;
     padding: 2%;
 }
 
-.uploadForm > .imgBox > img {
+.uploadForm > .formBox > .imgBox > img {
     height: 100%;
 }
 
-.uploadForm > .content {
-    background-color: white;
-    height: 50%;
+.uploadForm > .formBox > .content {
+    height: 53%;
     padding: 2%;
 }
 
-.uploadForm > .content > form {
+.uploadForm > .formBox > .content > form {
     height: 100%;
 }
 
 table, tr, td {
     border: none;
+}
+
+td > textarea {
+
+}
+
+td > input, textarea {
+    width: 80%;
+}
+
+.uploadForm > .formBox > .buttonBox {
+    text-align: right;
+    height: 7%;
+    padding: 1% 3% 1% 3%;
+}
+
+.uploadForm > .formBox > .buttonBox > button {
+    border: none;
+    border-radius: 10px;
 }

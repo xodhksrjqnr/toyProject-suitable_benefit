@@ -14,7 +14,8 @@ import static org.assertj.core.api.Assertions.*;
 @SpringBootTest
 public class TagDaoTest {
     @Autowired TagRepository repository;
-    @Autowired TagDao tagDao;
+    @Autowired
+    TagDao tagDao;
 
     @Transactional
     @Test
@@ -22,7 +23,7 @@ public class TagDaoTest {
         //given
 
         //when
-        Long id = tagDao.save("대학생");
+        Long id = tagDao.save("대학생").getTagId();
 
         //then
         assertThat(repository.findById(id).isPresent()).isTrue();

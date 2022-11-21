@@ -1,6 +1,7 @@
 import '../../css/Post.css'
 import Clock from "./Clock";
 import Day from "./Day";
+import Tag from "./Tag";
 
 function Post(props) {
     return (
@@ -19,11 +20,7 @@ function Post(props) {
                 <div>
                     <h6 style={{height:"5%"}}>누가 신청할 수 있나요?</h6>
                     <div style={{height:"85%"}}>
-                        {props.post.convertedTags.map(tag =>
-                            <div className="tag" key={tag}>
-                                <span>{tag}</span>
-                            </div>
-                        )}
+                        <Tag tags={props.post.tags}/>
                     </div>
                     <div style={{height:"5%", fontSize:"5px", textAlign:"center"}}>❉ 자세한 신청 조건을 꼭 확인하세요! ❉</div>
                 </div>

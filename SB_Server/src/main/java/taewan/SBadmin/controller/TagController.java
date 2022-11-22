@@ -27,6 +27,6 @@ public class TagController {
     @CrossOrigin(origins = "${admin.origins}")
     @PostMapping("/{name}")
     public Long upload(@PathVariable(required = true) String name) {
-        return tagDao.save(name);
+        return tagDao.save(name).getTagId();
     }
 }

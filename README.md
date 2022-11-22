@@ -42,7 +42,7 @@ API Server
   |---|---|---|
   |게시물조회|GET /posts/{postId}||
   |공개게시물전체조회|GET /posts/{cursor}/{filter}|filter = 0 : 태그 x, filter != 0 : 태그 o|
-  |게시물전체조회|GET /posts/{cursor}/detail||
+  |게시물전체조회|GET /posts/detail||
   |게시물저장|POST /posts||
   |게시물공개여부변경|POST /posts/{postId}/activity||
   

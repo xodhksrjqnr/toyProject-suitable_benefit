@@ -10,7 +10,8 @@ function PostPage(props) {
         axios.get(process.env.REACT_APP_POSTS + "/" + props.postNum)
             .then(response => {
                 const post = response.data;
-                setPost(<Post key={post.postId} post={post}/>);
+                if (response.data !== null)
+                    setPost(<Post key={post.postId} post={post}/>);
             })
     }, [props])
 

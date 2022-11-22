@@ -8,6 +8,7 @@ import '../../css/Scroll.css';
 function Scroll(props) {
     const [posts, setPosts] = useState([]);
     const lastPost = useRef();
+    const flag = useRef(false);
     const postNum = useRef(0);
 
     const getPosts = () => {
@@ -22,6 +23,8 @@ function Scroll(props) {
                     setPosts(prevPosts => prevPosts.concat(newPosts));
                     postNum.current = response.data[response.data.length - 1].postId;
                 }
+                if (response.data.length > 10)
+                    flag.current = false;
             })
     }
 
@@ -37,10 +40,13 @@ function Scroll(props) {
     useEffect(() => {
         if (posts.length === 0)
             postNum.current = 0;
-        lastPost.current = document.querySelector(
-            posts.length === 0 ? ".scrollMenu" : ".simplePost:last-of-type"
-        );
-        observer.current.observe(lastPost.current);
+        if (!flag.current) {
+            flag.current = true;
+            lastPost.current = document.querySelector(
+                posts.length === 0 ? ".scrollMenu" : ".simplePost:last-of-type"
+            );
+            observer.current.observe(lastPost.current);
+        }
     }, [posts])
 
     return (

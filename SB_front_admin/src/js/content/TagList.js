@@ -7,10 +7,13 @@ function TagList() {
 
     const addTag = () => {
         const target = document.getElementById("newTag");
-        if (!target.value) return;
+        if (!target.value || document.getElementById(target.value) !== null) {
+            target.value = null;
+            return;
+        }
         axios.post(process.env.REACT_APP_TAGS + "/" + target.value)
             .then(response => {
-                const tag = <div className="tag" key={target.value}>{target.value}</div>;
+                const tag = <div className="tag" key={target.value} id={target.value}>{target.value}</div>;
                 setTags(prev => prev.concat(tag));
                 target.value = null;
             });
@@ -20,7 +23,7 @@ function TagList() {
         axios.get(process.env.REACT_APP_TAGS)
             .then(response => {
                 setTags(response.data.map(data =>
-                    <div className="tag" key={data.name}>{data.name}</div>
+                    <div className="tag" key={data.name} id={data.name}>{data.name}</div>
                 ));
             });
     }, []);

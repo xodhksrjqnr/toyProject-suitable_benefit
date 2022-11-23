@@ -10,7 +10,7 @@
 
 개발기간 : 2022.08 ~ 진행중
 
-사용기술 : Java, Spring Boot, Spring Data JPA, ReactJS, MySQL
+사용기술 : Spring Boot, Spring Data JPA, ReactJS, MySQL
 
 ### 구조
 

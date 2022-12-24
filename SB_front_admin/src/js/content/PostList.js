@@ -7,8 +7,9 @@ function PostList() {
     const [posts, setPosts] = useState();
 
     const changeVisible = (e, id) => {
-        axios.post(process.env.REACT_APP_POSTS + "/" + id + "/activity").then();
-        e.target.innerText = (e.target.innerText === "공개" ? "비공개" : "공개");
+        axios.post(process.env.REACT_APP_POSTS + "/" + id + "/activity")
+            .then(() =>e.target.innerText = (e.target.innerText === "공개" ? "비공개" : "공개"))
+            .catch();
     }
 
     useEffect(() => {

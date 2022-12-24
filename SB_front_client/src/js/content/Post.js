@@ -20,7 +20,7 @@ function Post(props) {
                 <div>
                     <h6 style={{height:"5%"}}>누가 신청할 수 있나요?</h6>
                     <div style={{height:"85%"}}>
-                        <Tag tags={props.post.tags}/>
+                        <Tag tags={props.post.convertedTags}/>
                     </div>
                     <div style={{height:"5%", fontSize:"5px", textAlign:"center"}}>❉ 자세한 신청 조건을 꼭 확인하세요! ❉</div>
                 </div>

@@ -1,5 +1,4 @@
 import {useEffect, useState} from "react";
-import axios from "axios";
 import '../../css/Tag.css'
 
 function Tag(props) {
@@ -10,15 +9,8 @@ function Tag(props) {
     }
 
     useEffect(() => {
-        axios.get(process.env.REACT_APP_TAGS)
-            .then(response => {
-                const valid = [];
-                response.data.forEach(tag => {
-                    if ((props.tags & (1 << (tag.tagId - 1))) !== 0)
-                        valid.push(tagFormatting(tag.name));
-                });
-                setTags(valid);
-            })
+        props.tags.forEach(tag => setTags(
+            prevTag => prevTag.concat(tagFormatting(tag))));
     }, [props])
 
     return (

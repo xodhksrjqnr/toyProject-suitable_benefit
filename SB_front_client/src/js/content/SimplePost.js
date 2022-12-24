@@ -17,7 +17,7 @@ function SimplePost(props) {
                 <Percent userBit={props.bit} postBit={props.info.tags}/>
             </div>
             <div className="tag">
-                <Tag tags={props.info.tags}/>
+                <Tag tags={props.info.convertedTags}/>
             </div>
         </div>
     );

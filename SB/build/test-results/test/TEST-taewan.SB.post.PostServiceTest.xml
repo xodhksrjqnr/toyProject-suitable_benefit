@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="taewan.SB.post.PostServiceTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2022-12-24T02:17:18" hostname="taewanui-MacBookAir.local" time="0.485">
+  <properties/>
+  <testcase name="게시물_공개여부변경()" classname="taewan.SB.post.PostServiceTest" time="0.424"/>
+  <testcase name="게시물_단일조회()" classname="taewan.SB.post.PostServiceTest" time="0.01"/>
+  <testcase name="게시물_전체조회()" classname="taewan.SB.post.PostServiceTest" time="0.005"/>
+  <testcase name="비공개된_게시물에_대한_공개게시물_단일조회()" classname="taewan.SB.post.PostServiceTest" time="0.004"/>
+  <testcase name="게시물_없는_경우_전체조회()" classname="taewan.SB.post.PostServiceTest" time="0.003"/>
+  <testcase name="공개게시물_단일조회()" classname="taewan.SB.post.PostServiceTest" time="0.004"/>
+  <testcase name="공개게시물_전체조회with태그()" classname="taewan.SB.post.PostServiceTest" time="0.005"/>
+  <testcase name="없는_게시물_단일조회()" classname="taewan.SB.post.PostServiceTest" time="0.002"/>
+  <testcase name="게시물_삭제()" classname="taewan.SB.post.PostServiceTest" time="0.006"/>
+  <testcase name="게시물_저장()" classname="taewan.SB.post.PostServiceTest" time="0.005"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

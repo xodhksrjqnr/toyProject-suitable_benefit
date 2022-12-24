@@ -8,7 +8,7 @@
 
 ### 기간 & 사용기술
 
-개발기간 : 2022.08 ~ 진행중
+개발기간 : 2022.08 ~ 2022.12
 
 사용기술 : Spring Boot, Spring Data JPA, ReactJS, MySQL
 
